@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- This source file is public domain. -->
+		<title>Ezandora</title>
+		<meta content="width=device-width" name="viewport">
+		<style type="text/css">
+			:root {
+				--color-background:hsl(253, 53%, 83%);
+				--color-light-background:hsl(253, 100%, 94%);
+				--color-dark-background:hsl(253, 39%, 77%);
+				--color-very-dark-background:hsl(272, 100%, 23%);
+				/*--color-light-background:#e6dfff;
+				--color-background:#c7bdeb;
+				--color-dark-background:#b7addb;
+				--color-very-dark-background:#b7addb;*/
+				--roundrect-radius:1em;
+				--size-basis:calc(max(24px, min(30px, 2vw)));
+			}
+			body { font-family:Helvetica Neue,Arial,sans-serif;color:black;background-color:var(--color-very-dark-background);font-size:calc(0.75 * var(--size-basis));margin:0px; }
+			a:link { color:black; }
+			a:visited { color:black; }
+			a:active { color:black; }
+			img
+			{
+				/*width:100%; object-fit:contain;*/
+				width:100%;
+				max-width:500px;
+				object-fit:contain;
+				/*display:inline-block;*/
+			}
+			.images_container
+			{
+				display:flex;
+				flex-wrap:wrap;
+				align-content:space-between;
+				flex-direction:row;
+				gap:var(--size-basis);
+				/*display:grid;grid-template-columns:repeat(2, 1fr);grid-gap:calc(0.25 * var(--size-basis)); */
+			}
+			.image_container
+			{
+				background:var(--color-light-background);
+				text-align:center;
+				border-radius:var(--roundrect-radius); 
+				flex-basis:1;
+				flex-grow:1;
+				padding:1em;
+			}
+			a:hover {background:white;}
+			a.background_link { color:white; font-size:1.5em;width:100%;text-align:center;display:block; text-decoration:none; font-weight:bold;}
+			a.background_link:hover { background:black; }
+		</style>
+		<script type="text/javascript" src="Images.js"></script>
+	</head>
+	<body onload="ContentSetup();">
+		<H1 style="color:white;width:100%;text-align:center;">Images</H1>
+		<a href="../../index.html" class="background_link">Home</a>
+		<div id="images_container" class="images_container">
+		</div>
+		<a href="../../index.html" class="background_link">Home</a>
+	</body>
+</html>
