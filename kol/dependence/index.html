@@ -1,0 +1,301 @@
+<html><head>
+<script language=Javascript>
+<!--
+if (parent.frames.length == -1) location.href="game.php";
+var actions = { "sendmessage.php" : { "action" : 1, "title" : "Send Message", "arg" : "toid" }, "aagame.php" : { "action" : 1, "title" : "Challenge to A's Army", "arg" : "targetplayer" } }
+var notchat = true;//-->
+</script>
+<script language=Javascript src="images/scripts/keybinds.min.2.js"></script>
+<script language=Javascript src="images/scripts/window.20111231.js"></script>
+<script language="javascript">function chatFocus(){if(top.chatpane.document.chatform.graf) top.chatpane.document.chatform.graf.focus();}
+if (typeof defaultBind != 'undefined') { defaultBind(47, 2, chatFocus); defaultBind(190, 2, chatFocus);defaultBind(191, 2, chatFocus); defaultBind(47, 8, chatFocus);defaultBind(190, 8, chatFocus); defaultBind(191, 8, chatFocus); }</script><script> tp=top
+var todo = [];
+function nextAction() {
+	var next_todo = todo.shift();
+	if (next_todo) {
+		eval(next_todo);
+	}
+}
+function dojax(dourl, afterFunc, hoverCaller, failureFunc, method, params) {
+	$.ajax({
+		type: method || 'GET', url: dourl, cache: false,
+		data: params || null,
+		global: false,
+		success: function (out) {
+			nextAction();
+			if (out.match(/no\|/)) {
+				var parts = out.split(/\|/);
+				if (failureFunc) failureFunc(parts[1]);
+				else if (window.dojaxFailure) window.dojaxFailure(parts[1]);
+				else if (tp.chatpane.handleMessage) tp.chatpane.handleMessage({type: 'event', msg: 'Oops!  Sorry, Dave, you appear to be ' + parts[1]});
+				else  $('#ChatWindow').append('<font color="green">Oops!  Sorry, Dave, you appear to be ' + parts[1] + '.</font><br />' + "\n");
+				return;
+			}
+
+			if (hoverCaller)  {
+				float_results(hoverCaller, out);
+				if (afterFunc) { afterFunc(out); }
+				return;
+			}
+$(tp.mainpane.document).find("#effdiv").remove(); if(!window.dontscroll || (window.dontscroll && dontscroll==0)) { window.scroll(0,0);}
+			var $eff = $(tp.mainpane.document).find('#effdiv');
+			if ($eff.length == 0) {
+				var d = tp.mainpane.document.createElement('DIV');
+				d.id = 'effdiv';
+				var b = tp.mainpane.document.body;
+				if ($('#content_').length > 0) {
+					b = $('#content_ div:first')[0];
+				}
+				b.insertBefore(d, b.firstChild);
+				$eff = $(d);
+			}
+			$eff.find('a[name="effdivtop"]').remove().end()
+				.prepend('<a name="effdivtop"></a><center>' + out + '</center>').css('display','block');
+			if (!window.dontscroll || (window.dontscroll && dontscroll==0)) {
+				tp.mainpane.document.location = tp.mainpane.document.location + "#effdivtop";
+			}
+			if (afterFunc) { afterFunc(out); }
+		}
+	});
+}
+</script><script language=Javascript src="images/scripts/jquery-1.3.1.min.js"></script>
+<script language=Javascript src='images/scripts/rcm.20160406.js'></script>	<link rel="stylesheet" type="text/css" href="images/styles.20151006.css">
+<style type='text/css'>
+.faded {
+	zoom: 1;
+	filter: alpha(opacity=35);
+	opacity: 0.35;
+	-khtml-opacity: 0.35; 
+    -moz-opacity: 0.35;
+}
+</style>
+
+<script language="Javascript" src="basics.js"></script><link rel="stylesheet" href="/basics.1.css" /></head>
+
+<body>
+<div id='menu' class=rcm></div><div class="pyro">
+  <div class="before"></div>
+  <div class="after"></div>
+</div>
+<style>
+.pyro {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	pointer-events: none;
+}
+.pyro > .before, .pyro > .after {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  box-shadow: 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff;
+  -moz-animation: 1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards;
+  -webkit-animation: 1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards;
+  -o-animation: 1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards;
+  -ms-animation: 1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards;
+  animation: 1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards;
+}
+
+.pyro > .after {
+  -moz-animation-delay: 4.25s, 20.25s, 35.25s;
+  -webkit-animation-delay: 4.25s, 20.25s, 35.25s;
+  -o-animation-delay: 4.25s, 20.25s, 35.25s;
+  -ms-animation-delay: 4.25s, 20.25s, 35.25s;
+  animation-delay: 4.25s, 20.25s, 35.25s;
+  -moz-animation-duration: 1.25s, 1.25s, 10.25s;
+  -webkit-animation-duration: 1.25s, 1.25s, 10.25s;
+  -o-animation-duration: 1.25s, 1.25s, 10.25s;
+  -ms-animation-duration: 1.25s, 1.25s, 10.25s;
+  animation-duration: 1.25s, 1.25s, 10.25s;
+}
+
+@-webkit-keyframes bang {
+  to {
+    box-shadow: -23px 18.3333333333px #049543, 54px 57.3333333333px #18812a, 47px -277.6666666667px #168347, 180px -379.6666666667px #0a8f32, -208px 69.3333333333px #1c7d39, -180px -94.6666666667px #158434, -124px -77.6666666667px #0b8e2e, 187px -131.6666666667px #1d7c40, -81px -240.6666666667px #0f8a38, -195px -56.6666666667px #0a8f46, -190px -352.6666666667px #02971e, 148px 49.3333333333px #0a8f0e, -54px -392.6666666667px #089141, 123px -239.6666666667px #0c8d35, -156px -155.6666666667px #0b8e46, -72px -289.6666666667px #039617, 56px -241.6666666667px #1c7d41, -162px -14.6666666667px #188136, 115px -25.6666666667px #049528, 103px 2.3333333333px #108932, 179px -289.6666666667px #188142, -20px 32.3333333333px #118813, 25px -257.6666666667px #19801d, 29px -184.6666666667px #1c7d29, -15px -168.6666666667px #02973b, 137px 69.3333333333px #05940c, 246px -53.6666666667px #0f8a17, 14px -37.6666666667px #029711, 149px -74.6666666667px #009912, -120px -272.6666666667px #07920e, 47px -267.6666666667px #02973b, -239px 79.3333333333px #0b8e28, -116px -403.6666666667px #1a7f3d, -166px -60.6666666667px #089143, 113px -345.6666666667px #1a7f24, 126px -242.6666666667px #0f8a25, 156px -194.6666666667px #178240, 117px -329.6666666667px #0d8c22, 100px -383.6666666667px #158431, 42px -51.6666666667px #158435, 3px -348.6666666667px #0c8d48, -141px -9.6666666667px #09900e, -167px -70.6666666667px #0f8a22, -249px -344.6666666667px #059430, 225px -394.6666666667px #18813f, -172px -347.6666666667px #188145, -156px -81.6666666667px #029722, -164px -51.6666666667px #059437, -63px -137.6666666667px #0b8e32, 126px -300.6666666667px #05941f, 176px -156.6666666667px #089131;
+  }
+}
+@-moz-keyframes bang {
+  to {
+      box-shadow: -23px 18.3333333333px #049543, 54px 57.3333333333px #18812a, 47px -277.6666666667px #168347, 180px -379.6666666667px #0a8f32, -208px 69.3333333333px #1c7d39, -180px -94.6666666667px #158434, -124px -77.6666666667px #0b8e2e, 187px -131.6666666667px #1d7c40, -81px -240.6666666667px #0f8a38, -195px -56.6666666667px #0a8f46, -190px -352.6666666667px #02971e, 148px 49.3333333333px #0a8f0e, -54px -392.6666666667px #089141, 123px -239.6666666667px #0c8d35, -156px -155.6666666667px #0b8e46, -72px -289.6666666667px #039617, 56px -241.6666666667px #1c7d41, -162px -14.6666666667px #188136, 115px -25.6666666667px #049528, 103px 2.3333333333px #108932, 179px -289.6666666667px #188142, -20px 32.3333333333px #118813, 25px -257.6666666667px #19801d, 29px -184.6666666667px #1c7d29, -15px -168.6666666667px #02973b, 137px 69.3333333333px #05940c, 246px -53.6666666667px #0f8a17, 14px -37.6666666667px #029711, 149px -74.6666666667px #009912, -120px -272.6666666667px #07920e, 47px -267.6666666667px #02973b, -239px 79.3333333333px #0b8e28, -116px -403.6666666667px #1a7f3d, -166px -60.6666666667px #089143, 113px -345.6666666667px #1a7f24, 126px -242.6666666667px #0f8a25, 156px -194.6666666667px #178240, 117px -329.6666666667px #0d8c22, 100px -383.6666666667px #158431, 42px -51.6666666667px #158435, 3px -348.6666666667px #0c8d48, -141px -9.6666666667px #09900e, -167px -70.6666666667px #0f8a22, -249px -344.6666666667px #059430, 225px -394.6666666667px #18813f, -172px -347.6666666667px #188145, -156px -81.6666666667px #029722, -164px -51.6666666667px #059437, -63px -137.6666666667px #0b8e32, 126px -300.6666666667px #05941f, 176px -156.6666666667px #089131;
+	    }
+}
+@-o-keyframes bang {
+  to {
+      box-shadow: -23px 18.3333333333px #049543, 54px 57.3333333333px #18812a, 47px -277.6666666667px #168347, 180px -379.6666666667px #0a8f32, -208px 69.3333333333px #1c7d39, -180px -94.6666666667px #158434, -124px -77.6666666667px #0b8e2e, 187px -131.6666666667px #1d7c40, -81px -240.6666666667px #0f8a38, -195px -56.6666666667px #0a8f46, -190px -352.6666666667px #02971e, 148px 49.3333333333px #0a8f0e, -54px -392.6666666667px #089141, 123px -239.6666666667px #0c8d35, -156px -155.6666666667px #0b8e46, -72px -289.6666666667px #039617, 56px -241.6666666667px #1c7d41, -162px -14.6666666667px #188136, 115px -25.6666666667px #049528, 103px 2.3333333333px #108932, 179px -289.6666666667px #188142, -20px 32.3333333333px #118813, 25px -257.6666666667px #19801d, 29px -184.6666666667px #1c7d29, -15px -168.6666666667px #02973b, 137px 69.3333333333px #05940c, 246px -53.6666666667px #0f8a17, 14px -37.6666666667px #029711, 149px -74.6666666667px #009912, -120px -272.6666666667px #07920e, 47px -267.6666666667px #02973b, -239px 79.3333333333px #0b8e28, -116px -403.6666666667px #1a7f3d, -166px -60.6666666667px #089143, 113px -345.6666666667px #1a7f24, 126px -242.6666666667px #0f8a25, 156px -194.6666666667px #178240, 117px -329.6666666667px #0d8c22, 100px -383.6666666667px #158431, 42px -51.6666666667px #158435, 3px -348.6666666667px #0c8d48, -141px -9.6666666667px #09900e, -167px -70.6666666667px #0f8a22, -249px -344.6666666667px #059430, 225px -394.6666666667px #18813f, -172px -347.6666666667px #188145, -156px -81.6666666667px #029722, -164px -51.6666666667px #059437, -63px -137.6666666667px #0b8e32, 126px -300.6666666667px #05941f, 176px -156.6666666667px #089131;
+	    }
+  }
+@-ms-keyframes bang {
+  to {
+    box-shadow: -23px 18.3333333333px #049543, 54px 57.3333333333px #18812a, 47px -277.6666666667px #168347, 180px -379.6666666667px #0a8f32, -208px 69.3333333333px #1c7d39, -180px -94.6666666667px #158434, -124px -77.6666666667px #0b8e2e, 187px -131.6666666667px #1d7c40, -81px -240.6666666667px #0f8a38, -195px -56.6666666667px #0a8f46, -190px -352.6666666667px #02971e, 148px 49.3333333333px #0a8f0e, -54px -392.6666666667px #089141, 123px -239.6666666667px #0c8d35, -156px -155.6666666667px #0b8e46, -72px -289.6666666667px #039617, 56px -241.6666666667px #1c7d41, -162px -14.6666666667px #188136, 115px -25.6666666667px #049528, 103px 2.3333333333px #108932, 179px -289.6666666667px #188142, -20px 32.3333333333px #118813, 25px -257.6666666667px #19801d, 29px -184.6666666667px #1c7d29, -15px -168.6666666667px #02973b, 137px 69.3333333333px #05940c, 246px -53.6666666667px #0f8a17, 14px -37.6666666667px #029711, 149px -74.6666666667px #009912, -120px -272.6666666667px #07920e, 47px -267.6666666667px #02973b, -239px 79.3333333333px #0b8e28, -116px -403.6666666667px #1a7f3d, -166px -60.6666666667px #089143, 113px -345.6666666667px #1a7f24, 126px -242.6666666667px #0f8a25, 156px -194.6666666667px #178240, 117px -329.6666666667px #0d8c22, 100px -383.6666666667px #158431, 42px -51.6666666667px #158435, 3px -348.6666666667px #0c8d48, -141px -9.6666666667px #09900e, -167px -70.6666666667px #0f8a22, -249px -344.6666666667px #059430, 225px -394.6666666667px #18813f, -172px -347.6666666667px #188145, -156px -81.6666666667px #029722, -164px -51.6666666667px #059437, -63px -137.6666666667px #0b8e32, 126px -300.6666666667px #05941f, 176px -156.6666666667px #089131;
+  }
+}
+@keyframes bang {
+  to {
+      box-shadow: -23px 18.3333333333px #049543, 54px 57.3333333333px #18812a, 47px -277.6666666667px #168347, 180px -379.6666666667px #0a8f32, -208px 69.3333333333px #1c7d39, -180px -94.6666666667px #158434, -124px -77.6666666667px #0b8e2e, 187px -131.6666666667px #1d7c40, -81px -240.6666666667px #0f8a38, -195px -56.6666666667px #0a8f46, -190px -352.6666666667px #02971e, 148px 49.3333333333px #0a8f0e, -54px -392.6666666667px #089141, 123px -239.6666666667px #0c8d35, -156px -155.6666666667px #0b8e46, -72px -289.6666666667px #039617, 56px -241.6666666667px #1c7d41, -162px -14.6666666667px #188136, 115px -25.6666666667px #049528, 103px 2.3333333333px #108932, 179px -289.6666666667px #188142, -20px 32.3333333333px #118813, 25px -257.6666666667px #19801d, 29px -184.6666666667px #1c7d29, -15px -168.6666666667px #02973b, 137px 69.3333333333px #05940c, 246px -53.6666666667px #0f8a17, 14px -37.6666666667px #029711, 149px -74.6666666667px #009912, -120px -272.6666666667px #07920e, 47px -267.6666666667px #02973b, -239px 79.3333333333px #0b8e28, -116px -403.6666666667px #1a7f3d, -166px -60.6666666667px #089143, 113px -345.6666666667px #1a7f24, 126px -242.6666666667px #0f8a25, 156px -194.6666666667px #178240, 117px -329.6666666667px #0d8c22, 100px -383.6666666667px #158431, 42px -51.6666666667px #158435, 3px -348.6666666667px #0c8d48, -141px -9.6666666667px #09900e, -167px -70.6666666667px #0f8a22, -249px -344.6666666667px #059430, 225px -394.6666666667px #18813f, -172px -347.6666666667px #188145, -156px -81.6666666667px #029722, -164px -51.6666666667px #059437, -63px -137.6666666667px #0b8e32, 126px -300.6666666667px #05941f, 176px -156.6666666667px #089131;
+	    }
+  }
+@-webkit-keyframes gravity {
+  to {
+    transform: translateY(200px);
+    -moz-transform: translateY(200px);
+    -webkit-transform: translateY(200px);
+    -o-transform: translateY(200px);
+    -ms-transform: translateY(200px);
+    opacity: 0;
+  }
+}
+@-moz-keyframes gravity {
+  to {
+    transform: translateY(200px);
+    -moz-transform: translateY(200px);
+    -webkit-transform: translateY(200px);
+    -o-transform: translateY(200px);
+    -ms-transform: translateY(200px);
+    opacity: 0;
+  }
+}
+@-o-keyframes gravity {
+  to {
+    transform: translateY(200px);
+    -moz-transform: translateY(200px);
+    -webkit-transform: translateY(200px);
+    -o-transform: translateY(200px);
+    -ms-transform: translateY(200px);
+    opacity: 0;
+  }
+}
+@-ms-keyframes gravity {
+  to {
+    transform: translateY(200px);
+    -moz-transform: translateY(200px);
+    -webkit-transform: translateY(200px);
+    -o-transform: translateY(200px);
+    -ms-transform: translateY(200px);
+    opacity: 0;
+  }
+}
+@keyframes gravity {
+  to {
+      transform: translateY(200px);
+	      -moz-transform: translateY(200px);
+	      -webkit-transform: translateY(200px);
+		      -o-transform: translateY(200px);
+		      -ms-transform: translateY(200px);
+			      opacity: 0;
+			    }
+  }
+@-webkit-keyframes position {
+  0%, 19.9% {
+    margin-top: 10%;
+    margin-left: 40%;
+  }
+  20%, 39.9% {
+    margin-top: 40%;
+    margin-left: 30%;
+  }
+  40%, 59.9% {
+    margin-top: 20%;
+    margin-left: 70%;
+  }
+  60%, 79.9% {
+    margin-top: 30%;
+    margin-left: 20%;
+  }
+  80%, 99.9% {
+    margin-top: 30%;
+    margin-left: 80%;
+  }
+}
+@-moz-keyframes position {
+  0%, 19.9% {
+    margin-top: 10%;
+    margin-left: 40%;
+  }
+  20%, 39.9% {
+    margin-top: 40%;
+    margin-left: 30%;
+  }
+  40%, 59.9% {
+    margin-top: 20%;
+    margin-left: 70%;
+  }
+  60%, 79.9% {
+    margin-top: 30%;
+    margin-left: 20%;
+  }
+  80%, 99.9% {
+    margin-top: 30%;
+    margin-left: 80%;
+  }
+}
+@-o-keyframes position {
+  0%, 19.9% {
+    margin-top: 10%;
+    margin-left: 40%;
+  }
+  20%, 39.9% {
+    margin-top: 40%;
+    margin-left: 30%;
+  }
+  40%, 59.9% {
+    margin-top: 20%;
+    margin-left: 70%;
+  }
+  60%, 79.9% {
+    margin-top: 30%;
+    margin-left: 20%;
+  }
+  80%, 99.9% {
+    margin-top: 30%;
+    margin-left: 80%;
+  }
+}
+@-ms-keyframes position {
+  0%, 19.9% {
+    margin-top: 10%;
+    margin-left: 40%;
+  }
+  20%, 39.9% {
+    margin-top: 40%;
+    margin-left: 30%;
+  }
+  40%, 59.9% {
+    margin-top: 20%;
+    margin-left: 70%;
+  }
+  60%, 79.9% {
+    margin-top: 30%;
+    margin-left: 20%;
+  }
+  80%, 99.9% {
+    margin-top: 30%;
+    margin-left: 80%;
+  }
+}
+@keyframes position {
+  0%, 19.9% {
+      margin-top: 10%;
+	      margin-left: 40%;
+	    }
+    20%, 39.9% {
+	    margin-top: 40%;
+		    margin-left: 30%;
+		  }
+    40%, 59.9% {
+	    margin-top: 20%;
+		    margin-left: 70%;
+		  }
+    60%, 79.9% {
+	    margin-top: 30%;
+		    margin-left: 20%;
+		  }
+    80%, 99.9% {
+	    margin-top: 30%;
+		    margin-left: 80%;
+		  }
+  }
+
+</style>
+<center></center><center><table  width=95%  cellspacing=0 cellpadding=0><tr><td style="color: white;" align=center bgcolor=blue><b>The Kingdom of Loathing</b></td></tr><tr><td style="padding: 5px; border: 1px solid blue;"><center><table><tr><td><center><table cellpadding=0 cellspacing=0><tr><td colspan=6><img src="images/otherimages/main/main_top.gif" width=350 height=50 alt="Top Edge" title="Top Edge"></td></tr><tr><td rowspan=3><img src="images/otherimages/main/main_left.gif" width=25 height=300 alt="Left Edge" title="Left Edge"></td><td colspan=2 width=100 height=100><a><img src="images/otherimages/main/newmap1new.gif" width=100 height=100 border=0 alt="Seaside Town" title="Seaside Town"></a></td><td width=100 height=100><a><img src="images/otherimages/main/map2.gif" width=100 height=100 border=0 alt="The Campground" title="The Campground"></a></td><td width=100 height=100><a><img src="images/otherimages/main/map3.gif" width=100 height=100 border=0 alt="The Big Mountains" title="The Big Mountains"></a></td><td rowspan=3><img src="images/otherimages/main/main_right.gif" width=25 height=300 alt="Right Edge" title="Right Edge"></td></tr><tr><td width=50 height=100><a><img src=images/otherimages/main/map4a_sea.gif width=50 height=100 border=0 alt="The Sea" title="The Sea"></td><td width=50 height=100><a><img src=images/otherimages/main/map4b.gif width=50 height=100 border=0 alt="A seaside shack" title="A seaside shack"></a></td><td width=100 height=100><a><img src="images/otherimages/main/map5.gif" width=100 height=100 border=0 alt="The Nearby Plains" title="The Nearby Plains"></a></td><td width=100 height=100><a><img src=images/otherimages/main/newmap6.gif width=100 height=100 border=0 alt="The Lair of the Naughty Sorceress" title="The Lair of the Naughty Sorceress"></a></td></tr><tr><td width=100 colspan=2 height=100><a><img src="images/otherimages/main/map7beach.gif" width=100 height=100 border=0 alt="Desert Beach" title="Desert Beach"></td><td width=100 height=100><a><img src="images/otherimages/main/map8.gif" width=100 height=100 border=0 alt="The Distant Woods" title="The Distant Woods"></a></td><td width=100 height=100><a><img src="images/otherimages/main/island.gif" width=100 height=100 border=0 alt="The Mysterious Island of Mystery" title="The Mysterious Island of Mystery"></a></td></tr><tr><td colspan=6><img src="images/otherimages/main/main_bottom.gif" width=350 height=50 border=0 alt="Bottom Edge" title="Bottom Edge"></td></tr></table><table><tr><td align=center><img src="images/itemimages/clover.gif"></td><td align=center><img src="images/itemimages/beer.gif"></td><td align=center><img src="images/itemimages/clover.gif"></td><td align=center><img src="images/itemimages/beer.gif"></td></tr><tr><td align=center colspan=4><b>Today is <a href="">St. Sneaky Pete's Day</a>!</b><br>Drink, drink, drink!</td></tr><tr><td align=center><img src="images/itemimages/beer.gif"></td><td align=center><img src="images/itemimages/clover.gif"></td><td align=center><img src="images/itemimages/beer.gif"></td><td align=center><img src="images/itemimages/clover.gif"></td></tr></table><table><tr><td align=center><img src="images/itemimages/firecrack.gif"></td><td align=center><img src="images/itemimages/dynamite.gif"></td><td align=center><img src="images/itemimages/firecrack.gif"></td><td align=center><img src="images/itemimages/dynamite.gif"></td></tr><tr><td align=center colspan=4><b>Today is <a href="">Dependence Day</a>!</b><br>Go get some fireworks at <a>the General Store</a>, and celebrate!</td></tr><tr><td align=center><img src="images/itemimages/dynamite.gif"></td><td align=center><img src="images/itemimages/firecrack.gif"></td><td align=center><img src="images/itemimages/dynamite.gif"></td><td align=center><img src="images/itemimages/firecrack.gif"></td></tr></table></td></tr></table></center></td></tr><tr><td height=4></td></tr></table></center></body><script src="onfocus.1.js"></script></html>

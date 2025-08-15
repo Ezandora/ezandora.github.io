@@ -1,0 +1,148 @@
+<html><head>
+<script language=Javascript>
+<!--
+if (parent.frames.length == -1) location.href="game.php";
+//-->
+</script>
+<script language=Javascript src="/images/scripts/keybinds.min.2.js"></script>
+<script language=Javascript src="/images/scripts/window.20111231.js"></script>
+<script language="javascript">function chatFocus(){if(top.chatpane.document.chatform.graf) top.chatpane.document.chatform.graf.focus();}
+if (typeof defaultBind != 'undefined') { defaultBind(47, 2, chatFocus); defaultBind(190, 2, chatFocus);defaultBind(191, 2, chatFocus); defaultBind(47, 8, chatFocus);defaultBind(190, 8, chatFocus); defaultBind(191, 8, chatFocus); }</script><script language="javascript">
+	function updateParseItem(iid, field, info) {
+		var tbl = $('#ic'+iid);
+		var data = parseItem(tbl);
+		if (!data) return;
+		data[field] = info;
+		var out = [];
+		for (i in data) {
+			if (!data.hasOwnProperty(i)) continue;
+			out.push(i+'='+data[i]);
+		}
+		tbl.attr('rel', out.join('&'));
+	}
+	function parseItem(tbl) {
+		tbl = $(tbl);
+		var rel = tbl.attr('rel');
+		var data = {};
+		if (!rel) return data;
+		var parts = rel.split('&');
+		for (i in parts) {
+			if (!parts.hasOwnProperty(i)) continue;
+			var kv = parts[i].split('=');
+			tbl.data(kv[0], kv[1]);
+			data[kv[0]] = kv[1];
+		}
+		return data;
+	}
+</script><script language=Javascript src="/images/scripts/jquery-1.3.1.min.js"></script>
+<script type="text/javascript" src="/images/scripts/pop_query.20130705.js"></script>
+<script type="text/javascript"> function pop_ircm(clicked) { return false; } </script>	<link rel="stylesheet" type="text/css" href="/images/styles.20151006.css">
+<style type='text/css'>
+.faded {
+	zoom: 1;
+	filter: alpha(opacity=35);
+	opacity: 0.35;
+	-khtml-opacity: 0.35; 
+    -moz-opacity: 0.35;
+}
+</style>
+
+<script language="Javascript" src="/basics.js"></script><link rel="stylesheet" href="/basics.1.css" /></head>
+
+<body>
+<centeR><table  width=95%  cellspacing=0 cellpadding=0><tr><td style="color: white;" align=center bgcolor=blue><b>Seaside Town</b></td></tr><tr><td style="padding: 5px; border: 1px solid blue;"><center><table><tr><td><center><div id=background style='position:relative;'><img src="/images/otherimages/town/town_bg3.gif" width=450 height=450 border=0><div id=town_clandistrict style=' position: absolute; top: 212; left: 311; height: 100; width: 100;'><a  href=town_clan.php><img src="/images/otherimages/town/icon_clandistrict.gif" width=100 height=100 border=0 alt="The Clan District" title="The Clan District"></a></div><div id=town_council style=' position: absolute; top: 213; left: 207; height: 100; width: 100;'><a  href=council.php><img src="/images/otherimages/town/icon_council.gif" width=100 height=100 border=0 alt="The Council of Loathing" title="The Council of Loathing"></a></div><div id=town_eincwatch3 style=' position: absolute; top: 0; left: 0; height: 0; width: 0;'><a  href=place.php?whichplace=town&action=town_eincwatch3><img src="/images/otherimages/1x1trans.gif" width=0 height=0 border=0 alt="" title=""></a></div><div id=town_marketsquare style=' position: absolute; top: 314; left: 223; height: 100; width: 100;'><a  href=place.php?whichplace=town_market><img src="/images/otherimages/town/icon_marketsquare.gif" width=100 height=100 border=0 alt="Market Square" title="Market Square"></a></div><div id=town_museum style=' position: absolute; top: 204; left: 136; height: 100; width: 100;'><a  href=museum.php><img src="/images/otherimages/town/icon_museum.gif" width=100 height=100 border=0 alt="The Museum" title="The Museum"></a></div><div id=town_oddjobs style=' position: absolute; top: 202; left: 45; height: 100; width: 100;'><a  href=place.php?whichplace=town&action=town_oddjobs><img src="/images/otherimages/town/icon_oddjobs.gif" width=100 height=100 border=0 alt="The Odd Jobs Board" title="The Odd Jobs Board"></a></div><div id=town_right style=' position: absolute; top: 108; left: 166; height: 100; width: 100;'><a  href=place.php?whichplace=town_right><img src="/images/otherimages/town/icon_rightside.gif" width=100 height=100 border=0 alt="The Right Side of the Tracks" title="The Right Side of the Tracks"></a></div><div id=town_wrong style=' position: absolute; top: 108; left: 66; height: 100; width: 100;'><a  href=place.php?whichplace=town_wrong><img src="/images/otherimages/town/icon_wrongside.gif" width=100 height=100 border=0 alt="The Wrong Side of the Tracks" title="The Wrong Side of the Tracks"></a></div></div><p><a href=main.php>Back to the Main Map</a></center></td></tr></table></center></td></tr><tr><td height=4></td></tr></table></center><link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+<style>
+.s { 
+color: gray;
+font-weight: bold;
+font-size: 1.3em;
+font-family:'Shadows Into Light', cursive;
+
+}
+</style>
+<script>
+var sp = 6000;
+var spd=  sp;
+jQuery(function (_) {
+   var dia = [
+      {who:'y', t:"Dr. Gordon Stuart has devised a plan<br />and we're done with you!"},
+      {who:'s', t:"You will not defeat me.  I will devour you."},
+      {who:'y', t:"We've collected your ichor, your blood,<br /> and delivered it to the chasm of doom!"},
+      {who:'s', t:"I am still here, mortal..."},
+      {who:'y', t:"<b>Dr. Stuart!</b>  Is that attuner ready?"},
+      {action: 'fissure'},
+      {who:'y', t:"Ah ha!  Goodbye, Sssschmuck."},
+      {who:'s', t:"That is not my name, disrespectful mortal."},
+      {who:'y', t:"It is now.  Enjoy the chasm of endless doom."},
+      {who:'s', t:"I think I'll stay here and devour your soul."},
+      {who:'y', t:"<b>Dr. Stuart!</b>  Any time now."},
+      {action: 'vibe'},
+      {who:'y', t:"It's working!  He's being sucked back through!"},
+      {who:'y', t:"Well.  I guess that's over."},
+      {action: 'hagnk'},
+      {who:'y', t:"Whoah, what's that?"},
+      {who:'y', t:"Hagnk!  You're alright.... kinda!"},
+      {who:'y', t:"I wonder where that severed tentacle landed?"},
+      {action: 'end'}
+
+   ];
+   var scene = function () {
+       var n = dia.shift();
+       if (!n) return;
+       if (!n.action) {
+          d.append(_('<div />').html(n.t).addClass(n.who).animate({opacity: 0}, {duration: sp ,complete: function () { _(this).remove(); scene(); }}));
+       }
+       if (n.action == 'fissure') {
+          b.append(f);
+          f.animate({opacity: 1}, {duration: sp * .8, complete: function () { 
+              scene()
+          }});
+       }
+       if (n.action == 'vibe') {
+          b.append(f);
+          m.animate({left: '40', top: 295, height: 10, opacity: 0.2}, spd*2);
+          setTimeout(scene, spd);
+       }
+       if (n.action == 'hagnk') {
+          b.append(hg);
+          hg.animate({top:668, height: 30, opacity: 1}, {duration: spd, queue: false});
+          b.append(t);
+          t.animate({right: 0, height: 300, top: 900, opacity: 1}, {duration: spd*.6, queue: false});
+          scene();
+       }
+       if (n.action == 'end') {
+          d.empty().append('Escort Hagnk back to <a href="place.php?whichplace=town_right">The Right Side of the Tracks</a> <br />or <a href="place.php?whichplace=town&efinale=1">watch that again</a>.');
+          hg.animate({height: 100, top: 598, marginRight: '-100'}, {duration: 3000, queue: false});
+          y.animate({height: 100}, {duration: 3000, queue: false});
+          f.animate({height: 30}, {duration: 3000, queue: false});
+
+
+       }
+
+   };
+
+   var b = _('#background');
+   var m = _("<img src='/images/adventureimages/eldboss.gif' />");
+   var y = _('<img src="/images/otherimages/classav41_f.gif" />');
+   var d = _('<div style="line-height:20px; height: 150px; position: absolute; bottom: 80px; left: 50%; width: 500px; margin-left: -250px; text-align: center" />');
+   var f = _('<img src="/images/otherimages/elfissure2.gif" />').css({zIndex: 1, opacity: 0, position: 'absolute', left: '1%', top: 250});
+
+   var hg = _('<img src="/images/otherimages/hagnk_1arm.gif" />').css({zIndex: 1, opacity: 0, position: 'absolute', left: '1%', height: 1, top: 270});
+   var t = _('<img src="/images/adventureimages/eldtentacle.gif" />').css({zIndex: 1, opacity: 0, position: 'absolute', left: '1%', top: 250});
+
+window.foo=hg;
+   b.css({position: 'relative', height: 700, overflow: 'hidden'}).find('*').animate({opacity: 0, marginTop: 700}, {duration:3000, complete:function () { 
+      m.css({position: 'absolute', top: '-500px', left: '220', zIndex: 2});
+      y.css({position: 'absolute', bottom: 2, right: '50%', height: 30});
+      b.append(f);
+      b.append(m);
+      b.append(y);
+      b.append(d);
+   }});
+   setTimeout(function () { 
+      m.animate({top: 30}, {duration: sp, complete: function () {
+          scene();
+      }});
+   }, 3000);
+});
+</script></body><script src="/onfocus.1.js"></script></html>

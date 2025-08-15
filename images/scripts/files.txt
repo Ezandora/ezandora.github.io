@@ -1,0 +1,9 @@
+https://raw.githubusercontent.com/Ezandora/Source-Terminal-GUI/master/images/educate.png
+https://raw.githubusercontent.com/Ezandora/Asdon-Martin-GUI/master/images/martin1.png
+https://camo.githubusercontent.com/dff1fe96d9949bc196bbb14837c95b09124327e91d4152f071d50801a1259f99/68747470733a2f2f7261772e6769746875622e636f6d2f457a616e646f72612f4272696566636173652f6d61737465722f496d616765732f6775692e706e67
+https://raw.githubusercontent.com/Ezandora/Genie/master/images/genie2.99999repeating.png
+https://raw.githubusercontent.com/Ezandora/Latte/master/Images/latte.png
+https://camo.githubusercontent.com/ecd8adf08f169693f723683ae89c22dd1eca4d2feee0b28606b60828f5e17f95/68747470733a2f2f7261772e6769746875622e636f6d2f457a616e646f72612f42617374696c6c652f6d61737465722f696d616765732f62617374696c6c652e706e67
+https://raw.githubusercontent.com/Ezandora/Far-Future/master/Images/Explorer.png
+https://raw.githubusercontent.com/Ezandora/Detective-Solver/master/Images/24.png
+

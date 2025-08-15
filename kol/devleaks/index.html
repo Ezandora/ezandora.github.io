@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- This source file is public domain. -->
+		<title>Devleaks</title>
+		<meta content="width=device-width" name="viewport">
+		<style type="text/css">
+			body { font-family:Arial,Helvetica,sans-serif;color:black;background-color:#C0C0C0;font-size:14px;margin:0px; }
+			hr { height: 1px; border: 0px; width: 100%;background: #B2B2B2; }
+			textarea { resize: none; }
+			a:link { color:black; }
+			a:visited { color:black; }
+			a:active { color:black; }
+			div.r_centre { margin-left:auto; margin-right:auto;text-align:center; }
+			div.input_table_cell { display:table-cell; font-weight:bold; padding-left:5px;padding-right:5px; vertical-align:middle; padding-top:5px; padding-bottom:5px;}
+			div.align_right { text-align:right; }
+			.day_header { font-weight:bold; font-size:1.25em; }
+			.day_header_number { font-weight:bold; font-size:2.0em; }
+			hr.hr_little_margin { margin-top:2px; margin-bottom:2px; }
+			div.bullet_cell { display:table-cell;padding-right:5px; }
+		</style>
+		<script type="text/javascript"src="data.js"></script>
+		<script type="text/javascript"src="devleaks.js"></script>
+	</head>
+	<body onload="pageLoaded();">
+		<div style="max-width:700px;margin-left:auto; margin-right:auto;background-color:white;padding:2em;">
+		<div style="font-weight:bold;font-size:1.5em;" class="r_centre">Devleaks</div>
+		<div id="output_div" style=\"width:100%;\"></div>
+		<br>
+		<div onclick="generate();" style="font-size:1.1em;font-weight:bold;border:1px solid #C0C0C0;padding:5px;cursor:pointer;" class="r_centre">Refresh (spacebar)</div>
+		<noscript><span style="color:red;font-weight:bold;">Requires javascript.</span></noscript>
+		</div>
+		<div class="r_centre" style="background:#DDDDDD;max-width:756px;padding-top:5px;padding-bottom:5px;"><a href="../../index.html" style="font-size:1.2em;font-weight:bold;text-decoration:none;display:block;">Home</a></div>
+		<br>
+		<div style="font-size:0.777em;color:#A0A0A0;" class="r_centre">Written by Ezandora.</div>
+	</body>
+</html>

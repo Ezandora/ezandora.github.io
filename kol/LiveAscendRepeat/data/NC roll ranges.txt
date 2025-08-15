@@ -1,0 +1,1002 @@
+NC ranges, indexed from zero:
+0: [0, 60]
+1: [91, 99] forest friars castle? Barrrney's Barrr: That Explains All The Eyepatches, The Obligatory Pirate's Cove: The Arrrbitrator, Wartime Hippy Camp (Frat Disguise): Bait and Switch
+2: [0, 60]
+3: [0, 60]
+4: [0, 60]
+5: [0, 60]
+6: [0, 60]
+7: [0, 60]
+8: [0, 60]
+9: [0, 60]
+10: [0, 50]
+11: [0, 60]
+12: [0, 50]
+13: [0, 80]
+14: [61, 80] The Obligatory Pirate's Cove: Amatearrr Night
+15: [0, 80]
+16: [0, 60]
+17: [0, 60]
+18: [0, 80]
+19: [0, 80]
+20: [86, 90] forest The Obligatory Pirate's Cove: The Arrrbitrator, The Penultimate Fantasy Airship: Gesundheitgeist!, Wartime Hippy Camp (Frat Disguise): Bait and Switch
+21: [0, 60] The Penultimate Fantasy Airship: Hammering the Armory
+22: [91, 99] forest friars castle? The Obligatory Pirate's Cove: The Beached Boys, The Penultimate Fantasy Airship: Don't Chew on That Spirit!, Wartime Hippy Camp (Frat Disguise): The Thin Tie-Dyed Line
+23: [0, 75]
+24: [91, 99] forest friars castle? The Obligatory Pirate's Cove: The Arrrbitrator, The Penultimate Fantasy Airship: The Most Absorbent Spirit Ever, Wartime Hippy Camp (Frat Disguise): The Thin Tie-Dyed Line
+25: [0, 60]
+26: [0, 60]
+27: [0, 60]
+28: [0, 60]
+29: [0, 60]
+30: [0, 60]
+31: [0, 60]
+32: [61, 75] The Obligatory Pirate's Cove: The Arrrbitrator
+33: [61, 75] The Obligatory Pirate's Cove: Amatearrr Night
+34: [0, 60]
+35: [0, 60]
+36: [0, 60]
+37: [0, 60]
+38: [0, 75]
+39: [0, 60]
+40: [0, 60]
+41: [61, 75] The Obligatory Pirate's Cove: Filching the Undarrwear
+42: [91, 99] forest friars castle? Barrrney's Barrr: A Test of Testarrrsterone, The Obligatory Pirate's Cove: The Beached Boys, The Penultimate Fantasy Airship: Rip Rop Wrappety Do, Wartime Hippy Camp (Frat Disguise): The Thin Tie-Dyed Line
+43: [0, 75]
+44: [0, 60]
+45: [0, 75]
+46: [0, 75]
+47: [91, 99] forest friars castle? Barrrney's Barrr: A Test of Testarrrsterone, The Obligatory Pirate's Cove: The Arrrbitrator, The Penultimate Fantasy Airship: F-F-Fantastic!, Wartime Hippy Camp (Frat Disguise): The Thin Tie-Dyed Line
+48: [81, 85] Barrrney's Barrr: That Explains All The Eyepatches, The Obligatory Pirate's Cove: Barrie Me at Sea, Wartime Hippy Camp (Frat Disguise): Blockin' Out the Scenery
+49: [91, 95] forest friars Barrrney's Barrr: That Explains All The Eyepatches, The Obligatory Pirate's Cove: Filching the Undarrwear
+50: [11, 75]
+51: [11, 60]
+52: [0, 10] LFM
+53: [11, 60]
+54: [11, 60]
+55: [61, 75] The Obligatory Pirate's Cove: The Arrrbitrator
+56: [96, 99] forest friars castle The Castle in the Clouds in the Sky (Basement): Out in the Open Source, The Obligatory Pirate's Cove: Barrie Me at Sea, The Penultimate Fantasy Airship: Random Lack of an Encounter
+57: [0, 10] LFM The Castle in the Clouds in the Sky (Basement): You Don't Mess Around with Gym
+58: [11, 75]
+59: [0, 10] LFM
+60: [11, 80]
+61: [0, 75]
+62: [91, 95] forest friars The Obligatory Pirate's Cove: A Dreadful Curse, The Penultimate Fantasy Airship: Gesundheitgeist!
+63: [11, 60]
+64: [11, 60]
+65: [91, 95] forest friars The Obligatory Pirate's Cove: A Dreadful Curse, The Penultimate Fantasy Airship: Don't Chew on That Spirit! / Random Lack of an Encounter
+66: [11, 60]
+67: [11, 60] The Penultimate Fantasy Airship: Hammering the Armory
+68: [11, 60]
+69: [0, 10] LFM
+70: [91, 95] forest friars The Obligatory Pirate's Cove: The Arrrbitrator, The Penultimate Fantasy Airship: Gesundheitgeist! / Random Lack of an Encounter / The Most Absorbent Spirit Ever
+71: [81, 85] Barrrney's Barrr: Yes, You're a Rock Starrr, The Penultimate Fantasy Airship: Random Lack of an Encounter
+72: [11, 75]
+73: [0, 75] The Penultimate Fantasy Airship: Hammering the Armory
+74: [11, 75] The Penultimate Fantasy Airship: Hammering the Armory
+75: [11, 80]
+76: [86, 90] forest Barrrney's Barrr: Yes, You're a Rock Starrr, The Obligatory Pirate's Cove: Amatearrr Night, The Penultimate Fantasy Airship: Don't Chew on That Spirit! / Gesundheitgeist! / Random Lack of an Encounter / Rip Rop Wrappety Do / The Most Absorbent Spirit Ever
+77: [11, 60]
+78: [0, 10] LFM
+79: [11, 75]
+80: [61, 80] The Castle in the Clouds in the Sky (Top Floor): Copper Feel, The Obligatory Pirate's Cove: The Arrrbitrator
+81: [11, 75]
+82: [11, 75]
+83: [11, 80]
+84: [0, 10] LFM
+85: [96, 99] forest friars castle Barrrney's Barrr: Yes, You're a Rock Starrr, The Castle in the Clouds in the Sky (Top Floor): Copper Feel, The Obligatory Pirate's Cove: Barrie Me at Sea, The Penultimate Fantasy Airship: Random Lack of an Encounter
+86: [11, 80]
+87: [11, 80] The Penultimate Fantasy Airship: Hammering the Armory
+88: [86, 90] forest Barrrney's Barrr: A Test of Testarrrsterone, The Obligatory Pirate's Cove: The Beached Boys, The Penultimate Fantasy Airship: Don't Chew on That Spirit! / Random Lack of an Encounter / Rip Rop Wrappety Do / The Most Absorbent Spirit Ever
+89: [11, 80]
+90: [11, 80]
+91: [11, 80]
+92: [11, 80]
+93: [11, 80]
+94: [91, 99] forest friars castle? Barrrney's Barrr: That Explains All The Eyepatches, The Obligatory Pirate's Cove: Filching the Undarrwear, The Penultimate Fantasy Airship: Gesundheitgeist! / Random Lack of an Encounter
+95: [11, 80]
+96: [86, 90] forest Barrrney's Barrr: Yes, You're a Rock Starrr, The Obligatory Pirate's Cove: Amatearrr Night, The Penultimate Fantasy Airship: F-F-Fantastic! / Random Lack of an Encounter
+97: [0, 80]
+98: [11, 80]
+99: [0, 10] LFM
+100: [96, 99] forest friars castle The Castle in the Clouds in the Sky (Basement): The Fast and the Furry-ous, The Obligatory Pirate's Cove: A Dreadful Curse, The Penultimate Fantasy Airship: Don't Chew on That Spirit! / F-F-Fantastic! / Random Lack of an Encounter
+101: [91, 95] forest friars The Obligatory Pirate's Cove: The Beached Boys, The Penultimate Fantasy Airship: Random Lack of an Encounter / Rip Rop Wrappety Do / The Most Absorbent Spirit Ever
+102: [11, 80]
+103: [11, 80]
+104: [11, 80]
+105: [0, 10] LFM
+106: [11, 80]
+107: [86, 90] forest The Obligatory Pirate's Cove: The Beached Boys, The Penultimate Fantasy Airship: Random Lack of an Encounter
+108: [11, 75]
+109: [96, 99] forest friars castle The Castle in the Clouds in the Sky (Basement): The Fast and the Furry-ous, The Obligatory Pirate's Cove: Filching the Undarrwear, The Penultimate Fantasy Airship: Gesundheitgeist! / Random Lack of an Encounter
+110: [11, 80] The Castle in the Clouds in the Sky (Basement): The Fast and the Furry-ous
+111: [86, 90] forest The Castle in the Clouds in the Sky (Basement): You Don't Mess Around with Gym, The Obligatory Pirate's Cove: The Arrrbitrator, The Penultimate Fantasy Airship: Don't Chew on That Spirit! / F-F-Fantastic! / Gesundheitgeist! / Random Lack of an Encounter / Rip Rop Wrappety Do
+112: [11, 60]
+113: [11, 80]
+114: [96, 99] forest friars castle The Castle in the Clouds in the Sky (Basement): Out in the Open Source, The Obligatory Pirate's Cove: Amatearrr Night, The Penultimate Fantasy Airship: F-F-Fantastic! / Gesundheitgeist! / Random Lack of an Encounter
+115: [11, 80] The Castle in the Clouds in the Sky (Basement): You Don't Mess Around with Gym
+116: [0, 10] LFM The Castle in the Clouds in the Sky (Basement): You Don't Mess Around with Gym
+117: [11, 75]
+118: [96, 99] forest friars castle The Castle in the Clouds in the Sky (Basement): Out in the Open Source, The Castle in the Clouds in the Sky (Top Floor): Copper Feel, The Obligatory Pirate's Cove: Barrie Me at Sea, The Penultimate Fantasy Airship: Random Lack of an Encounter
+119: [11, 80] The Castle in the Clouds in the Sky (Basement): You Don't Mess Around with Gym
+120: [11, 80] The Castle in the Clouds in the Sky (Basement): You Don't Mess Around with Gym
+121: [0, 75]
+122: [91, 95] forest friars The Obligatory Pirate's Cove: The Beached Boys, The Penultimate Fantasy Airship: Random Lack of an Encounter / The Most Absorbent Spirit Ever
+123: [11, 80]
+124: [81, 85] The Penultimate Fantasy Airship: Gesundheitgeist! / Random Lack of an Encounter / The Most Absorbent Spirit Ever
+125: [11, 80]
+126: [11, 80]
+127: [11, 75]
+128: [11, 80]
+129: [11, 75]
+130: [11, 80]
+131: [81, 85] The Penultimate Fantasy Airship: Don't Chew on That Spirit! / F-F-Fantastic! / Random Lack of an Encounter / Rip Rop Wrappety Do
+132: [11, 80]
+133: [0, 80] The Castle in the Clouds in the Sky (Basement): The Fast and the Furry-ous
+134: [11, 80] The Castle in the Clouds in the Sky (Basement): The Fast and the Furry-ous / You Don't Mess Around with Gym
+135: [86, 90] forest The Castle in the Clouds in the Sky (Basement): You Don't Mess Around with Gym, The Obligatory Pirate's Cove: Amatearrr Night, The Outskirts of Cobb's Knob: When Rocks Attack, The Penultimate Fantasy Airship: F-F-Fantastic! / Random Lack of an Encounter / The Most Absorbent Spirit Ever, The Poop Deck: It's Always Swordfish / O Cap'm, My Cap'm
+136: [91, 95] forest friars The Haunted Ballroom: Curtains, The Obligatory Pirate's Cove: A Dreadful Curse, The Outskirts of Cobb's Knob: Knob Goblin BBQ, The Penultimate Fantasy Airship: Random Lack of an Encounter / Rip Rop Wrappety Do
+137: [11, 80] The Castle in the Clouds in the Sky (Basement): You Don't Mess Around with Gym
+138: [96, 99] forest friars castle The Castle in the Clouds in the Sky (Basement): Out in the Open Source / You Don't Mess Around with Gym, The Castle in the Clouds in the Sky (Top Floor): Yeah, You're for Me, Punk Rock Giant, The Haunted Ballroom: Curtains / Strung-Up Quartet, The Obligatory Pirate's Cove: Amatearrr Night, The Outskirts of Cobb's Knob: When Rocks Attack, The Penultimate Fantasy Airship: F-F-Fantastic! / Gesundheitgeist! / Random Lack of an Encounter / Rip Rop Wrappety Do, The Poop Deck: It's Always Swordfish / O Cap'm, My Cap'm
+139: [96, 99] forest friars castle The Castle in the Clouds in the Sky (Basement): The Fast and the Furry-ous, The Castle in the Clouds in the Sky (Ground Floor): There's No Ability Like Possibility, The Haunted Ballroom: We'll All Be Flat, The Obligatory Pirate's Cove: A Dreadful Curse, The Outskirts of Cobb's Knob: Knob Goblin BBQ, The Penultimate Fantasy Airship: Random Lack of an Encounter / Rip Rop Wrappety Do
+140: [11, 80]
+141: [86, 90] forest The Obligatory Pirate's Cove: Filching the Undarrwear, The Outskirts of Cobb's Knob: When Rocks Attack, The Penultimate Fantasy Airship: F-F-Fantastic! / Gesundheitgeist! / Random Lack of an Encounter
+142: [91, 95] forest friars The Haunted Ballroom: We'll All Be Flat, The Obligatory Pirate's Cove: Amatearrr Night, The Outskirts of Cobb's Knob: When Rocks Attack, The Penultimate Fantasy Airship: Gesundheitgeist! / Random Lack of an Encounter
+143: [11, 80] The Castle in the Clouds in the Sky (Basement): You Don't Mess Around with Gym
+144: [11, 80] The Castle in the Clouds in the Sky (Basement): You Don't Mess Around with Gym
+145: [0, 80]
+146: [11, 80] The Castle in the Clouds in the Sky (Basement): You Don't Mess Around with Gym
+147: [86, 90] forest The Castle in the Clouds in the Sky (Basement): You Don't Mess Around with Gym, The Obligatory Pirate's Cove: The Beached Boys, The Outskirts of Cobb's Knob: Malice in Chains, The Penultimate Fantasy Airship: Don't Chew on That Spirit! / Random Lack of an Encounter / The Most Absorbent Spirit Ever, The Poop Deck: It's Always Swordfish
+148: [11, 80] The Castle in the Clouds in the Sky (Basement): You Don't Mess Around with Gym
+149: [11, 80]
+150: [11, 80]
+151: [91, 95] forest friars The Castle in the Clouds in the Sky (Top Floor): Yeah, You're for Me, Punk Rock Giant, The Haunted Ballroom: Curtains / Strung-Up Quartet, The Obligatory Pirate's Cove: Amatearrr Night, The Outskirts of Cobb's Knob: When Rocks Attack, The Penultimate Fantasy Airship: Random Lack of an Encounter / Rip Rop Wrappety Do, The Poop Deck: It's Always Swordfish / O Cap'm, My Cap'm
+152: [91, 95] forest friars The Haunted Ballroom: We'll All Be Flat, The Obligatory Pirate's Cove: Barrie Me at Sea, The Outskirts of Cobb's Knob: Knob Goblin BBQ, The Penultimate Fantasy Airship: Random Lack of an Encounter, The Poop Deck: It's Always Swordfish / O Cap'm, My Cap'm
+153: [11, 80]
+154: [11, 80]
+155: [86, 90] forest The Obligatory Pirate's Cove: A Dreadful Curse, The Outskirts of Cobb's Knob: When Rocks Attack, The Penultimate Fantasy Airship: F-F-Fantastic! / Random Lack of an Encounter, The Poop Deck: It's Always Swordfish / O Cap'm, My Cap'm
+156: [11, 80]
+157: [0, 80]
+158: [96, 80]
+159: [86, 90] forest Inside the Palindome: Do Geese See God?, The Obligatory Pirate's Cove: The Beached Boys, The Outskirts of Cobb's Knob: Malice in Chains, The Penultimate Fantasy Airship: F-F-Fantastic! / Rip Rop Wrappety Do / The Most Absorbent Spirit Ever, The Poop Deck: It's Always Swordfish
+160: [11, 80]
+161: [11, 80] The Castle in the Clouds in the Sky (Top Floor): Flavor of a Raver
+162: [96, 99] forest friars castle Inside the Palindome: Last Egg Gets Al, The Castle in the Clouds in the Sky (Basement): You Don't Mess Around with Gym, The Castle in the Clouds in the Sky (Ground Floor): Putting Off Is Off-Putting, The Castle in the Clouds in the Sky (Top Floor): Flavor of a Raver, The Haunted Ballroom: We'll All Be Flat, The Obligatory Pirate's Cove: The Beached Boys, The Outskirts of Cobb's Knob: When Rocks Attack, The Penultimate Fantasy Airship: Rip Rop Wrappety Do, The Poop Deck: It's Always Swordfish
+163: [81, 85] The Outskirts of Cobb's Knob: When Rocks Attack, The Poop Deck: It's Always Swordfish / O Cap'm, My Cap'm
+164: [91, 95] forest friars Inside the Palindome: Do Geese See God? / Rod Nevada, Vendor, The Haunted Ballroom: Curtains, The Obligatory Pirate's Cove: Filching the Undarrwear, The Outskirts of Cobb's Knob: Malice in Chains, The Poop Deck: It's Always Swordfish
+165: [11, 80]
+166: [11, 80]
+167: [11, 80] The Castle in the Clouds in the Sky (Top Floor): Yeah, You're for Me, Punk Rock Giant
+168: [86, 90] forest Inside the Palindome: Last Egg Gets Al, The Castle in the Clouds in the Sky (Basement): You Don't Mess Around with Gym, The Obligatory Pirate's Cove: The Arrrbitrator, The Outskirts of Cobb's Knob: Malice in Chains, The Penultimate Fantasy Airship: Random Lack of an Encounter, The Poop Deck: It's Always Swordfish
+169: [0, 10] LFM
+170: [11, 80]
+171: [11, 80]
+172: [11, 80]
+173: [11, 80] The Castle in the Clouds in the Sky (Basement): You Don't Mess Around with Gym
+174: [11, 80]
+175: [11, 80]
+176: [11, 80]
+177: [11, 80]
+178: [11, 80]
+179: [11, 80]
+180: [11, 80]
+181: [0, 10] LFM The Castle in the Clouds in the Sky (Basement): You Don't Mess Around with Gym
+182: [11, 80]
+183: [81, 85] The Outskirts of Cobb's Knob: When Rocks Attack, The Penultimate Fantasy Airship: F-F-Fantastic! / The Most Absorbent Spirit Ever, The Poop Deck: It's Always Swordfish
+184: [11, 80] The Castle in the Clouds in the Sky (Basement): You Don't Mess Around with Gym
+185: [0, 10] LFM
+186: [81, 85] Inside the Palindome: Last Egg Gets Al, The Outskirts of Cobb's Knob: Knob Goblin BBQ, The Penultimate Fantasy Airship: Hammering the Armory / Random Lack of an Encounter, The Poop Deck: It's Always Swordfish / O Cap'm, My Cap'm, Wartime Hippy Camp (Frat Disguise): The Thin Tie-Dyed Line
+187: [11, 80]
+188: [11, 80]
+189: [86, 90] forest Inside the Palindome: Do Geese See God? / Rod Nevada, Vendor, The Outskirts of Cobb's Knob: Malice in Chains, The Penultimate Fantasy Airship: Gesundheitgeist! / Random Lack of an Encounter, The Poop Deck: It's Always Swordfish, Wartime Hippy Camp (Frat Disguise): Bait and Switch
+190: [11, 75]
+191: [91, 95] forest friars Inside the Palindome: Rod Nevada, Vendor, The Haunted Ballroom: Curtains, The Outskirts of Cobb's Knob: Knob Goblin BBQ, The Penultimate Fantasy Airship: Random Lack of an Encounter, Wartime Frat House (Hippy Disguise): Catching Some Zetas, Wartime Hippy Camp (Frat Disguise): Bait and Switch
+192: [11, 80]
+193: [0, 10] LFM
+194: [11, 80]
+195: [11, 80]
+196: [11, 80]
+197: [11, 80]
+198: [11, 80]
+199: [11, 80]
+200: [11, 80]
+201: [11, 80]
+202: [0, 10] LFM
+203: [11, 80]
+204: [91, 95] forest friars Inside the Palindome: Rod Nevada, Vendor, The Haunted Ballroom: We'll All Be Flat, The Outskirts of Cobb's Knob: When Rocks Attack, The Penultimate Fantasy Airship: F-F-Fantastic! / Random Lack of an Encounter, The Poop Deck: It's Always Swordfish / O Cap'm, My Cap'm, Wartime Hippy Camp (Frat Disguise): Blockin' Out the Scenery
+205: [11, 80]
+206: [86, 90] forest Inside the Palindome: Do Geese See God? / Last Egg Gets Al / Rod Nevada, Vendor, The Haunted Ballroom: We'll All Be Flat, The Outskirts of Cobb's Knob: Malice in Chains, The Penultimate Fantasy Airship: Random Lack of an Encounter / Rip Rop Wrappety Do, The Poop Deck: It's Always Swordfish, Wartime Hippy Camp (Frat Disguise): Bait and Switch
+207: [11, 80]
+208: [11, 80]
+209: [86, 90] forest Inside the Palindome: Do Geese See God? / Last Egg Gets Al / Rod Nevada, Vendor, The Outskirts of Cobb's Knob: Knob Goblin BBQ, The Penultimate Fantasy Airship: Random Lack of an Encounter, Wartime Hippy Camp (Frat Disguise): Bait and Switch
+210: [0, 10] LFM
+211: [0, 10] LFM
+212: [11, 80]
+213: [11, 80]
+214: [11, 80] The Castle in the Clouds in the Sky (Basement): You Don't Mess Around with Gym
+215: [11, 80]
+216: [86, 90] forest Inside the Palindome: Do Geese See God? / Last Egg Gets Al / Rod Nevada, Vendor, The Outskirts of Cobb's Knob: When Rocks Attack, The Penultimate Fantasy Airship: F-F-Fantastic! / Random Lack of an Encounter, The Poop Deck: It's Always Swordfish / O Cap'm, My Cap'm, Wartime Frat House (Hippy Disguise): Catching Some Zetas, Wartime Hippy Camp (Frat Disguise): Bait and Switch
+217: [11, 80]
+218: [11, 80]
+219: [11, 80]
+220: [91, 95] forest friars Inside the Palindome: Do Geese See God? / Rod Nevada, Vendor, The Haunted Ballroom: We'll All Be Flat, The Outskirts of Cobb's Knob: Malice in Chains, The Penultimate Fantasy Airship: Don't Chew on That Spirit! / F-F-Fantastic! / Rip Rop Wrappety Do, Wartime Frat House (Hippy Disguise): Catching Some Zetas, Wartime Hippy Camp (Frat Disguise): Bait and Switch
+221: [11, 80] Inside the Palindome: Rod Nevada, Vendor
+222: [0, 10] LFM
+223: [11, 80]
+224: [11, 80]
+225: [11, 75]
+226: [11, 80]
+227: [11, 80] Inside the Palindome: Last Egg Gets Al
+228: [96, 99] forest friars castle Inside the Palindome: Last Egg Gets Al, The Castle in the Clouds in the Sky (Basement): You Don't Mess Around with Gym, The Castle in the Clouds in the Sky (Top Floor): Flavor of a Raver, The Haunted Ballroom: We'll All Be Flat, The Outskirts of Cobb's Knob: Malice in Chains, The Penultimate Fantasy Airship: Random Lack of an Encounter, Wartime Frat House (Hippy Disguise): One Less Room Than In That Movie, Wartime Hippy Camp (Frat Disguise): The Thin Tie-Dyed Line
+229: [86, 90] forest Inside the Palindome: Do Geese See God? / Last Egg Gets Al, The Outskirts of Cobb's Knob: Malice in Chains, The Penultimate Fantasy Airship: F-F-Fantastic! / Gesundheitgeist! / The Most Absorbent Spirit Ever, Wartime Frat House (Hippy Disguise): Catching Some Zetas, Wartime Hippy Camp (Frat Disguise): Bait and Switch
+230: [11, 80] The Castle in the Clouds in the Sky (Basement): You Don't Mess Around with Gym
+231: [11, 80] The Castle in the Clouds in the Sky (Basement): You Don't Mess Around with Gym
+232: [0, 10] LFM
+233: [11, 80]
+234: [0, 10] LFM The Castle in the Clouds in the Sky (Basement): You Don't Mess Around with Gym
+235: [11, 80]
+236: [0, 10] LFM The Castle in the Clouds in the Sky (Basement): You Don't Mess Around with Gym
+237: [11, 80] Inside the Palindome: Do Geese See God?
+238: [81, 85] The Outskirts of Cobb's Knob: Knob Goblin BBQ, The Penultimate Fantasy Airship: Don't Chew on That Spirit! / Random Lack of an Encounter, The Poop Deck: It's Always Swordfish, Wartime Frat House (Hippy Disguise): Catching Some Zetas, Wartime Hippy Camp (Frat Disguise): Bait and Switch
+239: [11, 80]
+240: [11, 80]
+241: [11, 80]
+242: [0, 10] LFM
+243: [0, 10] LFM
+244: [11, 80] Inside the Palindome: Last Egg Gets Al
+245: [0, 10] LFM
+246: [11, 80]
+247: [11, 80] The Castle in the Clouds in the Sky (Basement): You Don't Mess Around with Gym, The Castle in the Clouds in the Sky (Top Floor): Melon Collie and the Infinite Lameness
+248: [11, 80]
+249: [96, 99] forest friars castle The Castle in the Clouds in the Sky (Top Floor): Yeah, You're for Me, Punk Rock Giant, The Outskirts of Cobb's Knob: When Rocks Attack, The Penultimate Fantasy Airship: F-F-Fantastic! / Rip Rop Wrappety Do, The Poop Deck: It's Always Swordfish / O Cap'm, My Cap'm, Wartime Hippy Camp (Frat Disguise): Blockin' Out the Scenery
+250: [81, 85] Inside the Palindome: Do Geese See God?, The Outskirts of Cobb's Knob: Malice in Chains, The Penultimate Fantasy Airship: F-F-Fantastic! / Random Lack of an Encounter, Wartime Frat House (Hippy Disguise): Catching Some Zetas, Wartime Hippy Camp (Frat Disguise): Bait and Switch
+251: [11, 75]
+252: [91, 95] forest friars Inside the Palindome: Last Egg Gets Al / Rod Nevada, Vendor, The Haunted Ballroom: Curtains / Strung-Up Quartet, The Outskirts of Cobb's Knob: When Rocks Attack, The Penultimate Fantasy Airship: Random Lack of an Encounter / Rip Rop Wrappety Do, Wartime Hippy Camp (Frat Disguise): Blockin' Out the Scenery
+253: [96, 99] forest friars castle Inside the Palindome: Do Geese See God?, The Castle in the Clouds in the Sky (Basement): You Don't Mess Around with Gym, The Castle in the Clouds in the Sky (Top Floor): Copper Feel, The Outskirts of Cobb's Knob: Malice in Chains, The Penultimate Fantasy Airship: F-F-Fantastic!
+254: [11, 80] Inside the Palindome: Last Egg Gets Al, The Penultimate Fantasy Airship: Hammering the Armory
+255: [11, 80]
+256: [11, 80] The Castle in the Clouds in the Sky (Basement): You Don't Mess Around with Gym
+257: [86, 90] forest Inside the Palindome: Last Egg Gets Al / Rod Nevada, Vendor, The Haunted Ballroom: We'll All Be Flat, The Outskirts of Cobb's Knob: Malice in Chains, The Penultimate Fantasy Airship: The Most Absorbent Spirit Ever, Wartime Frat House (Hippy Disguise): One Less Room Than In That Movie, Wartime Hippy Camp (Frat Disguise): The Thin Tie-Dyed Line
+258: [11, 80]
+259: [11, 80]
+260: [11, 80]
+261: [11, 80]
+262: [86, 90] forest Inside the Palindome: Do Geese See God? / Last Egg Gets Al, The Outskirts of Cobb's Knob: When Rocks Attack, The Penultimate Fantasy Airship: Random Lack of an Encounter, Wartime Frat House (Hippy Disguise): One Less Room Than In That Movie, Wartime Hippy Camp (Frat Disguise): The Thin Tie-Dyed Line
+263: [11, 80]
+264: [11, 80]
+265: [11, 80]
+266: [91, 95] forest friars Inside the Palindome: Do Geese See God? / Last Egg Gets Al, The Outskirts of Cobb's Knob: When Rocks Attack, The Penultimate Fantasy Airship: Random Lack of an Encounter, Wartime Frat House (Hippy Disguise): One Less Room Than In That Movie, Wartime Hippy Camp (Frat Disguise): The Thin Tie-Dyed Line
+267: [11, 80]
+268: [11, 80]
+269: [11, 80] The Castle in the Clouds in the Sky (Basement): You Don't Mess Around with Gym
+270: [11, 80]
+271: [11, 80]
+272: [11, 80] Inside the Palindome: Rod Nevada, Vendor
+273: [11, 80]
+274: [11, 80]
+275: [11, 80]
+276: [11, 80]
+277: [11, 80]
+278: [11, 80] Inside the Palindome: Do Geese See God?
+279: [11, 80]
+280: [11, 80]
+281: [11, 80]
+282: [81, 85] The Outskirts of Cobb's Knob: When Rocks Attack, The Penultimate Fantasy Airship: F-F-Fantastic! / Random Lack of an Encounter, Wartime Frat House (Hippy Disguise): Fratacombs, Wartime Hippy Camp (Frat Disguise): Blockin' Out the Scenery
+283: [11, 80]
+284: [91, 95] forest friars The Haunted Ballroom: We'll All Be Flat, The Outskirts of Cobb's Knob: Knob Goblin BBQ, The Penultimate Fantasy Airship: Random Lack of an Encounter
+285: [11, 80]
+286: [11, 80]
+287: [11, 80]
+288: [11, 80]
+289: [11, 80]
+290: [81, 85] The Outskirts of Cobb's Knob: Knob Goblin BBQ, The Penultimate Fantasy Airship: Rip Rop Wrappety Do
+291: [11, 80]
+292: [11, 80]
+293: [0, 10] LFM
+294: [11, 80]
+295: [11, 80]
+296: [11, 80]
+297: [0, 10] LFM
+298: [11, 80]
+299: [86, 90] forest The Haunted Ballroom: We'll All Be Flat, The Outskirts of Cobb's Knob: When Rocks Attack, The Penultimate Fantasy Airship: F-F-Fantastic!
+300: [0, 10] LFM
+301: [11, 80]
+302: [11, 80]
+303: [11, 80]
+304: [96, 80]
+305: [11, 80] The Castle in the Clouds in the Sky (Basement): You Don't Mess Around with Gym
+306: [11, 80]
+307: [96, 99] forest friars castle Inside the Palindome: Rod Nevada, Vendor, The Castle in the Clouds in the Sky (Basement): Out in the Open Source / You Don't Mess Around with Gym, The Castle in the Clouds in the Sky (Ground Floor): Home on the Free Range, The Castle in the Clouds in the Sky (Top Floor): Yeah, You're for Me, Punk Rock Giant, The Haunted Ballroom: We'll All Be Flat, The Outskirts of Cobb's Knob: When Rocks Attack
+308: [96, 99] forest friars castle Inside the Palindome: Last Egg Gets Al, The Castle in the Clouds in the Sky (Ground Floor): Putting Off Is Off-Putting, The Castle in the Clouds in the Sky (Top Floor): Flavor of a Raver, The Outskirts of Cobb's Knob: When Rocks Attack
+309: [11, 80]
+310: [0, 10] LFM The Castle in the Clouds in the Sky (Basement): You Don't Mess Around with Gym
+311: [96, 99] forest friars castle Inside the Palindome: Do Geese See God?, The Castle in the Clouds in the Sky (Ground Floor): There's No Ability Like Possibility, The Castle in the Clouds in the Sky (Top Floor): Melon Collie and the Infinite Lameness, The Outskirts of Cobb's Knob: Malice in Chains
+312: [11, 80]
+313: [11, 80]
+314: [0, 10] LFM
+315: [11, 80]
+316: [86, 90] forest The Outskirts of Cobb's Knob: When Rocks Attack
+317: [11, 80]
+318: [0, 10] LFM
+319: [11, 80]
+320: [11, 80]
+321: [11, 80]
+322: [0, 10] LFM
+323: [11, 80]
+324: [0, 10] LFM The Castle in the Clouds in the Sky (Top Floor): Yeah, You're for Me, Punk Rock Giant
+325: [81, 85] The Outskirts of Cobb's Knob: When Rocks Attack
+326: [11, 80]
+327: [86, 90] forest Inside the Palindome: Last Egg Gets Al, The Outskirts of Cobb's Knob: Knob Goblin BBQ
+328: [11, 80]
+329: [11, 80]
+330: [11, 80]
+331: [11, 80]
+332: [81, 85] The Outskirts of Cobb's Knob: Knob Goblin BBQ
+333: [11, 80]
+334: [0, 10] LFM The Castle in the Clouds in the Sky (Top Floor): Flavor of a Raver
+335: [0, 10] LFM
+336: [86, 95] forest friars? The Outskirts of Cobb's Knob: Knob Goblin BBQ
+337: [81, 85] The Outskirts of Cobb's Knob: Knob Goblin BBQ
+338: [0, 10] LFM
+339: [11, 80]
+340: [11, 80]
+341: [0, 10] LFM
+342: [11, 80]
+343: [11, 80]
+344: [11, 80] The Castle in the Clouds in the Sky (Basement): You Don't Mess Around with Gym
+345: [11, 80]
+346: [0, 10] LFM
+347: [11, 80]
+348: [11, 80]
+349: [0, 80]
+350: [86, 90] forest The Outskirts of Cobb's Knob: Malice in Chains, The Poop Deck: It's Always Swordfish
+351: [11, 80] The Haunted Ballroom: We'll All Be Flat
+352: [11, 80]
+353: [11, 80]
+354: [11, 80]
+355: [96, 99] forest friars castle The Castle in the Clouds in the Sky (Basement): You Don't Mess Around with Gym, The Castle in the Clouds in the Sky (Top Floor): Copper Feel, The Outskirts of Cobb's Knob: Malice in Chains
+356: [11, 75]
+357: [91, 95] forest friars
+358: [11, 80]
+359: [11, 80]
+360: [0, 10] LFM
+361: [0, 80]
+362: [0, 10] LFM
+363: [11, 80]
+364: [11, 80]
+365: [11, 80]
+366: [11, 80]
+367: [11, 80]
+368: [11, 80]
+369: [11, 80] The Castle in the Clouds in the Sky (Basement): You Don't Mess Around with Gym
+370: [0, 10] LFM
+371: [11, 80]
+372: [11, 80]
+373: [0, 80]
+374: [81, 85] The Outskirts of Cobb's Knob: Knob Goblin BBQ
+375: [11, 80]
+376: [0, 10] LFM
+377: [91, 95] forest friars Inside the Palindome: Last Egg Gets Al, The Castle in the Clouds in the Sky (Basement): You Don't Mess Around with Gym, The Haunted Ballroom: Curtains / Strung-Up Quartet, The Outskirts of Cobb's Knob: When Rocks Attack
+378: [11, 80]
+379: [11, 75]
+380: [11, 75]
+381: [11, 80]
+382: [11, 75]
+383: [0, 10] LFM
+384: [11, 80]
+385: [86, 90] forest Inside the Palindome: Do Geese See God?, The Haunted Ballroom: We'll All Be Flat, The Outskirts of Cobb's Knob: When Rocks Attack
+386: [11, 80]
+387: [0, 10] LFM
+388: [81, 85] The Outskirts of Cobb's Knob: When Rocks Attack, The Penultimate Fantasy Airship: Random Lack of an Encounter
+389: [11, 80]
+390: [11, 80]
+391: [96, 99] forest friars castle Inside the Palindome: Rod Nevada, Vendor, The Castle in the Clouds in the Sky (Top Floor): Flavor of a Raver, The Haunted Ballroom: Curtains, The Outskirts of Cobb's Knob: Malice in Chains
+392: [11, 80]
+393: [11, 80]
+394: [96, 99] forest friars castle The Castle in the Clouds in the Sky (Top Floor): Flavor of a Raver, The Haunted Ballroom: Curtains, The Outskirts of Cobb's Knob: Malice in Chains
+395: [11, 80]
+396: [11, 80]
+397: [11, 80]
+398: [11, 80] The Penultimate Fantasy Airship: Hammering the Armory
+399: [11, 80]
+400: [81, 85] The Outskirts of Cobb's Knob: Knob Goblin BBQ, The Penultimate Fantasy Airship: Random Lack of an Encounter
+401: [91, 99] forest friars castle? The Outskirts of Cobb's Knob: Knob Goblin BBQ, The Penultimate Fantasy Airship: Random Lack of an Encounter
+402: [11, 80]
+403: [11, 75]
+404: [11, 80]
+405: [11, 80]
+406: [0, 80]
+407: [11, 80]
+408: [96, 99] forest friars castle The Castle in the Clouds in the Sky (Top Floor): Flavor of a Raver, The Outskirts of Cobb's Knob: Malice in Chains, The Penultimate Fantasy Airship: Random Lack of an Encounter
+409: [11, 80]
+410: [91, 95] forest friars The Outskirts of Cobb's Knob: When Rocks Attack, The Penultimate Fantasy Airship: Random Lack of an Encounter
+411: [11, 80]
+412: [11, 80]
+413: [11, 80]
+414: [0, 10] LFM
+415: [11, 80]
+416: [11, 80]
+417: [11, 80]
+418: [0, 75]
+419: [11, 80]
+420: [11, 80]
+421: [0, 10] LFM
+422: [11, 80]
+423: [11, 80]
+424: [86, 90] forest The Outskirts of Cobb's Knob: Knob Goblin BBQ, The Penultimate Fantasy Airship: Gesundheitgeist!
+425: [0, 10] LFM
+426: [11, 80]
+427: [11, 80]
+428: [91, 99] forest friars castle? The Outskirts of Cobb's Knob: Malice in Chains, The Penultimate Fantasy Airship: Random Lack of an Encounter
+429: [11, 80]
+430: [86, 90] forest The Outskirts of Cobb's Knob: Malice in Chains, The Penultimate Fantasy Airship: Don't Chew on That Spirit! / Gesundheitgeist!
+431: [11, 80]
+432: [11, 80]
+433: [86, 90] forest The Outskirts of Cobb's Knob: Malice in Chains, The Penultimate Fantasy Airship: The Most Absorbent Spirit Ever
+434: [11, 80]
+435: [11, 80]
+436: [11, 80]
+437: [91, 99] forest friars castle? The Outskirts of Cobb's Knob: Knob Goblin BBQ, The Penultimate Fantasy Airship: Random Lack of an Encounter
+438: [11, 80]
+439: [11, 80]
+440: [11, 80]
+441: [11, 80]
+442: [0, 80]
+443: [81, 85] The Outskirts of Cobb's Knob: Malice in Chains, The Penultimate Fantasy Airship: Don't Chew on That Spirit! / Rip Rop Wrappety Do
+444: [11, 80]
+445: [11, 80]
+446: [11, 80]
+447: [11, 80]
+448: [11, 80]
+449: [91, 99] forest friars castle? The Outskirts of Cobb's Knob: Malice in Chains, The Penultimate Fantasy Airship: F-F-Fantastic! / Random Lack of an Encounter
+450: [11, 80]
+451: [11, 80]
+452: [11, 80]
+453: [11, 80]
+454: [0, 80]
+455: [11, 80]
+456: [11, 80]
+457: [11, 80]
+458: [11, 80]
+459: [11, 80]
+460: [11, 80]
+461: [11, 80]
+462: [96, 99] forest friars castle The Castle in the Clouds in the Sky (Basement): You Don't Mess Around with Gym, The Outskirts of Cobb's Knob: Malice in Chains, The Penultimate Fantasy Airship: Random Lack of an Encounter
+463: [11, 80]
+464: [96, 80] The Castle in the Clouds in the Sky (Basement): You Don't Mess Around with Gym
+465: [11, 80]
+466: [0, 80]
+467: [91, 85] The Outskirts of Cobb's Knob: Malice in Chains, The Penultimate Fantasy Airship: The Most Absorbent Spirit Ever
+468: [86, 85] The Outskirts of Cobb's Knob: When Rocks Attack, The Penultimate Fantasy Airship: Random Lack of an Encounter
+469: [91, 85] The Outskirts of Cobb's Knob: Knob Goblin BBQ, The Penultimate Fantasy Airship: Random Lack of an Encounter
+470: [11, 80]
+471: [86, 85] The Outskirts of Cobb's Knob: Malice in Chains, The Penultimate Fantasy Airship: Rip Rop Wrappety Do
+472: [86, 85] The Outskirts of Cobb's Knob: Knob Goblin BBQ, The Penultimate Fantasy Airship: Random Lack of an Encounter
+473: [11, 80]
+474: [0, 10] LFM
+475: [11, 80]
+476: [11, 80]
+477: [0, 10] LFM
+478: [86, 99] forest friars? castle? The Outskirts of Cobb's Knob: Malice in Chains
+479: [91, 99] forest friars castle? The Outskirts of Cobb's Knob: Malice in Chains, The Penultimate Fantasy Airship: F-F-Fantastic!
+480: [11, 80]
+481: [96, 99] forest friars castle The Castle in the Clouds in the Sky (Top Floor): Yeah, You're for Me, Punk Rock Giant, The Outskirts of Cobb's Knob: When Rocks Attack
+482: [11, 80]
+483: [81, 85] The Outskirts of Cobb's Knob: Knob Goblin BBQ
+484: [96, 80]
+485: [0, 10] LFM
+486: [91, 95] forest friars The Outskirts of Cobb's Knob: When Rocks Attack
+487: [11, 80]
+488: [11, 80]
+489: [11, 80]
+490: [86, 95] forest friars? The Outskirts of Cobb's Knob: Malice in Chains
+491: [11, 80]
+492: [11, 80]
+493: [91, 95] forest friars The Outskirts of Cobb's Knob: Knob Goblin BBQ
+494: [91, 95] forest friars The Outskirts of Cobb's Knob: Malice in Chains
+495: [11, 80]
+496: [81, 90] forest? The Outskirts of Cobb's Knob: Malice in Chains
+497: [11, 80]
+498: [86, 95] forest friars? The Outskirts of Cobb's Knob: When Rocks Attack
+499: [11, 80]
+500: [0, 60]
+501: [0, 60]
+502: [0, 80]
+503: [96, 99] forest friars castle
+504: [0, 80]
+505: [0, 80]
+506: [86, 90] forest Barrrney's Barrr: That Explains All The Eyepatches, The Obligatory Pirate's Cove: Barrie Me at Sea, The Outskirts of Cobb's Knob: Knob Goblin BBQ
+507: [61, 80] The Obligatory Pirate's Cove: Barrie Me at Sea
+508: [96, 99] forest friars castle Barrrney's Barrr: Yes, You're a Rock Starrr, The Castle in the Clouds in the Sky (Basement): The Fast and the Furry-ous, The Obligatory Pirate's Cove: A Dreadful Curse, The Outskirts of Cobb's Knob: Malice in Chains
+509: [0, 60]
+510: [0, 75]
+511: [0, 75] The Castle in the Clouds in the Sky (Basement): You Don't Mess Around with Gym
+512: [0, 75]
+513: [0, 75]
+514: [0, 75]
+515: [0, 50]
+516: [0, 75]
+517: [0, 75]
+518: [81, 85] The Obligatory Pirate's Cove: A Dreadful Curse, The Outskirts of Cobb's Knob: Malice in Chains, The Poop Deck: It's Always Swordfish
+519: [0, 75]
+520: [91, 99] forest friars castle? The Obligatory Pirate's Cove: Filching the Undarrwear, The Outskirts of Cobb's Knob: Malice in Chains
+521: [0, 60]
+522: [61, 80] The Obligatory Pirate's Cove: Amatearrr Night
+523: [0, 80]
+524: [0, 80]
+525: [86, 95] forest friars? The Obligatory Pirate's Cove: Filching the Undarrwear, The Outskirts of Cobb's Knob: Malice in Chains
+526: [86, 90] forest The Obligatory Pirate's Cove: Amatearrr Night, The Outskirts of Cobb's Knob: When Rocks Attack
+527: [91, 95] forest friars The Obligatory Pirate's Cove: The Beached Boys, The Outskirts of Cobb's Knob: Malice in Chains
+528: [0, 80]
+529: [0, 80]
+530: [0, 80]
+531: [0, 80]
+532: [0, 80]
+533: [0, 80]
+534: [0, 80]
+535: [0, 80]
+536: [0, 80]
+537: [86, 90] forest Inside the Palindome: Do Geese See God?, The Obligatory Pirate's Cove: Barrie Me at Sea, The Outskirts of Cobb's Knob: Knob Goblin BBQ
+538: [86, 90] forest The Outskirts of Cobb's Knob: When Rocks Attack
+539: [96, 80]
+540: [0, 80]
+541: [0, 80]
+542: [96, 99] forest friars castle The Castle in the Clouds in the Sky (Top Floor): Copper Feel, The Outskirts of Cobb's Knob: Knob Goblin BBQ
+543: [0, 80]
+544: [0, 80]
+545: [0, 80]
+546: [0, 80]
+547: [0, 80]
+548: [91, 95] forest friars
+549: [0, 80]
+550: [0, 80]
+551: [0, 80]
+552: [0, 80]
+553: [0, 80]
+554: [0, 80]
+555: [0, 80]
+556: [0, 80]
+557: [0, 80]
+558: [0, 80]
+559: [86, 90] forest Inside the Palindome: Last Egg Gets Al, The Penultimate Fantasy Airship: Random Lack of an Encounter
+560: [0, 80]
+561: [0, 80]
+562: [0, 80]
+563: [91, 95] forest friars The Penultimate Fantasy Airship: Gesundheitgeist!
+564: [0, 80]
+565: [81, 85] The Penultimate Fantasy Airship: Don't Chew on That Spirit!
+566: [0, 80]
+567: [0, 80]
+568: [96, 99] forest friars castle Inside the Palindome: Rod Nevada, Vendor, The Castle in the Clouds in the Sky (Top Floor): Yeah, You're for Me, Punk Rock Giant, The Penultimate Fantasy Airship: Random Lack of an Encounter
+569: [86, 90] forest Inside the Palindome: Rod Nevada, Vendor, The Penultimate Fantasy Airship: Random Lack of an Encounter
+570: [0, 80]
+571: [0, 80]
+572: [91, 99] forest friars castle? The Penultimate Fantasy Airship: The Most Absorbent Spirit Ever
+573: [0, 80]
+574: [86, 90] forest The Penultimate Fantasy Airship: Random Lack of an Encounter
+575: [0, 80]
+576: [0, 80]
+577: [0, 80]
+578: [0, 80]
+579: [0, 80]
+580: [0, 80]
+581: [0, 80]
+582: [86, 90] forest The Penultimate Fantasy Airship: Random Lack of an Encounter
+583: [0, 80]
+584: [0, 80]
+585: [0, 80]
+586: [91, 99] forest friars castle?
+587: [0, 80]
+588: [0, 80]
+589: [0, 80]
+590: [0, 80]
+591: [0, 80]
+592: [91, 99] forest friars castle? The Penultimate Fantasy Airship: Random Lack of an Encounter, Wartime Frat House (Hippy Disguise): One Less Room Than In That Movie
+593: [0, 80]
+594: [91, 99] forest friars castle? The Penultimate Fantasy Airship: Rip Rop Wrappety Do
+595: [0, 80]
+596: [0, 80]
+597: [0, 80]
+598: [0, 80]
+599: [0, 80]
+600: [96, 80]
+601: [96, 99] forest friars castle The Penultimate Fantasy Airship: Random Lack of an Encounter, Wartime Frat House (Hippy Disguise): Catching Some Zetas
+602: [0, 80]
+603: [0, 80]
+604: [0, 80]
+605: [0, 80]
+606: [0, 80]
+607: [0, 80]
+608: [0, 80]
+609: [0, 80]
+610: [0, 80]
+611: [0, 80]
+612: [0, 80]
+613: [0, 80]
+614: [81, 85] The Penultimate Fantasy Airship: Random Lack of an Encounter, The Poop Deck: It's Always Swordfish
+615: [81, 85] The Penultimate Fantasy Airship: Random Lack of an Encounter
+616: [0, 80]
+617: [0, 80]
+618: [0, 80]
+619: [0, 80]
+620: [0, 80]
+621: [0, 80]
+622: [0, 80]
+623: [0, 80]
+624: [0, 80]
+625: [0, 80]
+626: [0, 80]
+627: [0, 80]
+628: [0, 80]
+629: [0, 80]
+630: [0, 80]
+631: [0, 80]
+632: [0, 75]
+633: [0, 80]
+634: [0, 80]
+635: [81, 90] forest? The Penultimate Fantasy Airship: Random Lack of an Encounter, Wartime Frat House (Hippy Disguise): Fratacombs, Wartime Hippy Camp (Frat Disguise): Blockin' Out the Scenery
+636: [0, 80]
+637: [11, 75]
+638: [11, 75]
+639: [96, 80]
+640: [11, 80]
+641: [91, 99] forest friars castle? The Haunted Ballroom: We'll All Be Flat, The Penultimate Fantasy Airship: Random Lack of an Encounter
+642: [11, 80]
+643: [0, 10] LFM
+644: [11, 80]
+645: [86, 99] forest friars? castle? The Penultimate Fantasy Airship: Random Lack of an Encounter
+646: [11, 80]
+647: [0, 10] LFM
+648: [11, 75]
+649: [0, 80]
+650: [0, 10] LFM
+651: [86, 95] forest friars? The Penultimate Fantasy Airship: F-F-Fantastic! / Gesundheitgeist!
+652: [96, 80]
+653: [96, 80]
+654: [96, 99] forest friars castle The Penultimate Fantasy Airship: Random Lack of an Encounter
+655: [11, 80]
+656: [11, 80]
+657: [11, 80]
+658: [11, 80]
+659: [11, 80]
+660: [11, 80]
+661: [0, 80]
+662: [0, 80]
+663: [0, 80]
+664: [0, 80]
+665: [91, 99] forest friars castle? The Penultimate Fantasy Airship: Random Lack of an Encounter
+666: [0, 80]
+667: [11, 80]
+668: [11, 80]
+669: [11, 80]
+670: [11, 80]
+671: [11, 80]
+672: [91, 99] forest friars castle? The Penultimate Fantasy Airship: Don't Chew on That Spirit!
+673: [11, 80]
+674: [0, 10] LFM
+675: [81, 90] forest? The Penultimate Fantasy Airship: Random Lack of an Encounter, The Poop Deck: It's Always Swordfish / O Cap'm, My Cap'm
+676: [11, 80]
+677: [11, 80]
+678: [91, 99] forest friars castle? The Penultimate Fantasy Airship: The Most Absorbent Spirit Ever
+679: [0, 80]
+680: [0, 80]
+681: [0, 80]
+682: [0, 80]
+683: [0, 80]
+684: [0, 80]
+685: [0, 80]
+686: [0, 80]
+687: [0, 75]
+688: [0, 80]
+689: [0, 80]
+690: [0, 80]
+691: [0, 80]
+692: [0, 75]
+693: [0, 80]
+694: [0, 80]
+695: [0, 80]
+696: [81, 99] forest? friars? castle? The Penultimate Fantasy Airship: Random Lack of an Encounter / Rip Rop Wrappety Do, The Poop Deck: It's Always Swordfish / O Cap'm, My Cap'm
+697: [0, 80]
+698: [0, 80]
+699: [0, 80]
+700: [11, 80]
+701: [0, 80]
+702: [81, 99] forest? friars? castle? The Penultimate Fantasy Airship: Random Lack of an Encounter
+703: [81, 99] forest? friars? castle? The Penultimate Fantasy Airship: F-F-Fantastic! / Gesundheitgeist!
+704: [0, 80]
+705: [0, 10] LFM
+706: [11, 80]
+707: [11, 80]
+708: [81, 95] forest? friars? The Penultimate Fantasy Airship: Random Lack of an Encounter / Rip Rop Wrappety Do
+709: [96, 99] forest friars castle The Castle in the Clouds in the Sky (Basement): The Fast and the Furry-ous / You Don't Mess Around with Gym, The Haunted Ballroom: Curtains, The Penultimate Fantasy Airship: Random Lack of an Encounter
+710: [0, 80] The Castle in the Clouds in the Sky (Basement): You Don't Mess Around with Gym
+711: [11, 80]
+712: [81, 99] forest? friars? castle? The Penultimate Fantasy Airship: Don't Chew on That Spirit!
+713: [11, 80]
+714: [0, 10] LFM
+715: [81, 99] forest? friars? castle? The Penultimate Fantasy Airship: Random Lack of an Encounter / The Most Absorbent Spirit Ever
+716: [0, 80]
+717: [0, 80]
+718: [0, 80]
+719: [0, 80]
+720: [0, 80]
+721: [81, 90] forest? Inside the Palindome: Rod Nevada, Vendor, The Penultimate Fantasy Airship: Hammering the Armory / Rip Rop Wrappety Do / The Most Absorbent Spirit Ever
+722: [0, 80]
+723: [0, 80]
+724: [0, 80]
+725: [0, 80]
+726: [0, 80]
+727: [11, 80]
+728: [11, 80]
+729: [11, 80]
+730: [11, 80]
+731: [11, 80]
+732: [0, 10] LFM
+733: [11, 80]
+734: [11, 80]
+735: [81, 90] forest? Inside the Palindome: Do Geese See God?, The Penultimate Fantasy Airship: F-F-Fantastic!
+736: [0, 80]
+737: [0, 80]
+738: [81, 95] forest? friars? The Haunted Ballroom: We'll All Be Flat, The Penultimate Fantasy Airship: Rip Rop Wrappety Do
+739: [11, 80]
+740: [11, 80]
+741: [11, 80]
+742: [11, 80]
+743: [0, 80]
+744: [11, 80]
+745: [11, 80]
+746: [11, 80] The Castle in the Clouds in the Sky (Basement): The Fast and the Furry-ous / You Don't Mess Around with Gym
+747: [91, 95] forest friars Inside the Palindome: Last Egg Gets Al, The Penultimate Fantasy Airship: F-F-Fantastic!
+748: [11, 90] forest?
+749: [11, 85]
+750: [96, 99] forest friars castle The Castle in the Clouds in the Sky (Basement): Out in the Open Source, The Castle in the Clouds in the Sky (Ground Floor): Huzzah!, The Castle in the Clouds in the Sky (Top Floor): Copper Feel, The Haunted Ballroom: Curtains / Strung-Up Quartet
+751: [11, 75]
+752: [0, 10] LFM
+753: [11, 85]
+754: [11, 85]
+755: [11, 85]
+756: [86, 90] forest
+757: [91, 95] forest friars The Haunted Ballroom: Curtains
+758: [0, 75] The Castle in the Clouds in the Sky (Basement): You Don't Mess Around with Gym
+759: [0, 75]
+760: [11, 75]
+761: [0, 75]
+762: [11, 75]
+763: [11, 80]
+764: [11, 90] forest?
+765: [91, 99] forest friars castle?
+766: [11, 80]
+767: [0, 75]
+768: [11, 90] forest?
+769: [91, 99] forest friars castle? Wartime Hippy Camp (Frat Disguise): Blockin' Out the Scenery
+770: [11, 95] forest? friars?
+771: [11, 95] forest? friars?
+772: [11, 95] forest? friars?
+773: [0, 95] forest? friars?
+774: [11, 75]
+775: [11, 90] forest? The Castle in the Clouds in the Sky (Top Floor): Melon Collie and the Infinite Lameness
+776: [11, 95] forest? friars?
+777: [11, 95] forest? friars?
+778: [96, 99] forest friars castle
+779: [11, 95] forest? friars?
+780: [11, 95] forest? friars?
+781: [0, 99] forest? friars? castle?
+782: [11, 85]
+783: [0, 85]
+784: [11, 80]
+785: [11, 80]
+786: [11, 80]
+787: [0, 99] forest? friars? castle?
+788: [11, 99] forest? friars? castle?
+789: [11, 85]
+790: [0, 85]
+791: [11, 80]
+792: [0, 80]
+793: [11, 80]
+794: [11, 80]
+795: [11, 80]
+796: [0, 10] LFM
+797: [11, 80]
+798: [11, 80]
+799: [86, 99] forest friars? castle? Inside the Palindome: Last Egg Gets Al
+800: [11, 80]
+801: [11, 80]
+802: [11, 80]
+803: [81, 85] The Poop Deck: It's Always Swordfish / O Cap'm, My Cap'm
+804: [0, 85]
+805: [91, 99] forest friars castle?
+806: [0, 85]
+807: [11, 85]
+808: [11, 85]
+809: [0, 85]
+810: [0, 85]
+811: [0, 85]
+812: [0, 85]
+813: [0, 85]
+814: [0, 85]
+815: [0, 85]
+816: [0, 85]
+817: [91, 99] forest friars castle? Inside the Palindome: Do Geese See God?, The Haunted Ballroom: We'll All Be Flat
+818: [0, 85]
+819: [0, 85]
+820: [0, 85]
+821: [0, 85]
+822: [0, 75]
+823: [0, 75]
+824: [0, 80]
+825: [91, 99] forest friars castle?
+826: [86, 99] forest friars? castle? Inside the Palindome: Rod Nevada, Vendor
+827: [81, 85]
+828: [81, 99] forest? friars? castle?
+829: [96, 99] forest friars castle The Castle in the Clouds in the Sky (Basement): You Don't Mess Around with Gym, The Castle in the Clouds in the Sky (Top Floor): Flavor of a Raver
+830: [81, 99] forest? friars? castle?
+831: [0, 75]
+832: [0, 80]
+833: [0, 80]
+834: [0, 80]
+835: [0, 75]
+836: [0, 80]
+837: [0, 80]
+838: [0, 80]
+839: [0, 80]
+840: [0, 85]
+841: [0, 75]
+842: [0, 75]
+843: [0, 85]
+844: [0, 85]
+845: [0, 75]
+846: [0, 85]
+847: [81, 99] forest? friars? castle?
+848: [0, 85]
+849: [0, 85]
+850: [0, 85]
+851: [0, 85]
+852: [0, 85]
+853: [0, 85]
+854: [11, 85]
+855: [11, 85]
+856: [86, 99] forest friars? castle? Inside the Palindome: Rod Nevada, Vendor
+857: [0, 80]
+858: [0, 80]
+859: [0, 80]
+860: [0, 80]
+861: [0, 80] Inside the Palindome: Do Geese See God?
+862: [0, 85]
+863: [0, 85]
+864: [81, 85]
+865: [86, 99] forest friars? castle? Inside the Palindome: Last Egg Gets Al
+866: [11, 75]
+867: [76, 99] forest? friars? castle?
+868: [81, 99] forest? friars? castle?
+869: [96, 99] forest friars castle The Castle in the Clouds in the Sky (Ground Floor): There's No Ability Like Possibility, The Castle in the Clouds in the Sky (Top Floor): Melon Collie and the Infinite Lameness
+870: [11, 99] forest? friars? castle?
+871: [0, 99] forest? friars? castle?
+872: [11, 99] forest? friars? castle?
+873: [11, 85]
+874: [11, 85]
+875: [81, 85]
+876: [0, 80]
+877: [81, 85]
+878: [86, 99] forest friars? castle?
+879: [0, 80]
+880: [11, 80]
+881: [91, 95] forest friars
+882: [0, 95] forest? friars?
+883: [0, 10] LFM
+884: [0, 80]
+885: [11, 80]
+886: [0, 80]
+887: [81, 95] forest? friars?
+888: [0, 80]
+889: [11, 80] The Castle in the Clouds in the Sky (Top Floor): Flavor of a Raver
+890: [86, 95] forest friars? Inside the Palindome: Rod Nevada, Vendor
+891: [11, 80]
+892: [11, 80]
+893: [11, 80]
+894: [0, 80]
+895: [0, 75]
+896: [0, 80]
+897: [81, 95] forest? friars? Inside the Palindome: Do Geese See God?, Wartime Hippy Camp (Frat Disguise): Bait and Switch
+898: [0, 80]
+899: [81, 90] forest? The Castle in the Clouds in the Sky (Top Floor): Copper Feel, Wartime Hippy Camp (Frat Disguise): Bait and Switch
+900: [11, 90] forest?
+901: [11, 99] forest? friars? castle?
+902: [11, 80]
+903: [11, 80]
+904: [0, 10] LFM
+905: [0, 10] LFM
+906: [91, 99] forest friars castle? Inside the Palindome: Last Egg Gets Al, Wartime Hippy Camp (Frat Disguise): Bait and Switch
+907: [81, 99] forest? friars? castle? Wartime Hippy Camp (Frat Disguise): The Thin Tie-Dyed Line
+908: [0, 80]
+909: [0, 80]
+910: [0, 80]
+911: [0, 80]
+912: [0, 80]
+913: [0, 80]
+914: [0, 80]
+915: [81, 99] forest? friars? castle? The Poop Deck: It's Always Swordfish / O Cap'm, My Cap'm, Wartime Hippy Camp (Frat Disguise): Blockin' Out the Scenery
+916: [11, 85]
+917: [11, 85]
+918: [0, 80]
+919: [81, 85] The Poop Deck: It's Always Swordfish / O Cap'm, My Cap'm
+920: [86, 90] forest
+921: [0, 90] forest?
+922: [0, 90] forest?
+923: [0, 85]
+924: [91, 99] forest friars castle?
+925: [0, 85]
+926: [0, 85]
+927: [0, 85]
+928: [0, 85]
+929: [0, 85]
+930: [91, 99] forest friars castle?
+931: [0, 90] forest?
+932: [0, 90] forest?
+933: [0, 90] forest?
+934: [11, 99] forest? friars? castle?
+935: [11, 90] forest?
+936: [0, 90] forest?
+937: [91, 99] forest friars castle? Inside the Palindome: Do Geese See God?, The Haunted Ballroom: Curtains
+938: [0, 90] forest?
+939: [0, 90] forest?
+940: [0, 85]
+941: [0, 90] forest?
+942: [0, 90] forest?
+943: [0, 90] forest?
+944: [91, 99] forest friars castle?
+945: [0, 90] forest?
+946: [0, 90] forest?
+947: [0, 85]
+948: [91, 99] forest friars castle? Inside the Palindome: Last Egg Gets Al, The Haunted Ballroom: We'll All Be Flat, Wartime Hippy Camp (Frat Disguise): Bait and Switch
+949: [0, 80]
+950: [0, 80]
+951: [0, 80]
+952: [0, 80]
+953: [0, 80]
+954: [0, 80]
+955: [0, 80]
+956: [81, 85] Wartime Hippy Camp (Frat Disguise): The Thin Tie-Dyed Line
+957: [0, 80]
+958: [86, 90] forest Inside the Palindome: Rod Nevada, Vendor, Wartime Hippy Camp (Frat Disguise): Bait and Switch
+959: [0, 80]
+960: [0, 80]
+961: [0, 80]
+962: [0, 80]
+963: [0, 80]
+964: [0, 80] Inside the Palindome: Last Egg Gets Al
+965: [0, 80]
+966: [0, 80]
+967: [81, 99] forest? friars? castle? The Haunted Ballroom: We'll All Be Flat, Wartime Hippy Camp (Frat Disguise): Bait and Switch
+968: [81, 99] forest? friars? castle? Inside the Palindome: Do Geese See God?, Wartime Hippy Camp (Frat Disguise): The Thin Tie-Dyed Line
+969: [0, 80]
+970: [0, 80]
+971: [0, 80]
+972: [81, 99] forest? friars? castle? Wartime Hippy Camp (Frat Disguise): The Thin Tie-Dyed Line
+973: [11, 80]
+974: [11, 80]
+975: [0, 80]
+976: [0, 80]
+977: [0, 80]
+978: [0, 80]
+979: [91, 99] forest friars castle? Wartime Hippy Camp (Frat Disguise): Bait and Switch
+980: [0, 80]
+981: [0, 80]
+982: [11, 80]
+983: [11, 80]
+984: [86, 99] forest friars? castle? Wartime Hippy Camp (Frat Disguise): Bait and Switch
+985: [81, 95] forest? friars? Wartime Hippy Camp (Frat Disguise): Bait and Switch
+986: [11, 80]
+987: [0, 80]
+988: [0, 80]
+989: [0, 80]
+990: [0, 80]
+991: [0, 80]
+992: [0, 80]
+993: [11, 80]
+994: [86, 99] forest friars? castle? The Haunted Ballroom: We'll All Be Flat, Wartime Hippy Camp (Frat Disguise): Blockin' Out the Scenery
+995: [0, 85]
+996: [0, 99] forest? friars? castle?
+997: [0, 10] LFM
+998: [11, 99] forest? friars? castle?
+999: [0, 99] forest? friars? castle?
+1000: [11, 95] forest? friars?

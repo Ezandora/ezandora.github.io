@@ -1,0 +1,234 @@
+Gremlins, indexed from 0. Only the gremlins marked (tool) have the tool.
+
+Next to that Barrel with Something Burning in it:
+205, vegetable gremlin
+206, batwinged gremlin (tool)
+213, vegetable gremlin
+226, batwinged gremlin
+227, vegetable gremlin
+231, batwinged gremlin
+233, vegetable gremlin
+234, vegetable gremlin
+235, batwinged gremlin
+236, batwinged gremlin
+237, batwinged gremlin (tool)
+250, A.M.C. gremlin
+251, batwinged gremlin (tool)
+258, batwinged gremlin (tool)
+262, batwinged gremlin
+263, vegetable gremlin
+264, A.M.C. gremlin
+265, batwinged gremlin
+266, batwinged gremlin (tool)
+269, A.M.C. gremlin
+270, batwinged gremlin (tool)
+280, vegetable gremlin
+281, vegetable gremlin
+282, A.M.C. gremlin
+283, batwinged gremlin/batwinged gremlin (tool)
+284, batwinged gremlin
+285, batwinged gremlin (tool)
+513, A.M.C. gremlin
+539, A.M.C. gremlin
+540, vegetable gremlin
+541, A.M.C. gremlin
+553, vegetable gremlin
+554, vegetable gremlin
+555, batwinged gremlin (tool)
+679, A.M.C. gremlin
+680, batwinged gremlin
+681, batwinged gremlin
+682, A.M.C. gremlin
+683, vegetable gremlin
+684, batwinged gremlin (tool)
+773, batwinged gremlin (tool)
+919, A.M.C. gremlin
+940, batwinged gremlin
+976, vegetable gremlin
+977, vegetable gremlin
+978, batwinged gremlin
+979, A.M.C. gremlin
+980, batwinged gremlin (tool)
+1000, A.M.C. gremlin
+
+Near an Abandoned Refrigerator:
+226, spider gremlin
+227, spider gremlin
+228, spider gremlin
+229, batwinged gremlin
+230, spider gremlin (tool)
+238, A.M.C. gremlin
+239, batwinged gremlin
+250, A.M.C. gremlin
+251, A.M.C. gremlin
+254, A.M.C. gremlin
+255, spider gremlin
+256, spider gremlin
+257, spider gremlin
+258, spider gremlin
+259, spider gremlin (tool)
+267, spider gremlin
+268, A.M.C. gremlin
+269, A.M.C. gremlin
+270, spider gremlin
+271, spider gremlin (tool)
+272, A.M.C. gremlin
+273, batwinged gremlin
+274, spider gremlin
+275, batwinged gremlin
+276, spider gremlin (tool)
+284, batwinged gremlin
+309, A.M.C. gremlin
+315, batwinged gremlin
+316, spider gremlin (tool)
+513, A.M.C. gremlin
+543, batwinged gremlin
+544, spider gremlin (tool)
+637, spider gremlin (tool)
+689, spider gremlin (tool)
+711, batwinged gremlin
+716, A.M.C. gremlin
+717, spider gremlin (tool)
+776, batwinged gremlin
+777, batwinged gremlin
+778, A.M.C. gremlin
+779, batwinged gremlin
+780, batwinged gremlin
+781, batwinged gremlin
+782, A.M.C. gremlin
+783, spider gremlin (tool)
+786, spider gremlin
+787, batwinged gremlin
+788, spider gremlin (tool)
+937, A.M.C. gremlin
+938, batwinged gremlin
+984, batwinged gremlin
+989, spider gremlin
+990, spider gremlin
+991, spider gremlin
+992, spider gremlin (tool)
+1000, A.M.C. gremlin
+
+Over Where the Old Tires Are:
+224, erudite gremlin (tool)
+231, erudite gremlin (tool)
+241, erudite gremlin
+245, erudite gremlin (tool)
+256, spider gremlin
+257, spider gremlin
+258, spider gremlin
+260, erudite gremlin
+261, erudite gremlin/erudite gremlin (tool)
+272, A.M.C. gremlin
+273, spider gremlin
+274, spider gremlin
+275, spider gremlin
+276, spider gremlin
+277, erudite gremlin (tool)
+282, A.M.C. gremlin
+283, erudite gremlin
+284, erudite gremlin
+286, A.M.C. gremlin
+289, A.M.C. gremlin
+290, spider gremlin
+291, A.M.C. gremlin
+292, erudite gremlin
+317, spider gremlin
+318, erudite gremlin (tool)
+513, A.M.C. gremlin
+514, A.M.C. gremlin
+549, erudite gremlin (tool)
+637, A.M.C. gremlin
+638, A.M.C. gremlin
+639, A.M.C. gremlin
+640, A.M.C. gremlin
+641, A.M.C. gremlin
+642, erudite gremlin (tool)
+690, A.M.C. gremlin
+691, A.M.C. gremlin
+692, spider gremlin
+693, erudite gremlin
+694, erudite gremlin
+695, erudite gremlin (tool)
+749, erudite gremlin (tool)
+785, A.M.C. gremlin
+786, spider gremlin
+787, erudite gremlin
+788, erudite gremlin
+789, A.M.C. gremlin
+790, erudite gremlin
+791, spider gremlin
+792, erudite gremlin
+793, erudite gremlin
+794, erudite gremlin
+795, spider gremlin
+796, spider gremlin
+797, erudite gremlin
+798, spider gremlin
+799, erudite gremlin
+800, A.M.C. gremlin
+801, A.M.C. gremlin
+802, A.M.C. gremlin
+803, erudite gremlin
+811, A.M.C. gremlin
+812, erudite gremlin (tool)
+928, spider gremlin
+929, spider gremlin
+930, spider gremlin
+981, erudite gremlin (tool)
+1000, A.M.C. gremlin
+
+Out by that Rusted-Out Car:
+207, A.M.C. gremlin
+224, erudite gremlin
+225, vegetable gremlin/vegetable gremlin (tool)
+232, vegetable gremlin
+233, vegetable gremlin
+236, A.M.C. gremlin
+237, A.M.C. gremlin
+253, vegetable gremlin (tool)
+255, vegetable gremlin (tool)
+256, A.M.C. gremlin
+264, A.M.C. gremlin
+265, vegetable gremlin (tool)
+267, erudite gremlin
+270, erudite gremlin
+271, vegetable gremlin (tool)
+288, A.M.C. gremlin
+289, A.M.C. gremlin
+290, erudite gremlin
+291, vegetable gremlin
+292, vegetable gremlin (tool)
+513, A.M.C. gremlin
+516, A.M.C. gremlin
+545, vegetable gremlin
+546, erudite gremlin
+547, erudite gremlin
+550, vegetable gremlin
+551, A.M.C. gremlin
+552, vegetable gremlin (tool)
+685, vegetable gremlin
+686, erudite gremlin
+687, vegetable gremlin
+688, vegetable gremlin (tool)
+743, vegetable gremlin
+744, A.M.C. gremlin
+745, A.M.C. gremlin
+746, A.M.C. gremlin
+748, vegetable gremlin
+753, vegetable gremlin
+754, erudite gremlin
+755, A.M.C. gremlin
+756, vegetable gremlin
+758, A.M.C. gremlin
+759, A.M.C. gremlin
+774, vegetable gremlin
+806, erudite gremlin
+807, erudite gremlin
+808, A.M.C. gremlin
+809, A.M.C. gremlin
+810, vegetable gremlin (tool)
+921, vegetable gremlin
+922, A.M.C. gremlin
+933, vegetable gremlin (tool)
+1000, vegetable gremlin

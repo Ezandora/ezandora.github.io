@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- This source file is public domain. -->
+		<title>Sweet Synthesis</title>
+		<meta content="width=device-width" name="viewport">
+		<style type="text/css">
+			body { font-family:Arial,Helvetica,sans-serif;color:black;background-color:#C0C0C0;font-size:14px;margin:0px; }
+			hr { height: 1px; border: 0px; width: 100%;background: #B2B2B2; }
+			textarea { resize: none; }
+			a:link { color:black; }
+			a:visited { color:black; }
+			a:active { color:black; }
+			div.r_centre { margin-left:auto; margin-right:auto;text-align:center; }
+			.synthesis_button { border: 0px solid ;border-color: black; padding: 5px; font-weight:bold; display:inline-block; cursor:pointer; min-width:100px; margin:5px;}
+			.synthesis_button:hover { background-color:#DADADA; }
+			.synthesis_button_clicked { border: 0px solid ;border-color: black; padding: 5px; font-weight:bold; display:inline-block; cursor:pointer; min-width:100px; margin:5px; background-color:#BBBBBB; }
+			
+			.synthesis_button_left { padding: 5px; margin:5px; display:table-cell; width:32%; }
+			
+			.synthesis_table_row { display:table-row; cursor:pointer; }
+			.synthesis_table_row:hover { background-color:#DADADA; }
+			
+			.synthesis_component_header { pointer-events:none; }
+			
+			
+			.synthesis_component_container { pointer-events:none; color:#555555; padding-left:1.5em; }
+		</style>
+		<script type="text/javascript"src="sweet_synthesis_data.js"></script>
+		<script type="text/javascript"src="sweet_synthesis.js"></script>
+	</head>
+	<body onload="pageLoaded();">
+		<div style="max-width:700px;margin-left:auto; margin-right:auto;background-color:white;padding:2em;">
+			<div style="font-weight:bold;font-size:1.5em;" class="r_centre">Sweet Synthesis Calculator</div><br>
+			<p><a href="http://kol.coldfront.net/thekolwiki/index.php/Sweet_Synthesis" target="_blank">Sweet Synthesis</a> is a skill that will give thirty turns of an effect, for the cost of one spleen and <a href="sweet_synthesis_candy.html">two candies</a>.<br>Different candies give a different effect.</p>
+			<p>Select desired effect:</p>
+			<div class="r_centre">
+			<div class="synthesis_button" id="button_tier1_1" onclick="synthesisButtonClicked(event,1,1);">+9 hot res</div>
+			<div class="synthesis_button" id="button_tier1_2" onclick="synthesisButtonClicked(event,1,2);">+9 cold res</div>
+			<div class="synthesis_button" id="button_tier1_3" onclick="synthesisButtonClicked(event,1,3);">+9 stench res</div>
+			<div class="synthesis_button" id="button_tier1_4" onclick="synthesisButtonClicked(event,1,4);">+9 spooky res</div>
+			<div class="synthesis_button" id="button_tier1_5" onclick="synthesisButtonClicked(event,1,5);">+9 sleaze res</div>
+			<br>
+			<div class="synthesis_button" id="button_tier2_1" onclick="synthesisButtonClicked(event,2,1);">+300% muscle</div>
+			<div class="synthesis_button" id="button_tier2_2" onclick="synthesisButtonClicked(event,2,2);">+300% myst</div>
+			<div class="synthesis_button" id="button_tier2_3" onclick="synthesisButtonClicked(event,2,3);">+300% moxie</div>
+			<div class="synthesis_button" id="button_tier2_4" onclick="synthesisButtonClicked(event,2,4);">+300% max HP</div>
+			<div class="synthesis_button" id="button_tier2_5" onclick="synthesisButtonClicked(event,2,5);">+300% max MP</div>
+			<br>
+			<div class="synthesis_button" id="button_tier3_1" onclick="synthesisButtonClicked(event,3,1);">+300% meat</div>
+			<div class="synthesis_button" id="button_tier3_2" onclick="synthesisButtonClicked(event,3,2);">+150% item</div>
+			<div class="synthesis_button" id="button_tier3_3" onclick="synthesisButtonClicked(event,3,3);">+50% muscle gain</div>
+			<div class="synthesis_button" id="button_tier3_4" onclick="synthesisButtonClicked(event,3,4);">+50% myst gain</div>
+			<div class="synthesis_button" id="button_tier3_5" onclick="synthesisButtonClicked(event,3,5);">+50% moxie gain</div>
+			</div>
+			<p id="synthesis_output"></p>
+			<hr>
+			<p>Or select two candies:</p>
+			<p><select id="select_first_candy" onchange="recalculateCandyCombination()"><option></option></select> + <select id="select_second_candy" onchange="recalculateCandyCombination()"><option></option></select></p>
+			<p id="synthesis_combination_output"></p>
+			
+			<p id="unknown_candy_output" style="text-align:left;color:grey;font-size:0.8em;"></p>
+			<noscript><span style="color:red;font-weight:bold;">Requires javascript.</span></noscript>
+		</div>
+		<div class="r_centre" style="background:#DDDDDD;max-width:756px;padding-top:5px;padding-bottom:5px;"><a href="../index.html" style="font-size:1.2em;font-weight:bold;text-decoration:none;display:block;">Home</a></div>
+		<br><div style="font-size:0.777em;color:#A0A0A0;" class="r_centre">Written by Ezandora.</div>
+	</body>
+</html>

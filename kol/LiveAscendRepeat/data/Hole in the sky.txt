@@ -1,0 +1,510 @@
+Turn,odd,even zero-indexed
+86,?,Beaver
+87,?,Axe Wound
+88,?,Flange
+89,?,Muff
+90,?,Flange
+91,?,Honey Pot
+92,?,Box
+93,?,Muff
+94,?,Little Man in the Canoe
+95,?,Box
+96,?,Honey Pot
+97,?,Camel's Toe
+98,?,Flange
+99,?,Axe Wound
+100,?,Astronomer
+101,?,Bush
+102,?,Bush
+103,?,Camel's Toe
+104,?,Astronomer
+105,?,Beaver
+106,?,Flange
+107,?,Little Man in the Canoe
+108,?,Honey Pot
+109,?,Little Man in the Canoe
+110,?,Box
+111,?,Bush
+112,?,Camel's Toe
+113,?,Astronomer
+114,?,Honey Pot
+115,?,Astronomer
+116,?,Flange
+117,?,Axe Wound
+118,?,Box
+119,?,Little Man in the Canoe
+120,?,Camel's Toe
+121,?,Axe Wound
+122,?,Axe Wound
+123,?,Astronomer
+124,?,Camel's Toe
+125,?,Astronomer
+126,?,Flange
+127,?,Astronomer
+128,?,Muff
+129,?,Astronomer
+130,?,Bush
+131,?,Astronomer
+132,?,Box
+133,?,Beaver
+134,?,Bush
+135,?,Astronomer
+136,?,Flange
+137,?,Muff
+138,?,Bush
+139,?,Flange
+140,?,Astronomer
+141,?,Honey Pot
+142,?,Astronomer
+143,?,Astronomer
+144,?,Honey Pot
+145,?,Bush
+146,?,Box
+147,?,Little Man in the Canoe
+148,?,Honey Pot
+149,?,Beaver
+150,?,Box
+151,?,Axe Wound
+152,?,Little Man in the Canoe
+154,?,Bush
+155,?,Axe Wound
+156,?,Axe Wound
+157,?,Flange
+158,?,Box
+159,?,Flange
+160,?,Box
+161,?,Camel's Toe
+162,?,Honey Pot
+163,?,Astronomer
+164,?,Muff
+165,?,Beaver
+166,?,Beaver
+167,?,Astronomer
+168,Skinflute,Camel's Toe
+169,Astronomer,Astronomer
+170,Pork Sword,Flange
+171,One-Eyed Willie,Beaver
+172,Burrowing Bishop,Muff
+173,Twig and Berries,Axe Wound
+174,Pork Sword,Flange
+175,One-Eyed Willie,Bush
+176,One-Eyed Willie|Skinflute,Honey Pot
+177,Family Jewels,Muff
+178,One-Eyed Willie,Flange
+179,One-Eyed Willie,Astronomer
+180,Hooded Warrior,Camel's Toe
+181,Hooded Warrior,Bush
+182,One-Eyed Willie,Bush
+183,Hooded Warrior,Astronomer
+184,Skinflute,Beaver
+185,Twig and Berries,Camel's Toe
+186,Skinflute,Beaver
+187,Family Jewels,Flange
+188,Astronomer,Astronomer
+189,Trouser Snake,Flange
+190,Trouser Snake,Honey Pot
+191,Twig and Berries,Camel's Toe
+192,Astronomer,Astronomer
+193,Trouser Snake,Bush
+194,Pork Sword,Astronomer
+195,Pork Sword,Muff
+196,Twig and Berries,Honey Pot
+197,Junk,Box
+198,Astronomer,Astronomer
+199,One-Eyed Willie,Box
+200,Junk,Astronomer
+201,Family Jewels,Camel's Toe
+202,Junk,Axe Wound
+203,Trouser Snake,Bush
+204,Burrowing Bishop,Axe Wound
+205,Astronomer,Astronomer
+206,Pork Sword,Camel's Toe
+207,Trouser Snake,Beaver
+208,Family Jewels,Axe Wound
+209,Junk,Little Man in the Canoe
+210,Pork Sword,Flange
+211,Trouser Snake,Muff
+212,Astronomer,Astronomer
+213,Twig and Berries,Axe Wound
+214,Hooded Warrior,Axe Wound
+215,Twig and Berries,Axe Wound
+216,Pork Sword,Honey Pot
+217,Burrowing Bishop,Little Man in the Canoe
+218,Pork Sword,Bush
+219,Trouser Snake,Axe Wound
+220,Family Jewels,Box
+221,Pork Sword,Little Man in the Canoe
+222,Astronomer,Little Man in the Canoe
+223,Burrowing Bishop,Axe Wound
+224,Astronomer,Astronomer
+225,Hooded Warrior,Flange
+226,Family Jewels,Bush
+227,Skinflute,Bush
+228,Skinflute,Beaver
+229,Twig and Berries,Muff
+230,Junk,Box
+231,Astronomer,Astronomer
+232,Skinflute,Box
+233,Twig and Berries,Astronomer
+234,Twig and Berries,Flange
+235,Astronomer,Muff
+236,Junk,Camel's Toe
+237,Pork Sword,Little Man in the Canoe
+238,One-Eyed Willie,Flange
+239,Pork Sword,Little Man in the Canoe
+240,Skinflute,Honey Pot
+241,Skinflute,Camel's Toe
+242,Trouser Snake,Little Man in the Canoe
+243,Astronomer,Astronomer
+244,Burrowing Bishop,Honey Pot
+245,Astronomer,Beaver
+246,Skinflute,Camel's Toe
+247,Astronomer,Astronomer
+248,Hooded Warrior,Camel's Toe
+249,Twig and Berries,Bush
+250,Trouser Snake,Box
+251,Pork Sword,Muff
+252,Junk,Muff
+253,Junk,Muff
+254,Hooded Warrior,Bush
+255,Astronomer,Astronomer
+256,Family Jewels,Beaver
+257,Pork Sword,Bush
+258,Pork Sword,Flange
+259,Hooded Warrior,Beaver
+260,Pork Sword,Camel's Toe
+261,Pork Sword,Muff
+262,Astronomer,Astronomer
+263,Twig and Berries,Astronomer
+264,Trouser Snake,Astronomer
+265,Pork Sword,Muff
+266,Hooded Warrior,Honey Pot
+267,Burrowing Bishop,Bush
+268,Skinflute,Camel's Toe
+269,Trouser Snake,Muff
+270,Hooded Warrior,Beaver
+271,Trouser Snake,Beaver
+272,Trouser Snake,Muff
+273,Pork Sword,Flange
+274,Skinflute,Beaver
+275,Pork Sword,Muff
+276,Skinflute,Beaver
+277,Junk,Axe Wound
+278,Family Jewels,Astronomer
+279,Trouser Snake,Flange
+280,Twig and Berries,Box
+281,Burrowing Bishop,Astronomer
+282,Trouser Snake,Little Man in the Canoe
+283,Hooded Warrior,Honey Pot
+284,Junk,Little Man in the Canoe
+285,Skinflute,Camel's Toe
+286,Trouser Snake,Muff
+287,Burrowing Bishop,Bush
+288,Pork Sword,Axe Wound
+289,Trouser Snake,Muff
+290,Pork Sword,Flange
+291,Pork Sword,Little Man in the Canoe
+292,Hooded Warrior,Muff
+293,Twig and Berries,Bush
+294,Trouser Snake,Camel's Toe
+295,Junk,Camel's Toe
+296,Family Jewels,Bush
+297,Trouser Snake,Camel's Toe
+298,Trouser Snake,Little Man in the Canoe
+299,Twig and Berries,Astronomer
+300,Twig and Berries,Axe Wound
+301,Trouser Snake,Bush
+302,Skinflute,Muff
+303,One-Eyed Willie,Little Man in the Canoe
+304,Astronomer,Astronomer
+305,Pork Sword,Muff
+306,Twig and Berries,Flange
+307,Junk,Flange
+308,Junk,Honey Pot
+309,Burrowing Bishop,Flange
+310,Trouser Snake,Beaver
+311,Burrowing Bishop,Muff
+312,Trouser Snake,Beaver
+313,Skinflute,Box
+314,Skinflute,Bush
+315,Junk,Beaver
+316,Hooded Warrior,Honey Pot
+317,Astronomer,Box
+318,Skinflute,Astronomer
+319,Skinflute,Muff
+320,One-Eyed Willie,Beaver
+321,Trouser Snake,Beaver
+322,One-Eyed Willie,Camel's Toe
+323,Burrowing Bishop,Flange
+324,Astronomer,Astronomer
+325,One-Eyed Willie,Astronomer
+326,Junk,Box
+327,Skinflute,Camel's Toe
+328,Astronomer,Astronomer
+329,Skinflute,Muff
+330,Junk,Axe Wound
+331,Pork Sword,Muff
+332,Pork Sword,Camel's Toe
+333,Family Jewels,Bush
+334,Burrowing Bishop,Little Man in the Canoe
+335,Trouser Snake,Axe Wound
+336,Junk,Little Man in the Canoe
+337,Hooded Warrior,Astronomer
+338,Burrowing Bishop,Axe Wound
+339,Twig and Berries,Box
+340,Skinflute,Beaver
+341,Hooded Warrior,Axe Wound
+342,Hooded Warrior,Bush
+343,Family Jewels,Bush
+344,Trouser Snake,Bush
+345,Skinflute,Honey Pot
+346,Junk,Little Man in the Canoe
+347,Twig and Berries,Honey Pot
+348,Skinflute,Astronomer
+349,Skinflute,Bush
+350,Skinflute,Muff
+351,Burrowing Bishop,Camel's Toe
+352,Family Jewels,Honey Pot
+353,Burrowing Bishop,Honey Pot
+354,Burrowing Bishop,Little Man in the Canoe
+355,Junk,Flange
+356,Burrowing Bishop,Bush
+357,One-Eyed Willie,Beaver
+358,Skinflute,Camel's Toe
+359,Trouser Snake,Beaver
+360,Burrowing Bishop,Camel's Toe
+361,Pork Sword,Astronomer
+362,Junk,Axe Wound
+363,Astronomer,Astronomer
+364,Astronomer,Astronomer
+365,Family Jewels,Beaver
+366,Hooded Warrior,Muff
+367,Trouser Snake,Little Man in the Canoe
+368,Skinflute,Honey Pot
+369,Pork Sword,Little Man in the Canoe
+370,Pork Sword,Box
+371,Junk,Muff
+372,Astronomer,Astronomer
+373,Astronomer,Honey Pot
+374,Astronomer,Astronomer
+375,Junk,Beaver
+376,Burrowing Bishop,Honey Pot
+377,Hooded Warrior,Camel's Toe
+378,Twig and Berries,Beaver
+379,Hooded Warrior,Axe Wound
+380,Junk,Axe Wound
+381,Astronomer,Astronomer
+382,Twig and Berries,Flange
+383,Twig and Berries,Axe Wound
+384,Skinflute,Beaver
+385,One-Eyed Willie,Flange
+386,Twig and Berries,Astronomer
+387,Burrowing Bishop,Box
+388,Junk,Little Man in the Canoe
+389,Twig and Berries,Box
+390,Pork Sword,Honey Pot
+391,One-Eyed Willie,Camel's Toe
+392,Burrowing Bishop,Muff
+393,Junk,Box
+394,Astronomer,Box
+395,Junk,Box
+396,Twig and Berries,Camel's Toe
+397,Hooded Warrior,Bush
+398,Junk,Bush
+399,Family Jewels,Axe Wound
+400,One-Eyed Willie,Box
+401,Pork Sword,Little Man in the Canoe
+402,Astronomer,Honey Pot
+403,Burrowing Bishop,Box
+404,Twig and Berries,Bush
+405,Astronomer,Astronomer
+406,Twig and Berries,Little Man in the Canoe
+407,Pork Sword,Bush
+408,Junk,Axe Wound
+409,Pork Sword,Honey Pot
+410,Astronomer,Astronomer
+411,Family Jewels,Muff
+412,One-Eyed Willie,Honey Pot
+413,Trouser Snake,Beaver
+414,Skinflute,Honey Pot
+415,One-Eyed Willie,Muff
+416,Twig and Berries,Little Man in the Canoe
+417,Skinflute,Axe Wound
+418,Burrowing Bishop,Honey Pot
+419,Junk,Bush
+420,One-Eyed Willie,Little Man in the Canoe
+421,Burrowing Bishop,Beaver
+422,One-Eyed Willie,Beaver
+423,Trouser Snake,Box
+424,Hooded Warrior,Little Man in the Canoe
+425,Burrowing Bishop,Honey Pot
+426,Astronomer,Astronomer
+427,One-Eyed Willie,Little Man in the Canoe
+428,One-Eyed Willie,Bush
+429,Pork Sword,Little Man in the Canoe
+430,Pork Sword,Box
+431,Trouser Snake,Camel's Toe
+432,Astronomer,Astronomer
+433,Pork Sword,Box
+434,Trouser Snake,Beaver
+435,Skinflute,Little Man in the Canoe
+436,Burrowing Bishop,Honey Pot
+437,Skinflute,Little Man in the Canoe
+438,Junk,Bush
+439,Pork Sword,Axe Wound
+440,Family Jewels,Axe Wound
+441,Astronomer,Axe Wound
+442,Junk,Flange
+443,Hooded Warrior,Muff
+444,Pork Sword,Camel's Toe
+445,Hooded Warrior,Bush
+446,Twig and Berries,Honey Pot
+447,Twig and Berries,Astronomer
+448,Trouser Snake,Little Man in the Canoe
+449,Burrowing Bishop,Honey Pot
+450,Trouser Snake,Beaver
+451,Twig and Berries,Bush
+452,Family Jewels,Flange
+453,Hooded Warrior,Bush
+454,Trouser Snake,Camel's Toe
+455,Family Jewels,Astronomer
+456,Twig and Berries,Honey Pot
+457,Astronomer,Box
+458,Hooded Warrior,Beaver
+459,Family Jewels,Beaver
+460,Burrowing Bishop,Flange
+461,Skinflute,Little Man in the Canoe
+462,Pork Sword,Little Man in the Canoe
+463,Pork Sword,Camel's Toe
+464,Skinflute,Beaver
+465,Skinflute,Bush
+466,Family Jewels,Muff
+467,Family Jewels,Astronomer
+468,Hooded Warrior,Honey Pot
+469,Astronomer,Astronomer
+470,Burrowing Bishop,Camel's Toe
+471,Burrowing Bishop,Bush
+472,Trouser Snake,Flange
+473,Hooded Warrior,Beaver
+474,Pork Sword,Flange
+475,Junk,Beaver
+476,Junk,Muff
+477,One-Eyed Willie,Muff
+478,Skinflute,Box
+479,Astronomer,Bush
+480,Astronomer,Honey Pot
+481,One-Eyed Willie,Little Man in the Canoe
+482,Burrowing Bishop,Honey Pot
+483,Burrowing Bishop,Flange
+484,Junk,Honey Pot
+485,One-Eyed Willie,Little Man in the Canoe
+486,Burrowing Bishop,Muff
+487,One-Eyed Willie,Honey Pot
+488,Astronomer,Beaver
+489,Hooded Warrior,Axe Wound
+490,Trouser Snake,Box
+491,Astronomer,Astronomer
+492,Astronomer,Box
+493,Skinflute,Muff
+494,Trouser Snake,Muff
+495,Trouser Snake,Muff
+496,Astronomer,Astronomer
+497,Skinflute,Beaver
+498,Astronomer,Astronomer
+499,Pork Sword,Honey Pot
+515,Skinflute,?
+516,Trouser Snake,?
+523,Junk,?
+528,Family Jewels,?
+545,Junk,?
+547,Astronomer,?
+550,Twig and Berries,?
+552,Twig and Berries,?
+553,Twig and Berries,?
+554,Twig and Berries,?
+564,Hooded Warrior,?
+565,Hooded Warrior,?
+570,?,Axe Wound
+571,?,Muff
+572,?,Axe Wound
+574,?,Axe Wound
+575,?,Flange
+578,?,Box
+579,?,Astronomer
+580,?,Box
+581,?,Little Man in the Canoe
+582,?,Beaver
+776,?,Astronomer
+778,?,Camel's Toe
+800,?,Camel's Toe
+801,?,Astronomer
+802,?,Little Man in the Canoe
+803,?,Camel's Toe
+912,Family Jewels,?
+913,Trouser Snake,?
+914,Junk,?
+915,Astronomer,?
+916,Pork Sword,?
+917,Pork Sword,?
+957,Burrowing Bishop,?
+1002,One-Eyed Willie,?
+1010,Burrowing Bishop,?
+1016,Hooded Warrior,?
+1017,Skinflute,?
+1018,Family Jewels,?
+1020,Astronomer,?
+1021,Family Jewels,?
+1022,Burrowing Bishop,?
+1023,Trouser Snake,?
+1024,Twig and Berries,?
+1025,Astronomer,?
+1026,Family Jewels,?
+1027,Hooded Warrior,?
+1028,Pork Sword,?
+1029,Skinflute,?
+1030,Hooded Warrior,?
+1031,Hooded Warrior,?
+1032,Skinflute,?
+1033,Skinflute,?
+1034,Family Jewels,?
+1035,Twig and Berries,?
+1036,Hooded Warrior,?
+1037,One-Eyed Willie,?
+1038,Family Jewels,?
+1039,One-Eyed Willie,?
+1041,Trouser Snake,?
+1042,Burrowing Bishop,?
+1043,Twig and Berries,?
+1045,Hooded Warrior,?
+1046,Skinflute,?
+1047,One-Eyed Willie,?
+1048,Junk,?
+1049,Junk,?
+1050,Astronomer,?
+1051,Twig and Berries,?
+1052,One-Eyed Willie,?
+1053,Skinflute,?
+1054,Astronomer,?
+1055,Trouser Snake,?
+1056,Pork Sword,?
+1094,One-Eyed Willie,?
+1095,Astronomer,?
+1096,Junk,?
+1097,One-Eyed Willie,?
+1098,One-Eyed Willie,?
+1099,Junk,?
+1100,Family Jewels,?
+1101,Astronomer,?
+1104,Junk,?
+1105,Hooded Warrior,?
+1107,Hooded Warrior,?
+1108,Junk,?
+1109,One-Eyed Willie,?
+1110,Trouser Snake,?
+1111,One-Eyed Willie,?
+1112,Pork Sword,?
+1113,Trouser Snake,?
+1114,Burrowing Bishop,?
+1115,Hooded Warrior,?
+1116,Burrowing Bishop,?
+1117,Pork Sword,?

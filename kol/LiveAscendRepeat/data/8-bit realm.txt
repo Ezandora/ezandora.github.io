@@ -1,0 +1,560 @@
+Turn,odd,even indexed from zero
+0,Bullet Bill,Buzzy Beetle
+1,Goomba,Keese
+2,Octorok,Octorok
+3,Zol,Zol
+4,Tektite,Tektite
+5,Zol,Zol
+6,Blooper,Blooper
+7,Goomba,Blooper
+8,Koopa Troopa,Buzzy Beetle
+9,Zol,Zol
+10,Koopa Troopa,Koopa Troopa
+11,Blooper,Blooper
+12,Goomba,Octorok
+13,Tektite,Buzzy Beetle
+14,Blooper,Blooper
+15,Keese,Keese
+16,Keese,Keese
+17,Koopa Troopa,Koopa Troopa
+18,Goomba,Buzzy Beetle
+19,Zol,Zol
+20,Tektite,Tektite
+21,Goomba,Keese
+22,Bullet Bill,Bullet Bill
+23,Octorok,Octorok
+24,Koopa Troopa,Koopa Troopa
+25,Keese,Keese
+26,Bullet Bill,Bullet Bill
+27,Tektite,Tektite
+28,Zol,Zol
+29,Koopa Troopa,Koopa Troopa
+30,Keese,Keese
+31,Octorok,Octorok
+32,Blooper,Blooper
+33,Keese,Keese
+34,Goomba,Zol
+35,Bullet Bill,Bullet Bill
+36,Zol,Zol
+37,Koopa Troopa,Koopa Troopa
+38,Zol,Zol
+39,Tektite,Tektite
+40,Goomba,Keese
+41,Blooper,Blooper|Keese
+42,Keese,Keese
+43,Bullet Bill,Bullet Bill
+44,Blooper,Blooper
+45,Octorok,Buzzy Beetle
+46,Bullet Bill,Bullet Bill
+47,Koopa Troopa,Koopa Troopa
+48,Bullet Bill,Bullet Bill
+49,Koopa Troopa,Koopa Troopa
+50,Zol,Zol
+51,Octorok,Octorok
+52,Goomba,Koopa Troopa
+53,Goomba,Tektite
+54,Keese,Keese
+55,Goomba,Buzzy Beetle
+56,Keese,Keese
+57,Keese,Keese
+58,Koopa Troopa,Koopa Troopa
+59,Keese,Keese
+60,Goomba,Keese
+61,Octorok,Octorok
+62,Goomba,Bullet Bill
+63,Zol,Zol
+64,Goomba,Tektite
+65,Bullet Bill,Buzzy Beetle
+66,Keese,Keese
+67,Bullet Bill,Buzzy Beetle
+68,Koopa Troopa,Koopa Troopa
+69,Tektite,Tektite
+70,Goomba,Buzzy Beetle
+71,Tektite,Tektite
+72,Goomba,Octorok
+73,Octorok,Octorok
+74,Zol,Zol
+76,Blooper,Blooper
+77,Bullet Bill,Bullet Bill
+78,Blooper,Blooper
+79,Koopa Troopa,Buzzy Beetle
+80,Goomba,Bullet Bill
+81,Bullet Bill,Bullet Bill
+82,Keese,Keese
+83,Goomba,Bullet Bill
+84,Bullet Bill,Bullet Bill
+85,Tektite,Tektite
+86,Goomba,Octorok
+87,Goomba,Bullet Bill
+88,Koopa Troopa,Koopa Troopa
+89,Blooper,Blooper
+90,Koopa Troopa,Koopa Troopa
+91,Tektite,Tektite
+92,Goomba,Blooper
+93,Blooper,Blooper
+94,Zol,Zol
+95,Koopa Troopa,Koopa Troopa
+96,Bullet Bill,Bullet Bill
+97,Goomba,Koopa Troopa
+98,Goomba,Keese
+99,Bullet Bill,Bullet Bill
+100,Goomba,Buzzy Beetle
+101,Octorok,Octorok
+102,Koopa Troopa,Koopa Troopa
+103,Octorok,Octorok
+104,Koopa Troopa,Koopa Troopa
+105,Tektite,Tektite
+106,Keese,Keese
+107,Zol,Zol
+108,Bullet Bill,Bullet Bill
+109,Goomba,Zol
+110,Blooper,Blooper
+111,Koopa Troopa,Koopa Troopa
+112,Tektite,Tektite
+113,Goomba,Buzzy Beetle
+114,Bullet Bill,Bullet Bill
+115,Goomba,Buzzy Beetle
+116,Keese,Keese
+117,Bullet Bill,Bullet Bill
+118,Blooper,Blooper
+119,Tektite,Tektite
+120,Tektite,Tektite
+121,Bullet Bill,Bullet Bill
+122,Bullet Bill,Bullet Bill
+123,Octorok,Octorok
+124,Goomba,Zol
+125,Goomba,Buzzy Beetle
+126,Tektite,Tektite
+127,Bullet Bill,Buzzy Beetle
+128,Koopa Troopa,Koopa Troopa
+129,Keese,Buzzy Beetle
+130,Octorok,Octorok
+131,Koopa Troopa,Koopa Troopa
+132,Goomba,Tektite
+133,Goomba,Koopa Troopa
+134,Keese,Keese
+135,Blooper,Buzzy Beetle
+136,Keese,Keese
+137,Octorok,Octorok
+138,Keese,Keese
+139,Keese,Keese
+140,Zol,Buzzy Beetle
+141,Octorok,Octorok
+142,Blooper,Buzzy Beetle
+143,Octorok,Octorok
+144,Goomba,Koopa Troopa
+145,Koopa Troopa,Koopa Troopa
+146,Goomba,Koopa Troopa
+147,Koopa Troopa,Koopa Troopa
+148,Koopa Troopa,Koopa Troopa
+149,Octorok,Octorok
+150,Octorok,Octorok
+151,Bullet Bill,Bullet Bill
+152,Zol,Zol
+153,Goomba,Octorok
+154,Octorok,Octorok
+155,Bullet Bill,Bullet Bill
+156,Goomba,Tektite
+157,Keese,Keese
+158,Goomba,Tektite
+159,Keese,Keese
+160,Blooper,Blooper
+161,Tektite,Tektite
+162,Tektite,Tektite
+163,Octorok,Buzzy Beetle
+164,Koopa Troopa,Koopa Troopa
+165,Koopa Troopa,Koopa Troopa
+166,Tektite,Tektite
+167,Octorok,Octorok
+168,Bullet Bill,Bullet Bill
+169,Bullet Bill,Buzzy Beetle
+170,Keese,Keese
+171,Goomba,Tektite
+172,Octorok,Octorok
+173,Octorok,Octorok
+174,Keese,Keese
+175,Goomba,Keese
+176,Octorok,Octorok
+177,Blooper,Blooper
+178,Goomba,Keese
+179,Goomba,Octorok
+180,Koopa Troopa,Koopa Troopa
+181,Keese,Keese
+182,Goomba,Keese
+183,Koopa Troopa,Koopa Troopa
+184,Koopa Troopa,Koopa Troopa
+186,Koopa Troopa,Koopa Troopa
+187,Tektite,Tektite
+188,Blooper,Buzzy Beetle
+189,Goomba,Tektite
+190,Bullet Bill,Bullet Bill
+191,Octorok,Octorok
+192,Tektite,Buzzy Beetle
+193,Goomba,Keese
+194,Koopa Troopa,Koopa Troopa
+195,Tektite,Tektite
+196,Bullet Bill,Bullet Bill
+197,Tektite,Tektite
+198,Blooper,Buzzy Beetle
+199,Blooper,Blooper
+200,Tektite,Tektite
+201,Tektite,Tektite
+202,Tektite,Buzzy Beetle
+203,Goomba,Tektite
+204,Octorok,Octorok
+205,Keese,Buzzy Beetle
+206,Koopa Troopa,Koopa Troopa
+207,Zol,Zol
+208,Tektite,Tektite
+209,Zol,Zol
+210,Keese,Keese
+211,Blooper,Blooper
+212,Bullet Bill,Buzzy Beetle
+213,Keese,Buzzy Beetle
+214,Bullet Bill,Bullet Bill
+215,Bullet Bill,Bullet Bill
+216,Koopa Troopa,Buzzy Beetle
+217,Zol,Zol
+218,Keese,Keese
+219,Bullet Bill,Buzzy Beetle
+220,Blooper,Blooper
+221,Koopa Troopa,Koopa Troopa
+222,Zol,Zol
+223,Octorok,Octorok
+224,Bullet Bill,Buzzy Beetle
+225,Keese,Keese
+226,Keese,Keese
+227,Keese,Keese
+228,Keese,Keese
+229,Octorok,Octorok
+230,Blooper,Blooper
+231,Tektite,Buzzy Beetle
+232,Octorok,Octorok
+233,Octorok,Octorok
+234,Keese,Keese
+235,Blooper,Blooper
+236,Zol,Zol
+237,Koopa Troopa,Koopa Troopa
+238,Goomba,Tektite
+239,Tektite,Tektite
+240,Bullet Bill,Bullet Bill
+241,Octorok,Octorok
+242,Goomba,Zol
+243,Blooper,Buzzy Beetle
+244,Bullet Bill,Bullet Bill
+245,Zol,Zol
+246,Zol,Zol
+247,Tektite,Buzzy Beetle
+248,Koopa Troopa,Koopa Troopa
+249,Keese,Keese
+250,Blooper,Blooper
+251,Blooper,Blooper
+252,Blooper,Blooper
+253,Blooper,Blooper
+254,Koopa Troopa,Koopa Troopa
+255,Keese,Buzzy Beetle
+256,Keese,Keese
+257,Koopa Troopa,Koopa Troopa
+258,Keese,Keese
+259,Zol,Zol
+260,Bullet Bill,Bullet Bill
+261,Blooper,Blooper
+262,Tektite,Buzzy Beetle
+263,Octorok,Octorok
+264,Goomba,Buzzy Beetle
+265,Tektite,Tektite
+266,Koopa Troopa,Koopa Troopa
+267,Keese,Keese
+268,Octorok,Octorok
+269,Goomba,Blooper
+270,Keese,Keese
+271,Zol,Zol
+272,Goomba,Blooper
+273,Tektite,Tektite
+274,Keese,Keese
+275,Tektite,Tektite
+276,Zol,Zol
+277,Tektite,Tektite
+278,Tektite,Tektite
+279,Goomba,Keese
+280,Octorok,Octorok
+281,Octorok,Octorok
+282,Goomba,Tektite
+283,Koopa Troopa,Koopa Troopa
+284,Tektite,Tektite
+285,Koopa Troopa,Koopa Troopa
+286,Blooper,Blooper
+287,Octorok,Octorok
+288,Koopa Troopa,Koopa Troopa
+289,Goomba,Blooper
+290,Keese,Keese
+291,Zol,Zol
+292,Blooper,Blooper
+293,Keese,Keese
+294,Goomba,Tektite
+296,Keese,Keese
+297,Zol,Zol
+298,Zol,Zol
+299,Octorok,Octorok
+300,Octorok,Octorok
+301,Goomba,Koopa Troopa
+302,Blooper,Blooper
+303,Goomba,Tektite
+304,Blooper,Buzzy Beetle
+305,Tektite,Tektite
+306,Keese,Keese
+307,Tektite,Tektite
+308,Tektite,Tektite
+309,Octorok,Octorok
+310,Goomba,Koopa Troopa
+311,Blooper,Blooper
+312,Zol,Zol
+313,Koopa Troopa,Koopa Troopa
+314,Koopa Troopa,Koopa Troopa
+315,Tektite,Tektite
+316,Bullet Bill,Bullet Bill
+317,Blooper,Blooper
+318,Octorok,Octorok
+319,Koopa Troopa,Koopa Troopa
+320,Keese,Keese
+321,Goomba,Octorok
+322,Zol,Zol
+323,Octorok,Octorok
+324,Koopa Troopa,Buzzy Beetle
+325,Goomba,Buzzy Beetle
+326,Tektite,Tektite
+327,Koopa Troopa,Koopa Troopa
+328,Octorok,Buzzy Beetle
+329,Koopa Troopa,Koopa Troopa
+330,Bullet Bill,Bullet Bill
+331,Blooper,Blooper
+332,Zol,Zol
+333,Tektite,Tektite
+334,Zol,Zol
+335,Bullet Bill,Bullet Bill
+336,Tektite,Tektite
+337,Koopa Troopa,Koopa Troopa
+338,Octorok,Octorok
+339,Blooper,Blooper
+340,Zol,Buzzy Beetle
+341,Keese,Buzzy Beetle
+342,Keese,Keese
+343,Keese,Keese
+344,Goomba,Keese
+345,Bullet Bill,Bullet Bill
+346,Zol,Zol
+347,Bullet Bill,Bullet Bill
+348,Koopa Troopa,Koopa Troopa
+349,Koopa Troopa,Koopa Troopa
+350,Blooper,Blooper
+351,Zol,Zol
+352,Bullet Bill,Bullet Bill
+353,Octorok,Octorok
+354,Zol,Zol
+355,Keese,Keese
+356,Octorok,Octorok
+357,Goomba,Koopa Troopa
+358,Zol,Zol
+359,Zol,Zol
+360,Octorok,Octorok
+361,Tektite,Tektite
+362,Tektite,Tektite
+363,Bullet Bill,Buzzy Beetle
+364,Koopa Troopa,Buzzy Beetle
+365,Zol,Zol
+366,Blooper,Blooper
+367,Goomba,Zol
+368,Bullet Bill,Bullet Bill
+369,Zol,Zol
+370,Blooper,Blooper
+371,Tektite,Tektite
+372,Koopa Troopa,Buzzy Beetle
+373,Bullet Bill,Bullet Bill
+374,Bullet Bill,Buzzy Beetle
+375,Tektite,Tektite
+376,Octorok,Octorok
+377,Bullet Bill,Bullet Bill
+378,Zol,Zol
+379,Koopa Troopa,Koopa Troopa
+380,Bullet Bill,Bullet Bill
+381,Octorok,Buzzy Beetle
+382,Octorok,Octorok
+383,Octorok,Octorok
+384,Keese,Keese
+385,Goomba,Keese
+386,Octorok,Octorok
+387,Octorok,Octorok
+388,Tektite,Tektite
+389,Blooper,Blooper
+390,Koopa Troopa,Koopa Troopa
+391,Bullet Bill,Bullet Bill
+392,Blooper,Blooper
+393,Blooper,Blooper
+394,Blooper,Blooper
+395,Tektite,Tektite
+396,Zol,Buzzy Beetle
+397,Koopa Troopa,Koopa Troopa
+398,Keese,Keese
+399,Bullet Bill,Bullet Bill
+400,Goomba,Buzzy Beetle
+402,Bullet Bill,?
+403,Octorok,?
+405,Blooper,?
+406,Zol,?
+407,Keese,?
+409,Bullet Bill,?
+411,Blooper,?
+412,Bullet Bill,?
+413,Goomba,?
+414,Koopa Troopa,?
+415,Blooper,?
+416,Octorok,?
+417,Bullet Bill,?
+418,Bullet Bill,?
+419,Tektite,?
+420,Goomba,?
+421,Keese,?
+422,Zol,?
+423,Blooper,?
+425,Octorok,?
+505,?,Bullet Bill
+510,?,Koopa Troopa
+511,?,Zol
+512,?,Bullet Bill
+513,?,Blooper
+514,?,Tektite
+515,?,Koopa Troopa
+517,?,Zol
+519,?,Bullet Bill
+522,?,Blooper
+523,?,Tektite
+524,?,Blooper
+528,?,Keese
+529,?,Bullet Bill
+530,?,Koopa Troopa
+531,?,Bullet Bill
+532,?,Bullet Bill
+533,?,Buzzy Beetle
+534,?,Keese
+535,?,Tektite
+536,?,Buzzy Beetle
+543,?,Bullet Bill
+544,?,Bullet Bill
+545,?,Tektite
+546,?,Bullet Bill
+547,?,Buzzy Beetle
+554,?,Keese
+555,?,Koopa Troopa
+556,?,Tektite
+557,?,Tektite
+558,?,Zol
+560,?,Zol
+561,?,Koopa Troopa
+562,?,Tektite
+566,?,Octorok
+573,Octorok,?
+574,Tektite,?
+575,Keese,?
+576,Koopa Troopa,?
+577,Tektite,?
+578,Blooper,?
+579,Koopa Troopa,?
+580,Goomba,?
+581,Zol,?
+582,Zol,Zol
+583,Octorok,?
+584,Tektite,?
+585,Blooper,?
+587,Tektite,?
+588,Bullet Bill,?
+589,Koopa Troopa,?
+590,Bullet Bill,?
+591,Tektite,?
+593,Bullet Bill,?
+595,Octorok,?
+596,Blooper,?
+933,Zol,?
+942,?,Octorok
+943,?,Keese
+945,?,Blooper
+946,?,Koopa Troopa
+947,?,Buzzy Beetle
+949,?,Bullet Bill
+956,?,Bullet Bill
+957,?,Zol
+961,?,Keese
+962,?,Keese
+963,?,Bullet Bill
+964,?,Koopa Troopa
+967,?,Blooper
+969,?,Buzzy Beetle
+970,?,Bullet Bill
+988,?,Tektite
+1000,Blooper,?
+1002,Goomba,?
+1004,Goomba,?
+1007,Keese,?
+1010,Zol,?
+1016,Koopa Troopa,?
+1017,Keese,?
+1018,Zol,?
+1019,Zol,?
+1020,Keese,?
+1021,Bullet Bill,?
+1022,Octorok,?
+1023,Goomba,?
+1024,Octorok,?
+1025,Blooper,?
+1026,Zol,?
+1027,Koopa Troopa,?
+1028,Koopa Troopa,?
+1029,Octorok,?
+1030,Koopa Troopa,?
+1031,Bullet Bill,?
+1032,Octorok,?
+1033,Octorok,?
+1034,Tektite,?
+1035,Octorok,?
+1036,Bullet Bill,?
+1037,Bullet Bill,?
+1038,Goomba,?
+1039,Keese,?
+1041,Keese,?
+1042,Bullet Bill,?
+1043,Octorok,?
+1045,Zol,?
+1046,Zol,?
+1047,Goomba,?
+1048,Blooper,?
+1049,Tektite,?
+1050,Zol,?
+1051,Zol,?
+1052,Goomba,?
+1053,Keese,?
+1054,Blooper,?
+1055,Bullet Bill,?
+1056,Bullet Bill,?
+1093,Octorok,?
+1094,Goomba,?
+1095,Octorok,?
+1096,Tektite,?
+1097,Bullet Bill,?
+1098,Zol,?
+1099,Tektite,?
+1100,Tektite,?
+1101,Goomba,?
+1102,Zol,?
+1104,Tektite,?
+1105,Koopa Troopa,?
+1106,Bullet Bill,?
+1107,Keese,?
+1108,Tektite,?
+1109,Goomba,?
+1110,Goomba,?
+1111,Zol,?
+1112,Koopa Troopa,?
+1113,Bullet Bill,?
+1114,Keese,?
+1115,Zol,?
+1116,Zol,?
+1117,Keese,?

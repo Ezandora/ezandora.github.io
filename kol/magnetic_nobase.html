@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- This source file is public domain. -->
+		<title>Magnetic Sculptures</title>
+		<meta content="width=device-width" name="viewport">
+		<style type="text/css">
+			body { font-family:Arial,Helvetica,sans-serif;color:black;background-color:#C0C0C0;font-size:14px;margin:0px; }
+			hr { height: 1px; border: 0px; width: 100%;background: #B2B2B2; }
+			textarea { resize: none; }
+			a:link { color:black; }
+			a:visited { color:black; }
+			a:active { color:black; }
+			div.r_centre { margin-left:auto; margin-right:auto;text-align:center; }
+			div.pixel { width:24px;height:24px;display:table-cell;}
+			
+			.magnetic_sculpture { width: 120px; height: 144px; position: relative; }
+			.magnetic_base { position:absolute; bottom: 0px; left:0px; opacity: 0.25; }
+			.magnetic_pixel { position:absolute; }
+			.button { -webkit-border-radius: 60; -moz-border-radius: 60; border-radius: 60px; color: #ffffff; font-size: 20px; background: #808080; padding: 10px 20px 10px 20px; text-decoration: none; display:inline-block;}
+			.button:hover { background: #4f4f4f; text-decoration: none; cursor:pointer; }
+		</style>
+		<script type="text/javascript"src="magnetic.js"></script>
+	</head>
+	<body onload="pageLoaded(true);">
+		<div style="max-width:600px;margin-left:auto; margin-right:auto;background-color:white;padding:2em;">
+		<div style="font-weight:bold;font-size:1.5em;" class="r_centre">Magnetic sculptures</div><br>
+		<div id="magnetic_sculpture_display" class="r_centre" style="width:200px;height:200px;"></div>
+		<br>
+		<div id="pixel_collection" style="border:1px solid #B2B2B2;" onmousemove="pixelContainerMouseMoved(event)" onmousedown="pixelContainerMouseDown(event)" onmouseup="pixelContainerMouseUp(event)"></div>
+		<br>
+		<div class="r_centre"><div onclick="erasePixels()" class="button">Erase</div></div>
+		<div id="url_output_container" style="opacity:0;">
+			<br>Run this command in mafia, in the Graphical CLI:
+			<textarea id="url_output" style="width:600px;" onclick="this.select()" readonly rows="4"></textarea>
+			Make sure you have a magnetic sculpture in inventory.
+			<br>
+			<br>
+			Alternatively, in KOL chat, run this:
+			<textarea style="width:600px;" onclick="this.select()" readonly>/goto '+function(){document.getElementById('graf').maxLength=2000;}()[a]+'</textarea>
+			Then this:
+			<textarea id="chat_url_output" style="width:600px;" onclick="this.select()" readonly rows="4"></textarea>
+			Thanks to sausssage (#2457107) for the chat hack. And also discovering the limit break.
+		</div>
+		<noscript><span style="color:red;font-weight:bold;">Requires javascript.</span></noscript>
+		</div>
+		<br>
+		<div style="font-size:0.777em;color:#A0A0A0;" class="r_centre">Written by Ezandora.</div>
+		<!-- prevent cache flickering: -->
+		<img src="images/magsculpture/magpixel1.gif" style="opacity:0;">
+		<img src="images/magsculpture/magpixel2.gif" style="opacity:0;">
+		<img src="images/magsculpture/magpixel3.gif" style="opacity:0;">
+		<img src="images/magsculpture/magpixel4.gif" style="opacity:0;">
+		<img src="images/magsculpture/magpixel5.gif" style="opacity:0;">
+		<img src="images/magsculpture/magpixel6.gif" style="opacity:0;">
+		<img src="images/magsculpture/magpixel7.gif" style="opacity:0;">
+		<img src="images/magsculpture/magpixel8.gif" style="opacity:0;">
+		<img src="images/magsculpture/magpixel9.gif" style="opacity:0;">
+		<img src="images/magsculpture/magpixel10.gif" style="opacity:0;">
+	</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- This source file is public domain. -->
+		<title>Briefcase</title>
+		<meta content="width=device-width" name="viewport">
+		<style type="text/css">
+			body { font-family:Arial,Helvetica,sans-serif;color:black;background-color:#C0C0C0;font-size:14px;margin:0px; }
+			hr { height: 1px; border: 0px; width: 100%;background: #B2B2B2; }
+			textarea { resize: none; }
+			a:link { color:black; }
+			a:visited { color:black; }
+			a:active { color:black; }
+			div.r_centre { margin-left:auto; margin-right:auto;text-align:center; }
+			div.input_table_cell { display:table-cell; font-weight:bold; padding-left:5px;padding-right:5px; vertical-align:middle; padding-top:5px; padding-bottom:5px;}
+			div.align_right { text-align:right; }
+			.day_header { font-weight:bold; font-size:1.25em; }
+			.day_header_number { font-weight:bold; font-size:2.0em; }
+			hr.hr_little_margin { margin-top:2px; margin-bottom:2px; }
+			div.bullet_cell { display:table-cell;padding-right:5px; }
+			div.briefcase_cell { display:table-cell;vertical-align:middle; }
+		</style>
+		<script type="text/javascript"src="tabs.js"></script>
+		<script type="text/javascript"src="briefcase.js"></script>
+	</head>
+	<body onload="pageLoaded();">
+		<div style="max-width:700px;margin-left:auto; margin-right:auto;background-color:white;padding:2em;">
+		<div style="font-weight:bold;font-size:1.5em;" class="r_centre">KGBriefcase</div>
+		<p>There's a <a href="https://github.com/Ezandora/Briefcase/">Mafia solver script</a>.</p>
+		<p><strong>Do this before anything else:</strong> If the first horizontal light isn't lit, press the left and right actuators.</p>
+		<p><strong>Unlocking the crank:</strong> Input 000-000, set handle to DOWN, and press the left actuator.</p>
+		<p><strong>Charging the flywheel:</strong> Set the handle to the UP position. Click on the crank <strong>exactly</strong> eleven times. Click on the handle.<br><strong>Do this once per day</strong>, and you will gain more clicks.</p>
+		<p><strong>Unlocking the buttons:</strong> Input the code 012-210 or another XYZ-ZYX palindrome, and press either actuator.</p>
+		<p><strong>Opening the drawers:</strong> try 222-000-left-actuator and 000-222-right-actuator? They give exploding cigars. In License to Adventure, the right one gives a Minion-B-Gone, which you can use in the lair.</p>
+		<p><strong>Charging the antennae:</strong> Set the handle to DOWN and click the crank a bunch.</p>
+		<div><strong>Modifying the briefcase's enchantments:</strong> Set the handle to DOWN and click the buttons. You can modify three different enchantment slots. This resets on ascension.<div style="margin-left:20px;">Buttons <strong>1-2</strong> cycle through: +25% Weapon Damage, +50% Spell Damage, +5 Prismatic Damage, and +10% Critical Hit.<br>Buttons <strong>3-4</strong> cycle through: +25% init, +100 Damage Absorption, +5 Hot res, +5 Cold res, +5 Spooky res, +5 Stench res, and +5 Sleaze res.<br>Buttons <strong>5-6</strong> cycle through: 5-10 HP/MP regen, +5 adventures/day, +5 PvP fights/day, -combat, +combat, +25 ML, and -3MP to use skills.</div></div>
+		<p><strong>Martini hose:</strong> Set code to 000-000, set handle to UP, click either actuator. (111-111, 222-222, etc?)<br>The hose gives three martinis per day.<br>The quality depends on your tab configuration; basic is < 364(?) (base ten), improved is >= 364(?? possibly wrong?), and splendid is 485, 647, 701, 719, 725, 727 or 728?</p>
+		<p><strong>Modifying/unlocking the tabs:</strong> Set the handle to UP and try the different buttons. Each button alters the tabs in a different way.</p>
+		<p><strong>Tab buffs:</strong> The tabs at the top of the briefcase will give 50(? 100?) turns of a specific buff, depending on ???. This takes three of your daily clicks.</p>
+		<p><strong>Moving tabs unlock:</strong> The six tabs are a six-digit base-three number, shown in a random digit order. Each button adds -1, -10, -100, +1, +10, or +100 to the number, in base 3. Which button does which is also random.<br>There's a certain tab number you need to reach. As you get closer, more rings on top of the briefcase light up. Blinking means warm, solid means warmer. Once you have two solid concentric rings, you're very close.<br>Reaching the right number unlocks a second stage(?), where the tabs start moving every page reload, and ???. There's a solver at the bottom of this page.</p>
+		<p><strong>Unlocking the antennae:</strong> Either solve the mastermind puzzle (light #2, doesn't always work) or the tabs puzzle (light #3). Seems to be part of the lights #5 and #6 puzzles.
+		<p><strong>Opening the briefcase:</strong> Light the first three lights. Make sure your tabs are moving - they will change every page load. If they aren't, re-solve the third light. Make sure you know your lightrings target number, then press the +100 button until you are at least twenty or so above that. Set handle to DOWN, and turn the crank until you reach (target number + 4). Then flip the handle four times exactly.<br>This will unlock various once/day reward items, eternally.<br><strong>Alternate method:</strong> make sure tabs are moving, press the +100 button a bunch. Set handle to DOWN, turn crank until you see two solid concentric rings of light. (lightrings6.gif). Press crank exactly once more, then flip the handle four times.</p>
+		<p>The Six Horizontal Lights:<br>&bullet;<strong>First:</strong> Click the left and right actuators.<br>&bullet;<strong>Second:</strong> Solve the vertical lights mastermind puzzle.<br>&bullet;<strong>Third:</strong> Set the tabs on top to a specific number, which you can determine via the light rings. This makes the tabs start moving.<br>&bullet;<strong>Fourth:</strong> Something to do with tabs configuration after they start moving. Blinks at >= [third light tab value] + 2 (or not?) <strong>only</strong> if your tabs are moving.<br>Note: if your tabs run down to zero, they will stop moving, and you will have to reach your answer configuration to get them started again.<br>&bullet;<strong>Fifth:</strong> Antennae. Starts blinking with antennae charge three or greater.<br>&bullet;<strong>Sixth:</strong> It seems to start blinking when the fourth and fifth light are blinking, and you move the handle.</p>
+		<hr>
+		<H3>Light #2 Solver</H3>
+		<p>To light the second horizontal light, you have to play a game of Mastermind with the briefcase. This also unlocks the antennae, sometimes, but you can also unlock the antennae via the tabs puzzle.</p>
+		<p>When you click on the left actuator, three vertical lights will indicate how correct the three left digits are.</p>
+		<p>The lights will turn either solid black (<img src="images/light_on.gif">), blinking (<img src="images/light_blinking.gif">), or off (<img src="images/light_off.gif">). A solid light means you have the correct number in the correct spot. A blinking light means you have a correct number, but in the wrong spot. So, if you have a solid light and a blinking light, that means one of the dials is correct, and another dial is correct, but in the wrong spot.</p>
+		<p>Clicking on the right actuator will do the same for the three right digits.</p>
+		<p>This tool will help you solve this.</p>
+		<hr>
+		<div id="output_div" style=\"width:100%;\"></div>
+		<div class="r_centre" style="font-size:1.5em;font-weight:bold;">Input:</div>
+		<div id="output2_div" style=\"width:100%;\" class="r_centre"></div>
+		<div id="output3_div" style=\"width:100%;\"></div>
+		<hr>
+		<H3>Tabs Solver</H3>
+		<p>The tabs at the top of the briefcase represent a six-digit base-three number. Their different configurations represent a different value.</p>
+		<p>Each of the six buttons, when the handle is UP, will modify this number in a different way: -1, +1, -10, +10, -100, and +100.</p>
+		<p>Your goal is to reach a specific target number. Two sets of rings will light up on the top of the case, as you become closer to the destination goal.</p>
+		<p><a href="https://pastebin.com/vSegPer7">Run this script</a> every time you press a button, in order to get the tab configuration and lightrings value.</p>
+		<p>[More explanation here, maybe later. Run my <a href="https://github.com/Ezandora/Briefcase/">mafia solver script</a> instead?]</p>
+		<p>Intervals for lightrings, relative to the final answer:<br>lightrings1.gif: [-100, -76] and [76, 100]<br>lightrings2.gif: [-75, -51] and [51, 75]<br>lightrings3.gif: [-50, -26] and [26, 50]<br>lightrings4.gif: [-25, -11] and [11, 25]<br>lightrings5.gif: [-10, -6] and [6, 10]<br>lightrings6.gif: [-5, 5]</p>
+		<hr>
+		<div id="output_tabs_div" style=\"width:100%;\"></div>
+		<br>Raw input:<br>
+		<textarea onkeyup="tabsTextInputKeyup();" id="tabs_input" rows="10" cols="50"></textarea>
+		<br>
+		<div id="tab_converter_overall_div">Base converter: <textarea onkeyup="tabsTextInputKeyup();" id="tabs_number_conversion_input" rows="1" cols="6" maxlength="6"></textarea><span id="tabs_conversion_output"></span></div>
+		<noscript><span style="color:red;font-weight:bold;">Requires javascript.</span></noscript>
+		</div>
+		<div class="r_centre" style="background:#DDDDDD;max-width:756px;padding-top:5px;padding-bottom:5px;"><a href="../../index.html" style="font-size:1.2em;font-weight:bold;text-decoration:none;display:block;">Home</a></div>
+		<br>
+		<div style="font-size:0.777em;color:#A0A0A0;" class="r_centre">Written by Ezandora.</div>
+	</body>
+</html>

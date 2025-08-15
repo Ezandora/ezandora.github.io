@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- This source file is public domain. -->
+		<title>Gelatinous Noob Skills</title>
+		<meta content="width=device-width" name="viewport">
+		<style type="text/css">
+			body { font-family:Arial,Helvetica,sans-serif;color:black;background-color:#C0C0C0;font-size:14px;margin:0px; }
+			hr { height: 1px; border: 0px; width: 100%;background: #B2B2B2; }
+			textarea { resize: none; }
+			a:link { color:black; }
+			a:visited { color:black; }
+			a:active { color:black; }
+			div.r_centre { margin-left:auto; margin-right:auto;text-align:center; }
+			div.gelatinous_table { display:table;text-align:left;width:768px; }
+			.gelatinous_table_row { display:table-row; }
+			.gelatinous_table_row:hover { background-color:#DADADA; }
+			.gelatinous_component_container { pointer-events:none; color:#555555; padding-left:1.5em; }
+		</style>
+		<script type="text/javascript"src="other_data.js"></script>
+		<script type="text/javascript"src="item_data.js"></script>
+		<script type="text/javascript"src="GelatinousNoob.js"></script>
+	</head>
+	<body onload="pageLoaded();">
+		<div style="max-width:768px;margin-left:auto; margin-right:auto;background-color:white;padding:2em;">
+			<div class="r_centre">
+				<div style="font-weight:bold;font-size:1.5em;" class="r_center"><div style="margin-bottom:5px;">Gelatinous Noob Skills</div></div><br>
+			
+			</div>
+			<p>In the Gelatinous Noob path, you can absorb items. Certain items, when absorbed, will give a passive skill. Absorbing the same item more than once will give extra adventures.</p>
+			<p>Click on a skill name to see what items will absorb into that skill.</p>
+			<p>Crossed out items are not pullable in standard. Bolded items are from NPC stores or are easily obtainable.</p>
+			<p>+adventures suggested path: potted cactus (gift shop) &#9658; dirty bottlecap (starting) &#9658; hermit permit (npc) &#9658; LOV Enamorang? (LOV Tunnel) &#9658; concentrated magicalness pill (barrels) OR baconstone (starting) </p>
+			<p>Lazy starter skills: All +adventures/absorb, all +stats/fight, all +item, Sunglasses, Beating Human Heart, Pathological Greed, Subcutaneous Fat, Anterior Cruciate Ligaments.</p>
+			<p>Copy/paste your skills from your character sheet here, to ignore them:</p>
+			<p><textarea onkeyup="writePageLayout();" id="ignore_skills_textarea" rows=3 cols=20></textarea></p>
+			<div id="results_holder"></div>
+			<hr>
+			Or select an item: <select id="all_items_dropdown" onchange="dropdownSelectionChanged();"></select><span id="dropdown_output"></span>
+			</div>
+			
+			<noscript><span style="color:red;font-weight:bold;">Requires javascript.</span></noscript>
+		</div>
+		<div class="r_centre" style="background:#DDDDDD;max-width:824px;padding-top:5px;padding-bottom:5px;"><a href="../../index.html" style="font-size:1.2em;font-weight:bold;text-decoration:none;display:block;">Home</a></div>
+		<br><div style="font-size:0.777em;color:#A0A0A0;" class="r_centre">Written by Ezandora.</div>
+	</body>
+</html>

@@ -1,0 +1,1 @@
+All of this data has turns starting at 0. So everyone else's turn 1 is my turn zero.

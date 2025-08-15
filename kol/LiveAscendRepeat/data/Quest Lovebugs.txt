@@ -1,0 +1,187 @@
+Indexed from 0:
+23, The Defiled Alcove, lovebugs fired
+25, The Defiled Alcove, lovebugs fired
+25, The Defiled Nook, lovebugs fired
+26, The Defiled Niche, dirty old lihc, lovebugs fired
+32, The Defiled Nook, lovebugs fired
+34, The Defiled Nook, lovebugs fired
+37, The Defiled Alcove, lovebugs fired
+37, The Defiled Nook, lovebugs fired
+39, The Defiled Nook, lovebugs fired
+40, The Defiled Nook, lovebugs fired
+41, The Defiled Nook, lovebugs fired
+43, The Defiled Nook, lovebugs fired
+55, Oil Peak, lovebugs fired
+58, The Defiled Alcove, lovebugs fired
+58, The Defiled Nook, lovebugs fired
+71, The Defiled Alcove, lovebugs fired
+71, The Defiled Nook, lovebugs fired
+75, The Defiled Niche, dirty old lihc, lovebugs fired
+81, Oil Peak, lovebugs fired
+81, The Defiled Alcove, lovebugs fired
+87, Oil Peak, lovebugs fired
+89, Oil Peak, lovebugs fired
+90, The Smut Orc Logging Camp, lovebugs fired
+91, Oil Peak, lovebugs fired
+95, Oil Peak, lovebugs fired
+95, The Smut Orc Logging Camp, lovebugs fired
+99, Oil Peak, lovebugs fired
+99, The Defiled Niche, dirty old lihc, lovebugs fired
+99, The Smut Orc Logging Camp, lovebugs fired
+105, Oil Peak, lovebugs fired
+110, The Defiled Alcove, lovebugs fired
+111, The Smut Orc Logging Camp, lovebugs fired
+112, The Defiled Alcove, lovebugs fired
+113, The Defiled Alcove, lovebugs fired
+116, Oil Peak, lovebugs fired
+116, The Defiled Alcove, lovebugs fired
+116, The Smut Orc Logging Camp, lovebugs fired
+117, The Defiled Alcove, lovebugs fired
+117, The Defiled Niche, dirty old lihc, lovebugs fired
+117, The Smut Orc Logging Camp, lovebugs fired
+120, The Defiled Alcove, lovebugs fired
+120, The Defiled Cranny, lovebugs fired
+120, The Smut Orc Logging Camp, lovebugs fired
+126, Oil Peak, lovebugs fired
+126, The Defiled Alcove, lovebugs fired
+126, The Smut Orc Logging Camp, lovebugs fired
+130, Oil Peak, lovebugs fired
+131, The Smut Orc Logging Camp, lovebugs fired
+144, The Defiled Alcove, lovebugs fired
+144, The Smut Orc Logging Camp, lovebugs fired
+145, Oil Peak, lovebugs fired
+147, The Smut Orc Logging Camp, lovebugs fired
+150, Oil Peak, lovebugs fired
+153, The Defiled Alcove, lovebugs fired
+160, The Defiled Alcove, lovebugs fired
+161, Oil Peak, lovebugs fired
+161, The Smut Orc Logging Camp, lovebugs fired
+165, Oil Peak, lovebugs fired
+165, The Defiled Alcove, lovebugs fired
+165, The Defiled Niche, senile lihc, lovebugs fired
+167, Oil Peak, lovebugs fired
+167, The Defiled Niche, slick lihc, lovebugs fired
+168, Oil Peak, lovebugs fired
+168, The Arid, Extra-Dry Desert, lovebugs fired
+168, The Smut Orc Logging Camp, lovebugs fired
+177, Oil Peak, lovebugs fired
+177, The Arid, Extra-Dry Desert, lovebugs fired
+177, The Smut Orc Logging Camp, lovebugs fired
+183, The Arid, Extra-Dry Desert, lovebugs fired
+183, The Defiled Alcove, lovebugs fired
+184, The Arid, Extra-Dry Desert, lovebugs fired
+184, The Defiled Alcove, lovebugs fired
+184, The Smut Orc Logging Camp, lovebugs fired
+185, The Smut Orc Logging Camp, lovebugs fired
+186, The Smut Orc Logging Camp, lovebugs fired
+188, The Smut Orc Logging Camp, lovebugs fired
+189, The Arid, Extra-Dry Desert, lovebugs fired
+190, The Smut Orc Logging Camp, lovebugs fired
+192, The Arid, Extra-Dry Desert, lovebugs fired
+192, The Defiled Niche, dirty old lihc, lovebugs fired
+195, The Arid, Extra-Dry Desert, lovebugs fired
+196, Oil Peak, lovebugs fired
+196, The Arid, Extra-Dry Desert, lovebugs fired
+196, The Defiled Niche, dirty old lihc, lovebugs fired
+197, Oil Peak, lovebugs fired
+197, The Arid, Extra-Dry Desert, lovebugs fired
+200, Oil Peak, lovebugs fired
+200, The Arid, Extra-Dry Desert, lovebugs fired
+200, The Smut Orc Logging Camp, lovebugs fired
+204, The Arid, Extra-Dry Desert, lovebugs fired
+205, Oil Peak, lovebugs fired
+205, The Arid, Extra-Dry Desert, lovebugs fired
+208, Oil Peak, lovebugs fired
+208, The Arid, Extra-Dry Desert, lovebugs fired
+209, Oil Peak, lovebugs fired
+209, The Arid, Extra-Dry Desert, lovebugs fired
+212, Oil Peak, lovebugs fired
+212, The Arid, Extra-Dry Desert, lovebugs fired
+212, The Defiled Niche, dirty old lihc, lovebugs fired
+214, Oil Peak, lovebugs fired
+214, The Arid, Extra-Dry Desert, lovebugs fired
+214, The Defiled Alcove, lovebugs fired
+214, The Defiled Niche, dirty old lihc, lovebugs fired
+220, The Arid, Extra-Dry Desert, lovebugs fired
+225, Oil Peak, lovebugs fired
+227, Oil Peak, lovebugs fired
+227, The Arid, Extra-Dry Desert, lovebugs fired
+227, The Defiled Alcove, lovebugs fired
+239, The Arid, Extra-Dry Desert, lovebugs fired
+240, Oil Peak, lovebugs fired
+240, The Arid, Extra-Dry Desert, lovebugs fired
+241, The Arid, Extra-Dry Desert, lovebugs fired
+246, The Arid, Extra-Dry Desert, lovebugs fired
+256, The Arid, Extra-Dry Desert, lovebugs fired
+257, The Arid, Extra-Dry Desert, lovebugs fired
+259, The Arid, Extra-Dry Desert, lovebugs fired
+261, The Arid, Extra-Dry Desert, lovebugs fired
+262, The Arid, Extra-Dry Desert, lovebugs fired
+263, The Arid, Extra-Dry Desert, lovebugs fired
+264, The Arid, Extra-Dry Desert, lovebugs fired
+267, The Arid, Extra-Dry Desert, lovebugs fired
+268, The Arid, Extra-Dry Desert, lovebugs fired
+270, The Arid, Extra-Dry Desert, lovebugs fired
+272, Oil Peak, lovebugs fired
+272, The Arid, Extra-Dry Desert, lovebugs fired
+275, Oil Peak, lovebugs fired
+275, The Arid, Extra-Dry Desert, lovebugs fired
+279, The Arid, Extra-Dry Desert, lovebugs fired
+279, The Smut Orc Logging Camp, lovebugs fired
+285, The Arid, Extra-Dry Desert, lovebugs fired
+286, The Arid, Extra-Dry Desert, lovebugs fired
+288, The Arid, Extra-Dry Desert, lovebugs fired
+290, The Arid, Extra-Dry Desert, lovebugs fired
+291, The Arid, Extra-Dry Desert, lovebugs fired
+292, The Arid, Extra-Dry Desert, lovebugs fired
+298, The Arid, Extra-Dry Desert, lovebugs fired
+310, The Defiled Alcove, lovebugs fired
+314, The Defiled Alcove, lovebugs fired
+317, The Arid, Extra-Dry Desert, lovebugs fired
+317, The Defiled Niche, slick lihc, lovebugs fired
+322, The Arid, Extra-Dry Desert, lovebugs fired
+325, The Arid, Extra-Dry Desert, lovebugs fired
+328, The Arid, Extra-Dry Desert, lovebugs fired
+331, The Arid, Extra-Dry Desert, lovebugs fired
+339, The Arid, Extra-Dry Desert, lovebugs fired
+342, The Arid, Extra-Dry Desert, lovebugs fired
+343, The Arid, Extra-Dry Desert, lovebugs fired
+354, The Arid, Extra-Dry Desert, lovebugs fired
+355, The Arid, Extra-Dry Desert, lovebugs fired
+358, The Arid, Extra-Dry Desert, lovebugs fired
+361, The Arid, Extra-Dry Desert, lovebugs fired
+363, The Arid, Extra-Dry Desert, lovebugs fired
+364, The Arid, Extra-Dry Desert, lovebugs fired
+366, The Arid, Extra-Dry Desert, lovebugs fired
+376, The Arid, Extra-Dry Desert, lovebugs fired
+377, The Arid, Extra-Dry Desert, lovebugs fired
+386, The Arid, Extra-Dry Desert, lovebugs fired
+391, The Arid, Extra-Dry Desert, lovebugs fired
+395, The Arid, Extra-Dry Desert, lovebugs fired
+400, The Arid, Extra-Dry Desert, lovebugs fired
+405, The Arid, Extra-Dry Desert, lovebugs fired
+406, The Arid, Extra-Dry Desert, lovebugs fired
+410, The Arid, Extra-Dry Desert, lovebugs fired
+415, The Arid, Extra-Dry Desert, lovebugs fired
+416, The Arid, Extra-Dry Desert, lovebugs fired
+421, The Arid, Extra-Dry Desert, lovebugs fired
+422, The Arid, Extra-Dry Desert, lovebugs fired
+423, The Arid, Extra-Dry Desert, lovebugs fired
+424, Oil Peak, lovebugs fired
+426, Oil Peak, lovebugs fired
+430, The Arid, Extra-Dry Desert, lovebugs fired
+431, The Smut Orc Logging Camp, lovebugs fired
+432, The Arid, Extra-Dry Desert, lovebugs fired
+436, The Arid, Extra-Dry Desert, lovebugs fired
+439, The Arid, Extra-Dry Desert, lovebugs fired
+443, Oil Peak, lovebugs fired
+444, Oil Peak, lovebugs fired
+445, The Arid, Extra-Dry Desert, lovebugs fired
+449, The Arid, Extra-Dry Desert, lovebugs fired
+450, The Arid, Extra-Dry Desert, lovebugs fired
+455, The Arid, Extra-Dry Desert, lovebugs fired
+458, The Arid, Extra-Dry Desert, lovebugs fired
+460, The Arid, Extra-Dry Desert, lovebugs fired
+462, The Arid, Extra-Dry Desert, lovebugs fired
+464, The Arid, Extra-Dry Desert, lovebugs fired
+473, The Arid, Extra-Dry Desert, lovebugs fired
