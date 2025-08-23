@@ -33,7 +33,7 @@
 			.bubble_header { margin-left:auto; margin-right:auto; margin-block-start:0em; margin-block-end:0.0em; width: 100%; font-weight:bold;}
 			.bubble_subheader { margin-left:auto; margin-right:auto; margin-block-start:0em; margin-block-end:0.5em; width: 100%; font-size:1.1em; }
 			/*.subbubble { border-radius:var(--roundrect-radius); border: 2px solid var(--color-dark-background); display:block; padding:0.5em;}*/
-			.subbubble { border-radius:var(--roundrect-radius); background:var(--color-light-background); display:inline-block; padding:calc(var(--size-basis) * 0.5); /*cursor:pointer;*/ flex-grow:1; flex-basis:calc(10.0 * var(--size-basis)); min-width:400px;/*calc(max(700px, min(34%, 700px)));*/ /*max-width:400px;*/ max-width:50%; }
+			.subbubble { border-radius:var(--roundrect-radius); background:var(--color-light-background); display:inline-block; padding:calc(var(--size-basis) * 0.5); /*cursor:pointer;*/ flex-grow:1; flex-basis:calc(10.0 * var(--size-basis)); min-width:min(50%, 400px);*//*calc(max(700px, min(34%, 700px)));*/ /*max-width:400px;*/ max-width:50%; }
 			@media (max-width:910px)
 			{
 				.subbubble { max-width:100%; }
@@ -86,7 +86,7 @@
 			<div class="subbubble">
 				<H2 class="bubble_header">Digital Rain</H2>
 				<p class="bubble_subheader">Calming matrix screensaver</p>
-				<video autoplay loop class="subbubble_image"><source src="images/DigitalRain1080p.webm" type="video/webm"/></video>
+				<video autoplay loop class="subbubble_image"><source src="images/DigitalRain1080p.webm" type="video/webm" muted playsinline></video>
 				<div class="subbubble_description">Designed to give off the feeling of falling rain.</div>
 			</div>
 			<div class="subbubble">
@@ -125,7 +125,7 @@
 			<div class="subbubble">
 				<H2 class="bubble_header">Dust</H2>
 				<p class="bubble_subheader">Gravity particle simulator</p>
-				<video autoplay loop class="subbubble_image"><source src="images/Dust.webm" type="video/webm"/></video>
+				<video autoplay loop class="subbubble_image"><source src="images/Dust.webm" type="video/webm" muted playsinline></video>
 				<div class="subbubble_description">Interactive, simulates gravity applied to particles.</div>
 			</div>
 			<div class="subbubble">
