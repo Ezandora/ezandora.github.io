@@ -34,11 +34,7 @@
 			.bubble_header { margin-block-start:0em; margin-block-end:0.0em; width: 100%; font-weight:bold;}
 			.bubble_subheader { margin-left:auto; margin-right:auto; margin-block-start:0em; margin-block-end:0.5em; width: 100%; font-size:1.1em; }
 			/*.subbubble { border-radius:var(--roundrect-radius); border: 2px solid var(--color-dark-background); display:block; padding:0.5em;}*/
-			.subbubble { border-radius:var(--roundrect-radius); background:var(--color-light-background); display:inline-block; padding:calc(var(--size-basis) * 0.5); /*cursor:pointer;*/ flex-grow:1; flex-basis:calc(10.0 * var(--size-basis)); min-width:min(45%, 400px);*//*calc(max(700px, min(34%, 700px)));*/ /*max-width:400px;*/ max-width:50%; }
-			@media (max-width:910px)
-			{
-				.subbubble { max-width:100%; }
-			}
+			.subbubble { border-radius:var(--roundrect-radius); background:var(--color-light-background); display:inline-block; padding:calc(var(--size-basis) * 0.5); /*cursor:pointer;*/ flex-grow:1; flex-basis:calc(10.0 * var(--size-basis)); min-width:min(45%, 400px);/*calc(max(700px, min(34%, 700px)));*/ /*max-width:400px;*/ max-width:50%; }
 			.subbubble_description { text-align:left;margin-left:0px;margin-right:0px; margin-top:1em;}
 			.subbubble_large { flex-basis:100%; max-width:unset;}
 			/*.subbubble:hover { background:white; cursor:pointer; }*/
@@ -57,7 +53,11 @@
 			
 			div.text_links { display:grid;grid-template-columns:repeat(3, 1fr); }
 			div.text_links a { padding:20px; }
-			@media (max-width: 500px)
+			@media (max-width:910px)
+			{
+				.subbubble { max-width:100%; }
+			}
+			@media (max-width: 719px) /* 767px may be better */
 			{
 				/* phone */
 				div.text_links { grid-template-columns:repeat(2, 1fr); }
