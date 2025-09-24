@@ -61,6 +61,8 @@ div.text_links a { padding:20px; }
 {
 	.subbubble { max-width:100%; }
 }
+.text_abbreviation_short, .text_abbreviation_long {}
+
 @media (max-width: 719px) /* 767px may be better */
 {
 	/* phone */
@@ -68,5 +70,11 @@ div.text_links a { padding:20px; }
 	div.text_links a { padding:10px; }
 	div.bubble { padding-left:0px; padding-right:0px; }
 	.subbubble { width:100%; border-radius:0px; }
+	.text_abbreviation_long { display:none; }
 	/*.sticky_header_entry { font-size:1.25em; }*/
+}
+@media (min-width: 720px)
+{
+	/* not phone */
+	.text_abbreviation_short { display:none; }
 }
