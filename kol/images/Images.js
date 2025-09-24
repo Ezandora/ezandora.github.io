@@ -61,8 +61,10 @@ function ContentSetup()
 	
 	for (image_url of image_urls)
 	{
-		let container = document.createElement("div");
+		let container = document.createElement("a");
+		container.classList.add("subbubble");
 		container.classList.add("image_container");
+		container.href = image_url;
 		let image_element = document.createElement("img");
 		image_element.src = image_url;
 		container.appendChild(image_element);

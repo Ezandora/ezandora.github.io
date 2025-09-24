@@ -41,10 +41,10 @@ img.subbubble_carousel_image { max-height:calc(var(--size-basis) * 5.0); width:1
 
 a:hover {background:white;}
 
-.sticky_header { display:flex;position:sticky;top:0px;width:100%; flex-wrap:wrap;}
+.sticky_header { display:flex;position:sticky;top:0px;width:100%; flex-wrap:wrap; background-color:var(--color-very-dark-background);}
 .sticky_header_entry
 {
-	color:white; text-align:center;display:block; padding-top:0.5em;padding-bottom:0.5em;background-color:var(--color-very-dark-background); flex-grow:1; padding-left:1em; padding-right:1em;
+	color:white; text-align:center;display:block; padding-top:0.5em;padding-bottom:0.5em; flex-grow:1; padding-left:1em; padding-right:1em;
 /*font-size:2em;*/
 	font-size:calc(max(1.0em, min(1.5em, 3vw)));
 }
