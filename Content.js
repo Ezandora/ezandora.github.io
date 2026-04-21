@@ -118,7 +118,11 @@ function ContentSetup() {
         let subbubble_image = carousel_image.parentElement.parentElement.getElementsByClassName("subbubble_image")[0];
         carousel_image.addEventListener("click", function (event) {
             if (subbubble_image.src !== carousel_image.src) {
+                let previous_sh = subbubble_image.scrollHeight;
                 subbubble_image.src = carousel_image.src;
+                let new_sh = subbubble_image.scrollHeight;
+                let delta = new_sh - previous_sh;
+                window.scrollBy(0, delta);
                 //subbubble_image.parentElement.scrollIntoView();
             }
             else {
