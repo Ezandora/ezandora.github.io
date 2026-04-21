@@ -122,7 +122,8 @@ function ContentSetup() {
                 subbubble_image.src = carousel_image.src;
                 let new_sh = subbubble_image.scrollHeight;
                 let delta = new_sh - previous_sh;
-                window.scrollBy(0, delta);
+                if (Math.abs(delta) > 0.9)
+                    window.scrollBy(0, delta);
                 //subbubble_image.parentElement.scrollIntoView();
             }
             else {
