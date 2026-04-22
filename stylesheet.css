@@ -10,6 +10,8 @@
 	--roundrect-radius:1em;
 	--size-basis:calc(max(24px, min(30px, 2vw)));
 	--animation-time:166ms;
+	--animation-time:300ms;
+	/*--animation-time:2000ms;*/
 	/*Firefox does not support calc() in var() in transition-duration:*/
 	/*--animation-time:calc(20.0ms * 1000.0ms / 120.0ms);*/
 	/*--animation-time:calc(100.0ms * 1000.0ms / 120.0ms);*/
@@ -44,7 +46,7 @@ div.fullscreen_image_container { position:fixed; left:0px; top:0px; width:100vw;
 div.fullscreen_background_black { background:black; }
 div.fullscreen_background { position:absolute; left:0px; top:0px; width:100%; transition-duration: var(--animation-time); transition-property:all; transition-timing-function: var(--animation-type);will-change:transform;}
 
-.fullscreen_image { transition-duration: var(--animation-time); transition-property:all; transition-timing-function: var(--animation-type); position:absolute; object-fit:contain;will-change:transform;}
+.fullscreen_image { transition-duration: var(--animation-time); transition-property:all; transition-timing-function: var(--animation-type); position:absolute; object-fit:contain;will-change:transform; border-radius:var(--roundrect-radius);}
 .fullscreen_image_full { position:""; left: 0 !important; top:0 !important; width:100vw !important; height:100vh !important;}
 .instant_transition {transition-duration: 0ms !important; }
 

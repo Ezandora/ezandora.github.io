@@ -1,0 +1,168 @@
+{
+  "entries" : [
+    {
+      "title" : "Circles Image Evolver",
+      "subheader" : "Image to circles",
+      "images" : [
+        {
+          "urls" : ["images/circles/ISS2311f.jpg-PSNR 37.330841.jpg"],
+          "description" : "International Space Station"
+        },
+        {
+          "urls" : ["images/circles/IMG_0225.jpg"],
+          "description" : "A field of pink flowers"
+        },
+        {
+          "urls" : ["images/circles/STScI-01G7ETPF7DVBJAC42JR5N6EQRH.jpg-PSNR 40.069439.jpg"],
+          "description" : "Cosmic Cliffs in the Carina Nebula",
+          "source url" : "https://science.nasa.gov/asset/webb/cosmic-cliffs-in-the-carina-nebula-nircam-image/",
+          "source description": "NASA"
+        },
+        {
+          "urls" : ["images/circles/j9d2RPbtyAGLGQHBawQ7zD.jpg-PSNR 36.188564.jpg"],
+          "description" : "ALMA array from the air",
+          "source url" : "https://www.almaobservatory.org/en/alma-array-from-the-air-2/",
+          "source description": "ALMA array",
+          "credit": "© Clem & Adri Bacri-Normier (wingsforscience.com/ESO)"
+        },
+        {
+          "urls" : ["images/circles/B0X1w.jpg-PSNR 35.799866.jpg"],
+          "description" : "Colorful cat"
+        },
+        {
+          "urls" : ["images/circles/IMG_1374.jpeg-PSNR 40.363483.jpg"],
+          "description" : "A pond full of fish"
+        },
+        {
+          "urls" : ["images/circles/20104221733360877801.jpg-PSNR 31.551859.jpg"],
+          "description": "tree"
+        },
+        {
+          "urls" : ["images/circles/APOD 2013-05-29.jpg-PSNR 36.209431.jpg"],
+          "description" : "NGC 6960: The Witch's Broom Nebula",
+          "source url" : "https://apod.nasa.gov/apod/ap130529.html",
+          "source name" : "Astronomy Picture of the Day"
+        },
+        {
+          "urls" : ["images/circles/ISS2311u.jpg-PSNR 38.144867.jpg"],
+          "description" : "Space Shuttle Liftoff"
+        },
+        {
+          "urls" : ["images/circles/quiraing-trotternish-landscape-isle-skye-scotland-uk-SCOT1218.jpg-PSNR 35.010452.jpg"],
+          "description" : "Scottish Landscape"
+        }
+      ],
+      "description" : "Using the GPU, takes an input image and slowly evolves a circle-based representation. Gives off a painted, dream-like feel.<p>Does not use stable diffusion technology.</p>"
+    },
+    {
+      "title" : "Digital Rain",
+      "subheader" : "Calming matrix screensaver",
+      "images" : [
+        {
+          "urls" : ["video/DigitalRain-High.webm", "video/DigitalRain-Low.mp4"],
+          "description" : "Digital Rain"
+        }
+      ],
+      "description" : "Designed to give off the feeling of falling rain."
+    },
+    {
+      "title" : "Guide",
+      "subheader" : "Dynamic game advisor",
+      "images" : [
+        {
+          "urls" : ["images/guide.png"],
+          "description" : "Guide"
+        }
+      ],
+      "description" : "In-browser add-on that continually gives advice on how to play the online video game, Kingdom of Loathing. An automatic task list that responds to the user's current situation.<p><a href=\"https://github.com/Ezandora/Guide/\">GitHub</a></p><p><a href=\"Demos/Guide/relay_Guide.html\">Demo</a></p>"
+    },
+    {
+      "title" : "Destiny Ascension",
+      "subheader" : "AI game player",
+      "images" : [
+        {
+          "urls" : ["images/DestinyAscension.png"],
+          "description" : "Destiny Ascension"
+        }
+      ],
+      "description" : "Automatically plays through a single ascension of the online video game, Kingdom of Loathing, as efficiency as possible. Has won first place in-game on three occasions.<p>Run loop:</p><ul><li>Generate a list of every single useful action possible at this moment. How to execute the action, what the action requires, metadata.</li><li>Apply a large set of heuristics to alter the priority of all actions. Does this need to be done now, or would be better later?</li><li>Select highest priority action, prepare, execute, then loop again.</ul>"
+    },
+    {
+      "title" : "Landscapes",
+      "subheader" : "OpenGL playground",
+      "images" : [
+        {
+          "urls" : ["images/landscapes/snow.jpg"],
+          "description" : "Snowy mountain"
+        },
+        {
+          "urls" : ["images/landscapes/reflective_sphere.jpg"],
+          "description" : "Reflected sphere"
+        },
+        {
+          "urls" : ["images/landscapes/Screen shot 2010-05-12 at 7.38.32 AM.jpg"],
+          "description" : "Wireframe rainbow landscape"
+        },
+        {
+          "urls" : ["images/landscapes/distance box blur.jpg"],
+          "description" : "Distance box blur"
+        },
+        {
+          "urls" : ["images/landscapes/Screen shot 2010-05-11 at 4.45.34 PM.jpg"],
+          "description" : "Dot hills"
+        }
+      ],
+      "description" : "Two separate projects for trying various OpenGL concepts. Generated terrain, motion blur, summed area tables, real-time spherical reflections, quad trees, and shadow mapping."
+    },
+    {
+      "title" : "Dust",
+      "subheader" : "Gravity particle simulator",
+      "images" : [
+        {
+          "urls" : ["video/Dust-High.webm", "video/Dust-Low.mp4"],
+          "description" : "Dust"
+        }
+      ],
+      "description" : "Interactive, simulates gravity applied to particles."
+    },
+    {
+      "title" : "Other Scripts",
+      "subheader" : "Various in-game add-ons",
+      "images" : [
+        {
+          "urls" : ["images/scripts/educate.png"],
+          "description" : "Source Terminal GUI"
+        },
+        {
+          "urls" : ["images/scripts/martin1.png"],
+          "description" : "Asdon Martin GUI"
+        },
+        {
+          "urls" : ["images/scripts/briefcase.png"],
+          "description" : "Kremlin's Greatest Briefcase"
+        },
+        {
+          "urls" : ["images/scripts/genie2.99999repeating.png"],
+          "description" : "Genie"
+        },
+        {
+          "urls" : ["images/scripts/latte.png"],
+          "description" : "Latte"
+        },
+        {
+          "urls" : ["images/scripts/bastille.png"],
+          "description" : "Bastille"
+        },
+        {
+          "urls" : ["images/scripts/Explorer.png"],
+          "description" : "Far Future"
+        },
+        {
+          "urls" : ["images/scripts/24.png"],
+          "description" : "Detective Solver"
+        }
+      ],
+      "description" : "Game mods designed to improve quality of life for Kingdom of Loathing players. Some offer interactive GUIs for difficult-to-use in-game items, others play sections of the game automatically.<p><a href=\"https://github.com/Ezandora/\">GitHub</a></p>"
+    }
+  ]
+}

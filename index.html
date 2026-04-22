@@ -5,99 +5,16 @@
 		<title>Ezandora</title>
 		<meta name="viewport" content="width=device-width">
 		<link rel="stylesheet" href="stylesheet.css">
-		<script type="text/javascript" src="Content.js"></script>
+		<script async defer type="text/javascript" src="Content.js" onload="ContentSetup('index-content.json')"></script>
 	</head>
-	<body onload="ContentSetup();">
+	<body onload="">
 		<div class="sticky_header">
 			<a class="sticky_header_entry" style="text-align:left;" href="index.html">Ezandora</a>
 			<a class="sticky_header_entry" href="https://github.com/Ezandora/">GitHub</img></a>
 			<a class="sticky_header_entry" href="kol/index.html"><div class="text_abbreviation_long">Kingdom of Loathing Tools</div><div class="text_abbreviation_short">KOL Tools</div></a>
 		</div>
-		<div class="bubble">
+		<div class="bubble" id="projects_bubble">
 			<h1 class="bubble_major_header">Projects</h1>
-			<div class="subbubble">
-				<H2 class="bubble_header">Circles Image Evolver</H2>
-				<p class="bubble_subheader">Image to circles</p>
-				<img class="subbubble_image" src="images/circles/ISS2311f.jpg-PSNR 37.330841.jpg">
-				<div class="image_carousel">
-					<img class="subbubble_carousel_image" src="images/circles/ISS2311f.jpg-PSNR 37.330841.jpg">
-					<img class="subbubble_carousel_image" src="images/circles/IMG_0225.jpg">
-					<img class="subbubble_carousel_image" src="images/circles/STScI-01G7ETPF7DVBJAC42JR5N6EQRH.jpg-PSNR 40.069439.jpg">
-					<img class="subbubble_carousel_image" src="images/circles/j9d2RPbtyAGLGQHBawQ7zD.jpg-PSNR 36.188564.jpg">
-					<img class="subbubble_carousel_image" src="images/circles/B0X1w.jpg-PSNR 35.799866.jpg">
-					
-					<img class="subbubble_carousel_image" src="images/circles/IMG_1374.jpeg-PSNR 40.363483.jpg">
-					<img class="subbubble_carousel_image" src="images/circles/20104221733360877801.jpg-PSNR 31.551859.jpg">
-					<img class="subbubble_carousel_image" src="images/circles/APOD 2013-05-28.jpg-PSNR 36.209431.jpg">
-					<img class="subbubble_carousel_image" src="images/circles/ISS2311u.jpg-PSNR 38.144867.jpg">
-					<img class="subbubble_carousel_image" src="images/circles/quiraing-trotternish-landscape-isle-skye-scotland-uk-SCOT1218.jpg-PSNR 35.010452.jpg">
-				</div>
-				<div class="subbubble_description">Using the GPU, takes an input image and slowly evolves a circle-based representation. Gives off a painted, dream-like feel.<p>Does not use stable diffusion technology.</p></div>
-			</div>
-			<div class="subbubble">
-				<H2 class="bubble_header">Digital Rain</H2>
-				<p class="bubble_subheader">Calming matrix screensaver</p>
-				<video autoplay loop class="subbubble_image" muted playsinline><source src="video/DigitalRain-High.webm" type="video/webm"/><source src="video/DigitalRain-Low.mp4" type="video/mp4"/></video>
-				<div class="subbubble_description">Designed to give off the feeling of falling rain.</div>
-			</div>
-			<div class="subbubble">
-				<H2 class="bubble_header">Guide</H2>
-				<p class="bubble_subheader">Dynamic game advisor</p>
-				<img class="subbubble_image" src="images/guide.png">
-				<div class="subbubble_description">In-browser add-on that continually gives advice on how to play the online video game, Kingdom of Loathing. An automatic task list that responds to the user's current situation.
-					<p><a href="https://github.com/Ezandora/Guide/">GitHub</a></p>
-					<p><a href="Demos/Guide/relay_Guide.html">Demo</a></p>
-				</div>
-			</div>
-			<div class="subbubble">
-				<H2 class="bubble_header">Destiny Ascension</H2>
-				<p class="bubble_subheader">AI game player</p>
-				<img class="subbubble_image" src="images/DestinyAscension.png">
-				<div class="subbubble_description">Automatically plays through a single ascension of the online video game, Kingdom of Loathing, as efficiency as possible. Has won first place in-game on three occasions.
-				<p>Run loop:</p>
-				<ul>
-				<li>Generate a list of every single useful action possible at this moment. How to execute the action, what the action requires, metadata.</li>
-				<li>Apply a large set of heuristics to alter the priority of all actions. Does this need to be done now, or would be better later?</li>
-				<li>Select highest priority action, prepare, execute, then loop again.
-				</ul>
-				</div>
-			</div>
-			<div class="subbubble">
-				<H2 class="bubble_header">Landscapes</H2>
-				<p class="bubble_subheader">OpenGL playground</p>
-				<img class="subbubble_image" src="images/snow.jpg">
-				<div class="image_carousel">
-					<img class="subbubble_carousel_image" src="images/landscapes/snow.jpg">
-					<img class="subbubble_carousel_image" src="images/landscapes/reflective_sphere.jpg">
-					<img class="subbubble_carousel_image" src="images/landscapes/Screen shot 2010-05-12 at 7.38.32 AM.jpg">
-					<img class="subbubble_carousel_image" src="images/landscapes/distance box blur.jpg">
-					<img class="subbubble_carousel_image" src="images/landscapes/Screen shot 2010-05-11 at 4.45.34 PM.jpg">
-				</div>
-				<div class="subbubble_description">Two separate projects for trying various OpenGL concepts. Generated terrain, motion blur, summed area tables, real-time spherical reflections, quad trees, and shadow mapping.</div>
-			</div>
-			<div class="subbubble">
-				<H2 class="bubble_header">Dust</H2>
-				<p class="bubble_subheader">Gravity particle simulator</p>
-				<video autoplay loop class="subbubble_image" muted playsinline><source src="video/Dust-High.webm" type="video/webm"/><source src="video/Dust-Low.mp4" type="video/mp4"/></video>
-				<div class="subbubble_description">Interactive, simulates gravity applied to particles.</div>
-			</div>
-			<div class="subbubble">
-				<H2 class="bubble_header">Other Scripts</H2>
-				<p class="bubble_subheader">Various in-game add-ons</p>
-				<img class="subbubble_image" src="images/scripts/educate.png">
-				<div class="image_carousel">
-					<img class="subbubble_carousel_image" src="images/scripts/educate.png">
-					<img class="subbubble_carousel_image" src="images/scripts/martin1.png">
-					<img class="subbubble_carousel_image" src="images/scripts/briefcase.png">
-					<img class="subbubble_carousel_image" src="images/scripts/genie2.99999repeating.png">
-					<img class="subbubble_carousel_image" src="images/scripts/latte.png">
-					<img class="subbubble_carousel_image" src="images/scripts/bastille.png">
-					<img class="subbubble_carousel_image" src="images/scripts/Explorer.png">
-					<img class="subbubble_carousel_image" src="images/scripts/24.png">
-				</div>
-				<div class="subbubble_description">Game mods designed to improve quality of life for Kingdom of Loathing players. Some offer interactive GUIs for difficult-to-use in-game items, others play sections of the game automatically.
-				<p><a href="https://github.com/Ezandora/">GitHub</a></p></div>
-			</div>
 		</div>
 		<br>
 	</body>
