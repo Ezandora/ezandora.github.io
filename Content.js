@@ -16,11 +16,55 @@ function loadJSONFromServer(url) {
         return response.json();
     });
 }
+/*
+Always returns lowercase.
+*/
+function extensionForURL(url) {
+    var _a;
+    return (_a = url.split(/[#?]/)[0].split(".").pop()) === null || _a === void 0 ? void 0 : _a.trim().toLocaleLowerCase();
+}
 function pathIsVideo(url) {
-    let lowercase_url = url.toLocaleLowerCase();
-    if (lowercase_url.endsWith("webm") || lowercase_url.endsWith("mp4"))
+    let file_extension = extensionForURL(url);
+    if (file_extension === "webm" || file_extension === "mp4")
         return true;
     return false;
+}
+function internetMediaTypeForURL(url) {
+    //Extremely incomplete.
+    let media_map = {
+        "jpg": "image/jpeg",
+        "jpeg": "image/jpeg",
+        "jxl": "image/jxl",
+        "avif": "image/avif",
+        "gif": "image/gif",
+        "png": "image/png",
+        "apng": "image/apng",
+        "svg": "image/svg+xml",
+        "webp": "image/webp",
+        "bmp": "image/bmp",
+        "ico": "image/vnd.microsoft.icon",
+        "tif": "image/tiff",
+        "tiff": "image/tiff",
+        "mp4": "video/mp4",
+        "webm": "video/webm",
+        "avi": "video/x-msvideo",
+        "mpeg": "video/mpeg",
+        "mpg": "video/mpeg",
+        "ogv": "video/ogg",
+        "ts": "video/mp2t",
+        "3gp": "video/3gpp" //can be audio
+    };
+    let extension = extensionForURL(url);
+    if (extension in media_map)
+        return media_map[extension];
+    return "";
+}
+function domElementClearClassList(element) {
+    //copying a DOMTokenList is weird. it's either this or "[].slice.call(element.classList)", because JavaScript / the DOM is not... terribly consistent. Lots of "arrays" that aren't actually arrays.
+    let names_to_remove = [...element.classList];
+    for (let class_name of names_to_remove) {
+        element.classList.remove(class_name);
+    }
 }
 var SimpleGestureDirection;
 (function (SimpleGestureDirection) {
@@ -92,86 +136,89 @@ function fullscreenImageContainerHandleGesture(element, gesture) {
         element.click();
     }
 }
+var FullscreenTransitionState;
+(function (FullscreenTransitionState) {
+    FullscreenTransitionState["INACTIVE"] = "INACTIVE";
+    FullscreenTransitionState["PREPARING"] = "PREPARING";
+    FullscreenTransitionState["GROWING"] = "GROWING";
+    FullscreenTransitionState["FULLSCREEN"] = "FULLSCREEN";
+    FullscreenTransitionState["SHRINKING"] = "SHRINKING";
+})(FullscreenTransitionState || (FullscreenTransitionState = {}));
+;
 function enlargeImage(image) {
-    if (image.classList.contains("fullscreen_image"))
+    /*if (image.classList.contains("fullscreen_image"))
+        return;*/
+    if (image.dataset.fullscreen_state !== FullscreenTransitionState.INACTIVE)
         return;
-    if (image.dataset.fullscreen_state !== "0INACTIVE")
-        return;
+    let inner_image = image;
+    if (image.tagName === "PICTURE") {
+        inner_image = image.getElementsByTagName("img")[0];
+    }
     let new_background = document.createElement("div");
     new_background.classList.add("fullscreen_background");
     new_background.style.height = document.body.clientHeight + "px";
     let new_container = document.createElement("div");
     new_container.classList.add("fullscreen_image_container");
-    let element_bounds = image.getBoundingClientRect();
+    let element_bounds = inner_image.getBoundingClientRect();
     let image_clone = image.cloneNode(true);
     let image_parent = image.parentNode;
     image_parent.insertBefore(image_clone, image);
     image_parent.removeChild(image);
-    /*let swap = element;
-    element = new_image;
-    new_image = swap;*/
-    /*image.addEventListener("click", function ()
-    {
-        enlargeImage(image);
-    }, {once:true});*/
-    for (let class_element of image.classList) {
-        image.classList.remove(class_element);
+    domElementClearClassList(image);
+    if (image.tagName === "PICTURE") {
+        domElementClearClassList(inner_image);
     }
     if (image.tagName === "VIDEO") {
         let clone_as_video = image_clone;
         let image_as_video = image;
-        /*Firefox will fire a canplay for every currentTime chance, so only fire this once: */
+        //Firefox will fire a canplay for every currentTime chance, so only fire this once:
         clone_as_video.addEventListener("canplay", function () {
             clone_as_video.currentTime = image_as_video.currentTime;
         }, { once: true });
     }
     //Position the clone exactly where its predecessor was, as a starting point:
-    image.style.left = element_bounds.left + "px";
-    image.style.width = element_bounds.width + "px";
-    image.style.top = element_bounds.top + "px";
-    image.style.height = element_bounds.height + "px";
-    image.classList.add("fullscreen_image");
+    inner_image.style.left = element_bounds.left + "px";
+    inner_image.style.width = element_bounds.width + "px";
+    inner_image.style.top = element_bounds.top + "px";
+    inner_image.style.height = element_bounds.height + "px";
+    inner_image.classList.add("fullscreen_image");
     new_container.appendChild(image);
     document.body.appendChild(new_background);
     document.body.appendChild(new_container);
-    //document.body.classList.add("hiddenScrollbar");
     //This doesn't support zooming in/out properly, so disabled.
     //simpleGestureRegisterForElement(new_container, fullscreenImageContainerHandleGesture);
-    //let root_element = <HTMLElement>document.querySelector(":root");
-    //root_element.style.setProperty("--color-very-dark-background", "black");
-    //	document.body.style.background = "black";
-    //theme-color no longer available in Safari 26
-    //document.querySelector("meta[name=\"theme-color\"]").setAttribute("content", "black");
-    /*Array.from(document.getElementsByClassName("sticky_header")).forEach((sticky_element) => {
-        sticky_element.classList.add("sticky_header_black");
-    });*/
+    let root_element = document.querySelector(":root");
+    root_element.style.setProperty("--color-very-dark-background", "black");
     new_container.addEventListener("click", function () {
-        if (image.dataset.fullscreen_state !== "3FULLSCREEN" && image.dataset.fullscreen_state !== "2GROWING")
+        if (image.dataset.fullscreen_state !== FullscreenTransitionState.FULLSCREEN && image.dataset.fullscreen_state !== FullscreenTransitionState.GROWING)
             return;
         /*document.body.removeChild(new_container);*/
-        if (image.dataset.fullscreen_state === "3FULLSCREEN") {
+        if (image.dataset.fullscreen_state === FullscreenTransitionState.FULLSCREEN) {
             new_container.classList.remove("instant_transition");
             image.classList.remove("instant_transition");
         }
-        image.dataset.fullscreen_state = "4SHRINKING";
+        image.dataset.fullscreen_state = FullscreenTransitionState.SHRINKING;
         document.body.classList.remove("hiddenScrollbar");
         //Bug in safari: it ignores changes to the background color of sticky header elements, and prevents changes to the window highlight color. Which leaves a purple bar at the top in Safari.
         //We can fix this by not having a background color in the sticky elements, but then they floating text when scrolling down.
-        //root_element.style.setProperty("--color-very-dark-background", __original_color_very_dark_background);
-        /*Array.from(document.getElementsByClassName("sticky_header")).forEach((sticky_element : HTMLElement) => {
-            sticky_element.style.backgroundColor = "black";
-        });*/
+        root_element.style.setProperty("--color-very-dark-background", __original_color_very_dark_background);
         image.addEventListener("transitionend", function () {
-            if (image.dataset.fullscreen_state !== "4SHRINKING")
+            if (image.dataset.fullscreen_state !== FullscreenTransitionState.SHRINKING)
                 return;
-            image.dataset.fullscreen_state = "0INACTIVE";
+            image.dataset.fullscreen_state = FullscreenTransitionState.INACTIVE;
             new_container.removeChild(image);
             //Change class to what it was before:
-            for (let class_element of image.classList) {
-                image.classList.remove(class_element);
-            }
+            domElementClearClassList(image);
             for (let class_element of image_clone.classList) {
                 image.classList.add(class_element);
+            }
+            if (image !== inner_image && image.tagName === "PICTURE") {
+                domElementClearClassList(inner_image);
+                let inner_image_clone = image_clone.getElementsByTagName("img")[0];
+                for (let class_element of inner_image_clone.classList) {
+                    inner_image.classList.add(class_element);
+                }
+                inner_image.style.cssText = document.defaultView.getComputedStyle(inner_image_clone, "").cssText;
             }
             //Kind of hacky, change the style back:
             image.style.cssText = document.defaultView.getComputedStyle(image_clone, "").cssText;
@@ -180,29 +227,25 @@ function enlargeImage(image) {
             parent_element.removeChild(image_clone);
             document.body.removeChild(new_background);
             document.body.removeChild(new_container);
-            /*Array.from(document.getElementsByClassName("sticky_header")).forEach((sticky_element) => {
-                sticky_element.classList.remove("sticky_header_black");
-            });*/
         }, { once: true });
-        image.classList.remove("fullscreen_image_full");
+        inner_image.classList.remove("fullscreen_image_full");
         new_background.classList.remove("fullscreen_background_black");
-        //setTimeout(end_function, 3000);
     });
-    image.dataset.fullscreen_state = "1PREPARING";
+    image.dataset.fullscreen_state = FullscreenTransitionState.PREPARING;
     //If we call this immediately, it won't execute the animation.
     //So call a zero-length timeout. Kind of bad?
     setTimeout(function () {
-        if (image.dataset.fullscreen_state !== "1PREPARING") {
-            console.log("something is dreadfully wrong, image.dataset.fullscreen_state is " + image.dataset.fullscreen_state + " and not 1PREPARING");
+        if (image.dataset.fullscreen_state !== FullscreenTransitionState.PREPARING) {
+            console.log("something is dreadfully wrong, image.dataset.fullscreen_state is " + image.dataset.fullscreen_state + " and not PREPARING");
         }
-        image.dataset.fullscreen_state = "2GROWING";
-        image.classList.add("fullscreen_image_full");
+        image.dataset.fullscreen_state = FullscreenTransitionState.GROWING;
+        inner_image.classList.add("fullscreen_image_full");
         /*new_container.classList.add("fullscreen_background_black");*/
         new_background.classList.add("fullscreen_background_black");
         image.addEventListener("transitionend", function () {
-            if (image.dataset.fullscreen_state !== "2GROWING")
+            if (image.dataset.fullscreen_state !== FullscreenTransitionState.GROWING)
                 return;
-            image.dataset.fullscreen_state = "3FULLSCREEN";
+            image.dataset.fullscreen_state = FullscreenTransitionState.FULLSCREEN;
             image.classList.add("instant_transition");
             new_container.classList.add("instant_transition");
             document.body.classList.add("hiddenScrollbar");
@@ -211,12 +254,8 @@ function enlargeImage(image) {
 }
 function ContentSetup(content_json_path) {
     return __awaiter(this, void 0, void 0, function* () {
-        //let current_path : string = window.location.pathname.split("/").at(-1);
-        //let current_path : string = window.location.href
-        //let content_json_path = current_path + "content.json";
         let content = yield loadJSONFromServer(content_json_path);
         let projects_div = document.getElementById("projects_bubble");
-        //console.log("content = " + JSON.stringify(content));
         for (let entry of content["entries"]) {
             let subbubble = document.createElement("div");
             subbubble.classList.add("subbubble");
@@ -232,73 +271,163 @@ function ContentSetup(content_json_path) {
                 subheader.innerHTML = entry["subheader"];
                 subbubble.appendChild(subheader);
             }
-            let addImage = function (source_image, element_class, parent_element) {
+            let base_url = "";
+            if ("image url base" in entry)
+                base_url = entry["image url base"];
+            //Add in base url here:
+            for (let source_image of entry["images"]) {
                 let urls = source_image["urls"];
-                let first_url = urls[0];
-                if (pathIsVideo(first_url)) {
-                    let video = document.createElement("video");
-                    video.classList.add(element_class);
-                    video.autoplay = true;
-                    video.loop = true;
-                    video.muted = true;
-                    video.playsInline = true;
-                    for (let url of urls) {
-                        let source = document.createElement("source");
-                        source.src = url;
-                        if (url.toLocaleLowerCase().endsWith("webm"))
-                            source.type = "video/webm";
-                        if (url.toLocaleLowerCase().endsWith("mp4"))
-                            source.type = "video/mp4";
-                        video.appendChild(source);
+                //let secondary_base_url = ""
+                //if ("image url secondary base" in source_image)
+                //	secondary_base_url = source_image["image url secondary base"];
+                /*for (let i = 0; i < urls.length; i += 1)
+                {
+                    //urls[i] = base_url + secondary_base_url + urls[i];
+                    urls[i] = base_url + urls[i];
+                }*/
+                let media_queries = [];
+                if ("media queries" in source_image)
+                    media_queries = source_image["media queries"];
+                //Fill out urls with image formats:
+                let urls_new = [];
+                let media_queries_new = [];
+                for (let i = 0; i < urls.length; i += 1) {
+                    let url = urls[i];
+                    let media_query = "";
+                    if (i < media_queries.length)
+                        media_query = media_queries[i];
+                    if (media_query === "phone")
+                        media_query = "(max-width:600px)";
+                    if ("image formats available" in entry) {
+                        for (let image_format of entry["image formats available"]) {
+                            urls_new.push(base_url + url + "." + image_format);
+                            media_queries_new.push(media_query);
+                        }
                     }
-                    parent_element.appendChild(video);
-                    return video;
-                }
-                else {
-                    let image = document.createElement("img");
-                    image.classList.add(element_class);
-                    image.src = first_url;
-                    if ("description" in source_image) {
-                        image.alt = source_image["description"];
-                        image.title = source_image["description"];
+                    else {
+                        urls_new.push(base_url + url);
+                        media_queries_new.push(media_query);
                     }
-                    parent_element.appendChild(image);
-                    return image;
                 }
-                return null;
+                source_image["urls"] = urls_new;
+                source_image["media queries"] = media_queries_new;
+            }
+            let addImage = function (source_images, source_image_id, element_class, parent_element) {
+                return __awaiter(this, void 0, void 0, function* () {
+                    let source_image = source_images[source_image_id];
+                    let urls = source_image["urls"];
+                    let media_queries = source_image["media queries"];
+                    let first_url = urls[0];
+                    if (pathIsVideo(first_url)) {
+                        let video = document.createElement("video");
+                        video.classList.add(element_class);
+                        video.autoplay = true;
+                        video.loop = true;
+                        video.muted = true;
+                        video.playsInline = true;
+                        for (let url of urls) {
+                            let source = document.createElement("source");
+                            source.src = url;
+                            source.type = internetMediaTypeForURL(url);
+                            video.appendChild(source);
+                        }
+                        video.dataset.id = source_image_id;
+                        parent_element.appendChild(video);
+                        return video;
+                    }
+                    else {
+                        let image = document.createElement("img");
+                        let return_value = image;
+                        let picture = document.createElement("picture");
+                        for (let url_id = 0; url_id < urls.length; url_id += 1) {
+                            let url = urls[url_id];
+                            let media_query = "";
+                            if (url_id < media_queries.length)
+                                media_query = media_queries[url_id];
+                            let source = document.createElement("source");
+                            source.srcset = encodeURI(url); //encode URL because we use spaces in our image name specification
+                            source.type = internetMediaTypeForURL(url);
+                            if (media_query.length > 0)
+                                source.media = media_query;
+                            picture.appendChild(source);
+                        }
+                        picture.appendChild(image);
+                        parent_element.appendChild(picture);
+                        return_value = picture;
+                        picture.dataset.id = source_image_id;
+                        image.loading = "lazy";
+                        image.classList.add(element_class);
+                        image.src = encodeURI(urls[urls.length - 1]);
+                        if ("description" in source_image) {
+                            image.alt = source_image["description"];
+                            image.title = source_image["description"];
+                        }
+                        return return_value;
+                    }
+                });
             };
-            let subbubble_element = addImage(entry["images"][0], "subbubble_image", subbubble);
-            subbubble_element.dataset.fullscreen_state = "0INACTIVE";
-            subbubble_element.addEventListener("click", function () {
-                enlargeImage(subbubble_element);
-            });
+            {
+                let subbubble_element = yield addImage(entry["images"], 0, "subbubble_image", subbubble);
+                subbubble_element.classList.add("subbubble_first_image");
+                subbubble_element.dataset.fullscreen_state = FullscreenTransitionState.INACTIVE;
+                subbubble_element.addEventListener("click", function () {
+                    enlargeImage(subbubble_element);
+                });
+            }
             if (entry["images"].length > 1) {
                 let carousel = document.createElement("div");
                 carousel.classList.add("image_carousel");
                 subbubble.appendChild(carousel);
-                for (let image of entry["images"]) {
-                    if (pathIsVideo(image["urls"][0]))
-                        continue; //unsupported
-                    let image_element = addImage(image, "subbubble_carousel_image", carousel);
+                for (let i = 0; i < entry["images"].length; i += 1) {
+                    if (pathIsVideo(entry["images"][i]["urls"][0]))
+                        continue; //not yet supported
+                    let image_element = yield addImage(entry["images"], i, "subbubble_carousel_image", carousel);
                     image_element.addEventListener("click", function (event) {
-                        let subbubble_element_as_image = (subbubble_element);
-                        //let subbubble_image : HTMLImageElement = <HTMLImageElement>image_element.parentElement.parentElement.getElementsByClassName("subbubble_image")[0];
-                        if (subbubble_element_as_image.src !== image_element.src) {
-                            let previous_sh = subbubble_element_as_image.scrollHeight;
-                            subbubble_element_as_image.src = image_element.src;
-                            subbubble_element_as_image.alt = image_element.alt;
-                            subbubble_element_as_image.title = image_element.title;
-                            let new_sh = subbubble_element_as_image.scrollHeight;
-                            let delta = new_sh - previous_sh;
-                            if (Math.abs(delta) > 0.9)
-                                window.scrollBy(0, delta);
-                            //subbubble_image.parentElement.scrollIntoView();
-                        }
-                        else {
-                            //enlargeImage(subbubble_image);
-                            subbubble_element.click();
-                        }
-                        event.stopPropagation();
+                        return __awaiter(this, void 0, void 0, function* () {
+                            var _a, _b, _c, _d;
+                            let getInnerImage = function (element) {
+                                if (element.tagName === "PICTURE")
+                                    return element.getElementsByTagName("img")[0];
+                                return element;
+                            };
+                            let first_picture = (_b = (_a = image_element.parentElement) === null || _a === void 0 ? void 0 : _a.parentElement) === null || _b === void 0 ? void 0 : _b.getElementsByClassName("subbubble_first_image")[0];
+                            if (first_picture.dataset.id !== image_element.dataset.id) {
+                                let previous_sh = getInnerImage(first_picture).scrollHeight;
+                                let previous_page_y_offset = window.pageYOffset;
+                                let image_clone = image_element.cloneNode(true);
+                                let inner_image = image_clone.getElementsByTagName("img")[0];
+                                inner_image.loading = "eager";
+                                yield inner_image.decode(); //wait for decode to get scrollHeight?
+                                (_c = first_picture.parentNode) === null || _c === void 0 ? void 0 : _c.insertBefore(image_clone, first_picture);
+                                (_d = first_picture.parentNode) === null || _d === void 0 ? void 0 : _d.removeChild(first_picture);
+                                domElementClearClassList(image_clone);
+                                image_clone.classList.add("subbubble_first_image");
+                                let image_clone_img = image_clone.getElementsByTagName("img")[0];
+                                domElementClearClassList(image_clone_img);
+                                image_clone_img.classList.add("subbubble_image");
+                                image_clone.dataset.fullscreen_state = FullscreenTransitionState.INACTIVE;
+                                image_clone.addEventListener("click", function () {
+                                    enlargeImage(image_clone);
+                                });
+                                let current_page_y_offset = window.pageYOffset;
+                                //Scroll page so the element we clicked on doesn't move.
+                                //Both chromium and firefox do this automatically, safari doesn't. we can determine browser behavior by checking if pageYOffset changed
+                                let new_sh = getInnerImage(image_clone).scrollHeight;
+                                let delta = new_sh - previous_sh;
+                                let page_delta = current_page_y_offset - previous_page_y_offset;
+                                delta -= page_delta;
+                                //console.log("previous page y offset: " + previous_page_y_offset + " new = " + current_page_y_offset + " delta = " + page_delta);
+                                //console.log("sh: " + previous_sh + " => " + new_sh + " delta = " + delta);
+                                if (Math.abs(delta) > 0.9) {
+                                    window.scrollBy(0, delta);
+                                }
+                            }
+                            else {
+                                //enlargeImage(subbubble_image);
+                                first_picture.click();
+                            }
+                            event.stopPropagation();
+                        });
                     });
                 }
             }
@@ -312,52 +441,5 @@ function ContentSetup(content_json_path) {
         }
         let root_element = document.querySelector(":root");
         __original_color_very_dark_background = getComputedStyle(root_element).getPropertyValue("--color-very-dark-background");
-        /*else if (true)
-        {
-            let subbubble_image_elements = Array.from(document.getElementsByClassName("subbubble_image"));
-            for (let subbubble_image_uncast of subbubble_image_elements)
-            {
-                let subbubble_image : HTMLImageElement = <HTMLImageElement>subbubble_image_uncast;
-                
-                subbubble_image.addEventListener("click", function ()
-                {
-                    let parent_element = subbubble_image.parentElement;
-                    if (!parent_element.classList.contains("subbubble_large"))
-                    {
-                        parent_element.classList.add("subbubble_large");
-                        //document.scrollTo(0, parent_element.top);
-                    }
-                    else
-                    {
-                        parent_element.classList.remove("subbubble_large");
-                    }
-                    parent_element.scrollIntoView();
-                });
-            }
-        }*/
-        /*else
-        {
-            let subbubble_elements = Array.from(document.getElementsByClassName("subbubble"));
-            for (let subbubble of subbubble_elements)
-            {
-                
-                subbubble.addEventListener("click", function ()
-                {
-                    if (!subbubble.classList.contains("subbubble_large"))
-                    {
-                        subbubble.classList.add("subbubble_large");
-                        //document.scrollTo(0, parent_element.top);
-                    }
-                    else
-                    {
-                        subbubble.classList.remove("subbubble_large");
-                    }
-                    subbubble.scrollIntoView();
-                });
-            }
-        }*/
     });
 }
-//document.onload = function() { ContentSetup() };
-//document.addEventListener("load", function() { console.log("1"); ContentSetup(); });
-//ContentSetup();

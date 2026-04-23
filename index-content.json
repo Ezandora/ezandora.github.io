@@ -3,53 +3,81 @@
     {
       "title" : "Circles Image Evolver",
       "subheader" : "Image to circles",
+      "image url base" : "images/circles/",
+      "image formats available": ["jxl", "avif", "jpg"],
       "images" : [
         {
-          "urls" : ["images/circles/ISS2311f.jpg-PSNR 37.330841.jpg"],
+          "urls" : ["ISS2311f.jpg-PSNR 37.003532", "ISS2311f.jpg-PSNR 40.070053"],
+          "media queries" : ["phone", ""],
           "description" : "International Space Station"
         },
         {
-          "urls" : ["images/circles/IMG_0225.jpg"],
+          "urls" : ["IMG_0225.jpeg-PSNR 37.142963"],
           "description" : "A field of pink flowers"
         },
         {
-          "urls" : ["images/circles/STScI-01G7ETPF7DVBJAC42JR5N6EQRH.jpg-PSNR 40.069439.jpg"],
+          "urls" : ["STScI-01G7ETPF7DVBJAC42JR5N6EQRH.jpg-PSNR 35.154507", "STScI-01G7ETPF7DVBJAC42JR5N6EQRH.jpg-PSNR 40.035046"],
+          "media queries" : ["phone", ""],
           "description" : "Cosmic Cliffs in the Carina Nebula",
           "source url" : "https://science.nasa.gov/asset/webb/cosmic-cliffs-in-the-carina-nebula-nircam-image/",
           "source description": "NASA"
         },
         {
-          "urls" : ["images/circles/j9d2RPbtyAGLGQHBawQ7zD.jpg-PSNR 36.188564.jpg"],
+          "urls" : ["Vistas-Aéreas-27.jpg-PSNR 37.226654"],
           "description" : "ALMA array from the air",
           "source url" : "https://www.almaobservatory.org/en/alma-array-from-the-air-2/",
           "source description": "ALMA array",
           "credit": "© Clem & Adri Bacri-Normier (wingsforscience.com/ESO)"
         },
         {
-          "urls" : ["images/circles/B0X1w.jpg-PSNR 35.799866.jpg"],
+          "urls" : ["B0X1w.jpg-PSNR 35.032013", "B0X1w.jpg-PSNR 37.119846"],
+          "media queries" : ["phone", ""],
           "description" : "Colorful cat"
         },
         {
-          "urls" : ["images/circles/IMG_1374.jpeg-PSNR 40.363483.jpg"],
+          "urls" : ["IMG_1374.jpeg-PSNR 39.104931"],
           "description" : "A pond full of fish"
         },
         {
-          "urls" : ["images/circles/20104221733360877801.jpg-PSNR 31.551859.jpg"],
-          "description": "tree"
-        },
-        {
-          "urls" : ["images/circles/APOD 2013-05-29.jpg-PSNR 36.209431.jpg"],
+          "urls" : ["ngc6960_FinalPugh.jpg-PSNR 35.060204", "ngc6960_FinalPugh.jpg-PSNR 37.108112"],
+          "media queries" : ["phone", ""],
           "description" : "NGC 6960: The Witch's Broom Nebula",
           "source url" : "https://apod.nasa.gov/apod/ap130529.html",
           "source name" : "Astronomy Picture of the Day"
         },
         {
-          "urls" : ["images/circles/ISS2311u.jpg-PSNR 38.144867.jpg"],
+          "urls" : ["ISS2311u.jpg-PSNR 37.047081"],
           "description" : "Space Shuttle Liftoff"
         },
         {
-          "urls" : ["images/circles/quiraing-trotternish-landscape-isle-skye-scotland-uk-SCOT1218.jpg-PSNR 35.010452.jpg"],
+          "urls" : ["a8f81cad-60bd-4349-85dc-8445478565b2_111361_l.jpg-PSNR 33.070778"],
           "description" : "Scottish Landscape"
+        },
+        {
+          "urls" : ["xPCnqw3.jpg-PSNR 32.094692", "xPCnqw3.jpg"],
+          "media queries" : ["phone", ""],
+          "description": "Rainforest"
+        },
+        {
+          "urls" : ["art002e009282~large.jpg-PSNR 35.092567", "art002e009282~large.jpg-PSNR 39.039570"],
+          "media queries" : ["phone", ""],
+          "description": "Shadows Across Vavilov Crater",
+          "source url": "https://www.nasa.gov/image-detail/amf-art002e009282/",
+          "source name": "NASA"
+        },
+        {
+          "urls" : ["art002e009285~orig.jpg-PSNR 46.256451", "art002e009285~orig.jpg-PSNR 48.114716"],
+          "media queries" : ["phone", ""],
+          "description": "The Edge of Two Worlds",
+          "source url": "https://www.nasa.gov/image-detail/amf-art002e009285/",
+          "source name": "NASA"
+        },
+        {
+          "urls" : ["art002e009289~orig.jpg-PSNR 38.032074", "art002e009289~orig.jpg-PSNR 40.033176"],
+          "media queries" : ["phone", ""],
+          "description": "Earthset on the Far Side",
+          "source url": "https://www.nasa.gov/image-detail/amf-art002e021219/",
+          "source name": "NASA"
         }
       ],
       "description" : "Using the GPU, takes an input image and slowly evolves a circle-based representation. Gives off a painted, dream-like feel.<p>Does not use stable diffusion technology.</p>"

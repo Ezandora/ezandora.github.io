@@ -12,6 +12,7 @@
 	--animation-time:166ms;
 	--animation-time:300ms;
 	/*--animation-time:2000ms;*/
+	/*--animation-time:10000ms;*/
 	/*Firefox does not support calc() in var() in transition-duration:*/
 	/*--animation-time:calc(20.0ms * 1000.0ms / 120.0ms);*/
 	/*--animation-time:calc(100.0ms * 1000.0ms / 120.0ms);*/
@@ -26,7 +27,7 @@ a:visited { color:black; }
 a:active { color:black; }
 div.r_center { margin-left:auto; margin-right:auto;text-align:center; }
 /*	div.bubble { margin:5em;background-color:white;padding:calc(var(--size-basis) * 0.5);border-radius:var(--roundrect-radius);margin-left:auto;margin-right:auto; display:flex; flex-direction:row; flex-wrap: wrap; justify-content:space-evenly; max-width:90%; gap:var(--size-basis);}*/
-div.bubble { margin-bottom:2em; padding:1em; background-color:var(--color-background); display:flex; flex-direction:row; flex-wrap: wrap; justify-content:space-evenly; gap:var(--size-basis); }
+div.bubble { margin-bottom:2em; padding:1em; background-color:var(--color-background); display:flex; flex-direction:row; flex-wrap: wrap; justify-content:space-evenly; gap:var(--size-basis); overflow: hidden;}
 div.vertical_spacer { min-height:5em; width:1px;}
 
 /*.bubble_header { padding-bottom:2px; border-bottom:2px solid var(--color-background); display:inline-block; margin-left:auto; margin-right:auto; }*/
@@ -53,12 +54,13 @@ div.fullscreen_background { position:absolute; left:0px; top:0px; width:100%; tr
 body.hiddenScrollbar { overflow:hidden; }
 
 div.image_carousel { display:grid; max-width:100%; grid-gap:calc(0.25 * var(--size-basis)); grid-template-columns:repeat(5, 1fr);}
-img.subbubble_carousel_image { max-height:calc(var(--size-basis) * 5.0); width:100%; height:calc(var(--size-basis) * 5);object-fit:cover; border-radius:var(--roundrect-radius); border:5px; flex:1 0 0; cursor:pointer;}
+.subbubble_carousel_image { max-height:calc(var(--size-basis) * 5.0); width:100%; height:calc(var(--size-basis) * 5);object-fit:cover; border-radius:var(--roundrect-radius); border:5px; flex:1 0 0; cursor:pointer;}
 /*img.subbubble_carousel_image:hover { outline:calc(0.5 * var(--size-basis)) solid black; z-index:1; cursor:pointer;}*/
 
 a:hover {background:white;}
 
 .sticky_header { display:flex;position:sticky;top:0px;width:100%; flex-wrap:wrap; background-color:var(--color-very-dark-background);}
+
 .sticky_header_entry
 {
 	color:white; text-align:center;display:block; padding-top:0.5em;padding-bottom:0.5em; flex-grow:1; padding-left:1em; padding-right:1em;
