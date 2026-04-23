@@ -195,7 +195,7 @@ function enlargeImage(image) {
         /*document.body.removeChild(new_container);*/
         if (image.dataset.fullscreen_state === FullscreenTransitionState.FULLSCREEN) {
             new_container.classList.remove("instant_transition");
-            image.classList.remove("instant_transition");
+            inner_image.classList.remove("instant_transition");
         }
         image.dataset.fullscreen_state = FullscreenTransitionState.SHRINKING;
         document.body.classList.remove("hiddenScrollbar");
@@ -246,7 +246,7 @@ function enlargeImage(image) {
             if (image.dataset.fullscreen_state !== FullscreenTransitionState.GROWING)
                 return;
             image.dataset.fullscreen_state = FullscreenTransitionState.FULLSCREEN;
-            image.classList.add("instant_transition");
+            inner_image.classList.add("instant_transition");
             new_container.classList.add("instant_transition");
             document.body.classList.add("hiddenScrollbar");
         }, { once: true });
