@@ -9,7 +9,7 @@
 	--color-very-dark-background:#b7addb;*/
 	--roundrect-radius:1em;
 	--size-basis:calc(max(24px, min(30px, 2vw)));
-	--animation-time:166ms;
+	/*--animation-time:166ms;*/
 	--animation-time:300ms;
 	/*--animation-time:2000ms;*/
 	/*--animation-time:10000ms;*/
