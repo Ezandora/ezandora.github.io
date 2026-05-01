@@ -40,6 +40,7 @@ div.vertical_spacer { min-height:5em; width:1px;}
 .subbubble_large { flex-basis:100%; max-width:unset;}
 /*.subbubble:hover { background:white; cursor:pointer; }*/
 .subbubble_image { width:100%; object-fit:contain; border-radius:var(--roundrect-radius); cursor:pointer;}
+.subbubble_image_clone { opacity:0; }
 /*.subbubble_image:hover { outline:calc(0.5 * var(--size-basis)) solid black; z-index:1;}*/
 /*video { border-radius:var(--roundrect-radius); }*/
 

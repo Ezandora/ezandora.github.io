@@ -145,6 +145,11 @@ var FullscreenTransitionState;
     FullscreenTransitionState["SHRINKING"] = "SHRINKING";
 })(FullscreenTransitionState || (FullscreenTransitionState = {}));
 ;
+let getSubbubbleInnerImage = function (element) {
+    if (element.tagName === "PICTURE")
+        return element.getElementsByTagName("img")[0];
+    return element;
+};
 function enlargeImage(image) {
     /*if (image.classList.contains("fullscreen_image"))
         return;*/
@@ -164,6 +169,7 @@ function enlargeImage(image) {
     let image_parent = image.parentNode;
     image_parent.insertBefore(image_clone, image);
     image_parent.removeChild(image);
+    getSubbubbleInnerImage(image_clone).classList.add("subbubble_image_clone");
     domElementClearClassList(image);
     if (image.tagName === "PICTURE") {
         domElementClearClassList(inner_image);
@@ -176,7 +182,7 @@ function enlargeImage(image) {
             clone_as_video.currentTime = image_as_video.currentTime;
         }, { once: true });
     }
-    //Position the clone exactly where its predecessor was, as a starting point:
+    //Position the image exactly where it was, as a starting point:
     inner_image.style.left = element_bounds.left + "px";
     inner_image.style.width = element_bounds.width + "px";
     inner_image.style.top = element_bounds.top + "px";
@@ -210,12 +216,16 @@ function enlargeImage(image) {
             //Change class to what it was before:
             domElementClearClassList(image);
             for (let class_element of image_clone.classList) {
+                if (class_element === "subbubble_image_clone")
+                    continue;
                 image.classList.add(class_element);
             }
             if (image !== inner_image && image.tagName === "PICTURE") {
                 domElementClearClassList(inner_image);
                 let inner_image_clone = image_clone.getElementsByTagName("img")[0];
                 for (let class_element of inner_image_clone.classList) {
+                    if (class_element === "subbubble_image_clone")
+                        continue;
                     inner_image.classList.add(class_element);
                 }
                 inner_image.style.cssText = document.defaultView.getComputedStyle(inner_image_clone, "").cssText;
@@ -385,14 +395,9 @@ function ContentSetup(content_json_path) {
                     image_element.addEventListener("click", function (event) {
                         return __awaiter(this, void 0, void 0, function* () {
                             var _a, _b, _c, _d;
-                            let getInnerImage = function (element) {
-                                if (element.tagName === "PICTURE")
-                                    return element.getElementsByTagName("img")[0];
-                                return element;
-                            };
                             let first_picture = (_b = (_a = image_element.parentElement) === null || _a === void 0 ? void 0 : _a.parentElement) === null || _b === void 0 ? void 0 : _b.getElementsByClassName("subbubble_first_image")[0];
                             if (first_picture.dataset.id !== image_element.dataset.id) {
-                                let previous_sh = getInnerImage(first_picture).scrollHeight;
+                                let previous_sh = getSubbubbleInnerImage(first_picture).scrollHeight;
                                 let previous_page_y_offset = window.pageYOffset;
                                 let image_clone = image_element.cloneNode(true);
                                 let inner_image = image_clone.getElementsByTagName("img")[0];
@@ -409,10 +414,21 @@ function ContentSetup(content_json_path) {
                                 image_clone.addEventListener("click", function () {
                                     enlargeImage(image_clone);
                                 });
+                                /*image_clone_img.style.opacity = "0.0";
+                                image_clone_img.style.position = "absolute";
+                                image_clone_img.addEventListener("transitionend", function()
+                                {
+                                    image_clone_img.style.position = "";
+                                    first_picture.parentNode?.removeChild(first_picture);
+                                });
+                                setTimeout(function()
+                                {
+                                    image_clone_img.style.opacity = "1.0";
+                                }, 0);*/
                                 let current_page_y_offset = window.pageYOffset;
                                 //Scroll page so the element we clicked on doesn't move.
                                 //Both chromium and firefox do this automatically, safari doesn't. we can determine browser behavior by checking if pageYOffset changed
-                                let new_sh = getInnerImage(image_clone).scrollHeight;
+                                let new_sh = getSubbubbleInnerImage(image_clone).scrollHeight;
                                 let delta = new_sh - previous_sh;
                                 let page_delta = current_page_y_offset - previous_page_y_offset;
                                 delta -= page_delta;
