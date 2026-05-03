@@ -59,11 +59,18 @@ function internetMediaTypeForURL(url) {
         return media_map[extension];
     return "";
 }
-function domElementClearClassList(element) {
+function domElementClearClassList(element, except = {}) {
     //copying a DOMTokenList is weird. it's either this or "[].slice.call(element.classList)", because JavaScript / the DOM is not... terribly consistent. Lots of "arrays" that aren't actually arrays.
     let names_to_remove = [...element.classList];
     for (let class_name of names_to_remove) {
+        if (except[class_name])
+            continue;
         element.classList.remove(class_name);
+    }
+}
+function domElementCloneClassList(from_element, to_element) {
+    for (let class_element of from_element.classList) {
+        to_element.classList.add(class_element);
     }
 }
 var SimpleGestureDirection;
@@ -165,12 +172,17 @@ function enlargeImage(image) {
     let new_container = document.createElement("div");
     new_container.classList.add("fullscreen_image_container");
     let element_bounds = inner_image.getBoundingClientRect();
-    let image_clone = image.cloneNode(true);
+    //let image_clone : HTMLElement = <HTMLElement>image.cloneNode(true);
+    let image_clone = document.createElement("div");
+    domElementCloneClassList(inner_image, image_clone);
+    image_clone.style.width = inner_image.clientWidth + "px";
+    image_clone.style.height = inner_image.clientHeight + "px";
+    image_clone.style.display = "inline-block";
     let image_parent = image.parentNode;
     image_parent.insertBefore(image_clone, image);
     image_parent.removeChild(image);
     getSubbubbleInnerImage(image_clone).classList.add("subbubble_image_clone");
-    domElementClearClassList(image);
+    domElementClearClassList(image, { "video_constant": true, "video_constant_retina": true });
     if (image.tagName === "PICTURE") {
         domElementClearClassList(inner_image);
     }
@@ -182,11 +194,14 @@ function enlargeImage(image) {
             clone_as_video.currentTime = image_as_video.currentTime;
         }, { once: true });
     }
+    let retina_multiply = 1.0;
+    if (inner_image.classList.contains("video_constant_retina"))
+        retina_multiply = 2.0;
     //Position the image exactly where it was, as a starting point:
     inner_image.style.left = element_bounds.left + "px";
-    inner_image.style.width = element_bounds.width + "px";
+    inner_image.style.width = (element_bounds.width * retina_multiply) + "px";
     inner_image.style.top = element_bounds.top + "px";
-    inner_image.style.height = element_bounds.height + "px";
+    inner_image.style.height = (element_bounds.height * retina_multiply) + "px";
     inner_image.classList.add("fullscreen_image");
     new_container.appendChild(image);
     document.body.appendChild(new_background);
@@ -213,23 +228,31 @@ function enlargeImage(image) {
                 return;
             image.dataset.fullscreen_state = FullscreenTransitionState.INACTIVE;
             new_container.removeChild(image);
-            //Change class to what it was before:
             domElementClearClassList(image);
+            image.classList.add("subbubble_first_image");
+            //Change class to what it was before:
+            domElementClearClassList(inner_image);
             for (let class_element of image_clone.classList) {
                 if (class_element === "subbubble_image_clone")
                     continue;
+                inner_image.classList.add(class_element);
+            }
+            /*for (let class_element of image_clone.classList)
+            {
+                if (class_element === "subbubble_image_clone") continue;
                 image.classList.add(class_element);
             }
-            if (image !== inner_image && image.tagName === "PICTURE") {
+            if (image !== inner_image && image.tagName === "PICTURE")
+            {
                 domElementClearClassList(inner_image);
                 let inner_image_clone = image_clone.getElementsByTagName("img")[0];
-                for (let class_element of inner_image_clone.classList) {
-                    if (class_element === "subbubble_image_clone")
-                        continue;
+                for (let class_element of inner_image_clone.classList)
+                {
+                    if (class_element === "subbubble_image_clone") continue;
                     inner_image.classList.add(class_element);
                 }
                 inner_image.style.cssText = document.defaultView.getComputedStyle(inner_image_clone, "").cssText;
-            }
+            }*/
             //Kind of hacky, change the style back:
             image.style.cssText = document.defaultView.getComputedStyle(image_clone, "").cssText;
             let parent_element = image_clone.parentElement;
@@ -239,6 +262,7 @@ function enlargeImage(image) {
             document.body.removeChild(new_container);
         }, { once: true });
         inner_image.classList.remove("fullscreen_image_full");
+        inner_image.classList.remove("fullscreen_image_full_retina");
         new_background.classList.remove("fullscreen_background_black");
     });
     image.dataset.fullscreen_state = FullscreenTransitionState.PREPARING;
@@ -249,7 +273,10 @@ function enlargeImage(image) {
             console.log("something is dreadfully wrong, image.dataset.fullscreen_state is " + image.dataset.fullscreen_state + " and not PREPARING");
         }
         image.dataset.fullscreen_state = FullscreenTransitionState.GROWING;
-        inner_image.classList.add("fullscreen_image_full");
+        if (inner_image.classList.contains("video_constant_retina"))
+            inner_image.classList.add("fullscreen_image_full_retina");
+        else
+            inner_image.classList.add("fullscreen_image_full");
         /*new_container.classList.add("fullscreen_background_black");*/
         new_background.classList.add("fullscreen_background_black");
         image.addEventListener("transitionend", function () {
@@ -335,13 +362,23 @@ function ContentSetup(content_json_path) {
                         video.loop = true;
                         video.muted = true;
                         video.playsInline = true;
-                        for (let url of urls) {
+                        for (let url_id = 0; url_id < urls.length; url_id += 1) {
+                            let url = urls[url_id];
                             let source = document.createElement("source");
+                            let media_query = "";
+                            if (url_id < media_queries.length)
+                                media_query = media_queries[url_id];
                             source.src = url;
                             source.type = internetMediaTypeForURL(url);
+                            if (media_query.length > 0)
+                                source.media = media_query;
                             video.appendChild(source);
                         }
                         video.dataset.id = source_image_id;
+                        if ("retina" in source_image && source_image["retina"])
+                            video.classList.add("video_constant_retina");
+                        if ("keep constant size" in source_image && source_image["keep constant size"])
+                            video.classList.add("video_constant");
                         parent_element.appendChild(video);
                         return video;
                     }

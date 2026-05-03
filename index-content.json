@@ -87,7 +87,10 @@
       "subheader" : "Calming matrix screensaver",
       "images" : [
         {
-          "urls" : ["video/DigitalRain-High.webm", "video/DigitalRain-Low.mp4"],
+                    "urls" : [
+          "video/DigitalRain-1080p.webm",
+          "video/DigitalRain-Compatibility.mp4"],
+          "keep constant size" : true,
           "description" : "Digital Rain"
         }
       ],
