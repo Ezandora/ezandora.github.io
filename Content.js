@@ -289,8 +289,66 @@ function enlargeImage(image) {
         }, { once: true });
     }, 0);
 }
+let __video_elements_to_reprocess_on_resize = [];
+let __video_elements_source_image = [];
+function processWindowResizedEvent() {
+    for (let i = 0; i < __video_elements_to_reprocess_on_resize.length; i += 1) {
+        let video_element = __video_elements_to_reprocess_on_resize[i];
+        let source_image = __video_elements_source_image[i];
+        let urls_to_add = [];
+        let media_queries = [];
+        let urls = source_image["urls"];
+        if ("media queries" in source_image)
+            media_queries = source_image["media queries"];
+        for (let url_id = 0; url_id < urls.length; url_id += 1) {
+            let url = urls[url_id];
+            let media_query = "";
+            if (url_id < media_queries.length)
+                media_query = media_queries[url_id];
+            if (media_query.length > 0) {
+                if (!window.matchMedia(media_query).matches) {
+                    continue;
+                }
+            }
+            urls_to_add.push(url);
+        }
+        let need_to_redo_sources = false;
+        let source_elements_old = video_element.querySelectorAll("source");
+        if (source_elements_old.length !== urls_to_add.length) {
+            need_to_redo_sources = true;
+        }
+        else {
+            for (let i = 0; i < source_elements_old.length; i += 1) {
+                if (source_elements_old[i].getAttribute("src") !== urls_to_add[i]) {
+                    need_to_redo_sources = true;
+                    break;
+                }
+            }
+        }
+        if (!need_to_redo_sources)
+            continue;
+        video_element.pause();
+        for (let source_element of source_elements_old)
+            video_element.removeChild(source_element);
+        for (let url of urls_to_add) {
+            let source = document.createElement("source");
+            source.src = url;
+            source.type = internetMediaTypeForURL(url);
+            video_element.appendChild(source);
+        }
+        video_element.load();
+        video_element.play();
+    }
+}
+let __window_resized_timeout = undefined;
+function windowResizedEvent() {
+    if (__window_resized_timeout !== undefined)
+        clearTimeout(__window_resized_timeout);
+    __window_resized_timeout = setTimeout(processWindowResizedEvent, 100);
+}
 function ContentSetup(content_json_path) {
     return __awaiter(this, void 0, void 0, function* () {
+        let need_resize_event_listener = false;
         let content = yield loadJSONFromServer(content_json_path);
         let projects_div = document.getElementById("projects_bubble");
         for (let entry of content["entries"]) {
@@ -362,17 +420,32 @@ function ContentSetup(content_json_path) {
                         video.loop = true;
                         video.muted = true;
                         video.playsInline = true;
+                        let add_element_to_video_reprocessing = false;
                         for (let url_id = 0; url_id < urls.length; url_id += 1) {
                             let url = urls[url_id];
-                            let source = document.createElement("source");
                             let media_query = "";
+                            //Safari seems to have poor support for media queries in <video> <source> elements.
+                            //So, just run the query now and add it if it passes.
+                            //We also attach to the resize event and redo this process, updating the video's sources.
                             if (url_id < media_queries.length)
                                 media_query = media_queries[url_id];
+                            if (media_query.length > 0) {
+                                add_element_to_video_reprocessing = true;
+                                need_resize_event_listener = true;
+                                if (!window.matchMedia(media_query).matches) {
+                                    continue;
+                                }
+                            }
+                            let source = document.createElement("source");
                             source.src = url;
                             source.type = internetMediaTypeForURL(url);
-                            if (media_query.length > 0)
-                                source.media = media_query;
+                            //if (media_query.length > 0)
+                            //source.media = media_query;
                             video.appendChild(source);
+                        }
+                        if (add_element_to_video_reprocessing) {
+                            __video_elements_to_reprocess_on_resize.push(video);
+                            __video_elements_source_image.push(source_image);
                         }
                         video.dataset.id = source_image_id;
                         if ("retina" in source_image && source_image["retina"])
@@ -494,5 +567,7 @@ function ContentSetup(content_json_path) {
         }
         let root_element = document.querySelector(":root");
         __original_color_very_dark_background = getComputedStyle(root_element).getPropertyValue("--color-very-dark-background");
+        if (need_resize_event_listener)
+            addEventListener("resize", () => windowResizedEvent());
     });
 }
