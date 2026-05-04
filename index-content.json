@@ -89,14 +89,12 @@
         {
                     "urls" : [
           "video/DigitalRain-PhonePortrait.webm",
-          "video/DigitalRain-PhoneLandscape.webm",
           "video/DigitalRain-Tablet.webm",
           "video/DigitalRain-1080p.webm",
           "video/DigitalRain-1440p.webm",
           "video/DigitalRain-Compatibility.mp4"],
           "media queries" : [
           "(max-width: 400px) and (max-height:872px)",
-          "(max-width: 872px) and (max-height:400px)",
           "(max-width: 1176px) and (max-height:1176px)",
           "(max-width:1920px) and (max-height:1080px)",
           "",
