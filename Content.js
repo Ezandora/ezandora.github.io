@@ -289,9 +289,11 @@ function enlargeImage(image) {
         }, { once: true });
     }, 0);
 }
+let __window_resized_timeout = undefined;
 let __video_elements_to_reprocess_on_resize = [];
 let __video_elements_source_image = [];
 function processWindowResizedEvent() {
+    __window_resized_timeout = undefined;
     for (let i = 0; i < __video_elements_to_reprocess_on_resize.length; i += 1) {
         let video_element = __video_elements_to_reprocess_on_resize[i];
         let source_image = __video_elements_source_image[i];
@@ -340,7 +342,6 @@ function processWindowResizedEvent() {
         video_element.play();
     }
 }
-let __window_resized_timeout = undefined;
 function windowResizedEvent() {
     if (__window_resized_timeout !== undefined)
         clearTimeout(__window_resized_timeout);
