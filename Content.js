@@ -352,7 +352,9 @@ function ContentSetup(content_json_path) {
         let need_resize_event_listener = false;
         let content = yield loadJSONFromServer(content_json_path);
         let projects_div = document.getElementById("projects_bubble");
-        for (let entry of content["entries"]) {
+        //for (let entry of content["entries"])
+        for (let entry_id = 0; entry_id < content["entries"].length; entry_id += 1) {
+            let entry = content["entries"][entry_id];
             let subbubble = document.createElement("div");
             subbubble.classList.add("subbubble");
             {
@@ -370,9 +372,24 @@ function ContentSetup(content_json_path) {
             let base_url = "";
             if ("image url base" in entry)
                 base_url = entry["image url base"];
+            let thumbnail_base_url = "";
+            if ("thumbnail image url base" in entry)
+                thumbnail_base_url = entry["thumbnail image url base"];
+            let image_formats_available = [];
+            if ("image formats available" in entry)
+                image_formats_available = entry["image formats available"];
+            let thumbnail_image_formats_available = [];
+            if ("thumbnail image formats available" in entry)
+                thumbnail_image_formats_available = entry["thumbnail image formats available"];
             //Add in base url here:
             for (let source_image of entry["images"]) {
                 let urls = source_image["urls"];
+                let thumbnail_urls = [];
+                if ("thumbnail replicate url from base" in entry && entry["thumbnail replicate url from base"]) {
+                    thumbnail_urls.push(urls[0]);
+                }
+                else if ("thumbnail urls" in source_image)
+                    thumbnail_urls = source_image["thumbnail urls"];
                 //let secondary_base_url = ""
                 //if ("image url secondary base" in source_image)
                 //	secondary_base_url = source_image["image url secondary base"];
@@ -394,8 +411,8 @@ function ContentSetup(content_json_path) {
                         media_query = media_queries[i];
                     if (media_query === "phone")
                         media_query = "(max-width:600px)";
-                    if ("image formats available" in entry) {
-                        for (let image_format of entry["image formats available"]) {
+                    if (image_formats_available.length > 0) {
+                        for (let image_format of image_formats_available) {
                             urls_new.push(base_url + url + "." + image_format);
                             media_queries_new.push(media_query);
                         }
@@ -405,14 +422,35 @@ function ContentSetup(content_json_path) {
                         media_queries_new.push(media_query);
                     }
                 }
+                let thumbnail_urls_new = [];
+                for (let i = 0; i < thumbnail_urls.length; i += 1) {
+                    //Again, but for thumbnails:
+                    //dislike the code duplication here, but this is a difficult needle to thread:
+                    let url = thumbnail_urls[i];
+                    if (thumbnail_image_formats_available.length > 0) {
+                        for (let image_format of thumbnail_image_formats_available) {
+                            thumbnail_urls_new.push(thumbnail_base_url + url + "." + image_format);
+                        }
+                    }
+                    else {
+                        thumbnail_urls_new.push(thumbnail_base_url + url);
+                    }
+                }
                 source_image["urls"] = urls_new;
+                source_image["thumbnail urls"] = thumbnail_urls_new;
                 source_image["media queries"] = media_queries_new;
             }
-            let addImage = function (source_images, source_image_id, element_class, parent_element) {
+            let addImage = function (source_images, source_image_id, element_class, parent_element, thumbnail) {
                 return __awaiter(this, void 0, void 0, function* () {
                     let source_image = source_images[source_image_id];
                     let urls = source_image["urls"];
                     let media_queries = source_image["media queries"];
+                    let high_priority = false;
+                    if (thumbnail && source_image["thumbnail urls"].length > 0) {
+                        media_queries = [];
+                        urls = source_image["thumbnail urls"];
+                        //high_priority = true;
+                    }
                     let first_url = urls[0];
                     if (pathIsVideo(first_url)) {
                         let video = document.createElement("video");
@@ -421,6 +459,7 @@ function ContentSetup(content_json_path) {
                         video.loop = true;
                         video.muted = true;
                         video.playsInline = true;
+                        //video.loading = "lazy";
                         let add_element_to_video_reprocessing = false;
                         for (let url_id = 0; url_id < urls.length; url_id += 1) {
                             let url = urls[url_id];
@@ -448,15 +487,29 @@ function ContentSetup(content_json_path) {
                             __video_elements_to_reprocess_on_resize.push(video);
                             __video_elements_source_image.push(source_image);
                         }
+                        if ("aspect ratio" in entry) {
+                            video.style.aspectRatio = entry["aspect ratio"];
+                        }
+                        if ("background url" in source_image) {
+                            video.style.backgroundImage = "url(\"" + source_image["background url"] + "\")";
+                            video.style.backgroundPositionX = "center";
+                            video.style.backgroundPositionY = "center";
+                            video.style.backgroundRepeat = "no-repeat";
+                            if (!source_image["keep constant size"])
+                                video.style.backgroundSize = "contain";
+                        }
                         video.dataset.id = source_image_id;
                         if ("retina" in source_image && source_image["retina"])
                             video.classList.add("video_constant_retina");
                         if ("keep constant size" in source_image && source_image["keep constant size"])
                             video.classList.add("video_constant");
-                        parent_element.appendChild(video);
+                        if (parent_element !== undefined)
+                            parent_element.appendChild(video);
                         return video;
                     }
                     else {
+                        if (entry_id <= 2)
+                            high_priority = true;
                         let image = document.createElement("img");
                         let return_value = image;
                         let picture = document.createElement("picture");
@@ -472,11 +525,18 @@ function ContentSetup(content_json_path) {
                                 source.media = media_query;
                             picture.appendChild(source);
                         }
+                        if (high_priority) {
+                            image.fetchPriority = "high";
+                        }
+                        else {
+                            image.loading = "lazy";
+                            image.fetchPriority = "low";
+                        }
                         picture.appendChild(image);
-                        parent_element.appendChild(picture);
+                        if (parent_element !== undefined)
+                            parent_element.appendChild(picture);
                         return_value = picture;
                         picture.dataset.id = source_image_id;
-                        image.loading = "lazy";
                         image.classList.add(element_class);
                         image.src = encodeURI(urls[urls.length - 1]);
                         if ("description" in source_image) {
@@ -488,7 +548,7 @@ function ContentSetup(content_json_path) {
                 });
             };
             {
-                let subbubble_element = yield addImage(entry["images"], 0, "subbubble_image", subbubble);
+                let subbubble_element = yield addImage(entry["images"], 0, "subbubble_image", subbubble, false);
                 subbubble_element.classList.add("subbubble_first_image");
                 subbubble_element.dataset.fullscreen_state = FullscreenTransitionState.INACTIVE;
                 subbubble_element.addEventListener("click", function () {
@@ -502,29 +562,54 @@ function ContentSetup(content_json_path) {
                 for (let i = 0; i < entry["images"].length; i += 1) {
                     if (pathIsVideo(entry["images"][i]["urls"][0]))
                         continue; //not yet supported
-                    let image_element = yield addImage(entry["images"], i, "subbubble_carousel_image", carousel);
+                    let image_element = yield addImage(entry["images"], i, "subbubble_carousel_image", carousel, true);
                     image_element.addEventListener("click", function (event) {
                         return __awaiter(this, void 0, void 0, function* () {
-                            var _a, _b, _c, _d;
+                            var _a, _b, _c, _d, _e, _f;
                             let first_picture = (_b = (_a = image_element.parentElement) === null || _a === void 0 ? void 0 : _a.parentElement) === null || _b === void 0 ? void 0 : _b.getElementsByClassName("subbubble_first_image")[0];
                             if (first_picture.dataset.id !== image_element.dataset.id) {
                                 let previous_sh = getSubbubbleInnerImage(first_picture).scrollHeight;
                                 let previous_page_y_offset = window.pageYOffset;
-                                let image_clone = image_element.cloneNode(true);
-                                let inner_image = image_clone.getElementsByTagName("img")[0];
-                                inner_image.loading = "eager";
-                                yield inner_image.decode(); //wait for decode to get scrollHeight?
-                                (_c = first_picture.parentNode) === null || _c === void 0 ? void 0 : _c.insertBefore(image_clone, first_picture);
-                                (_d = first_picture.parentNode) === null || _d === void 0 ? void 0 : _d.removeChild(first_picture);
-                                domElementClearClassList(image_clone);
-                                image_clone.classList.add("subbubble_first_image");
-                                let image_clone_img = image_clone.getElementsByTagName("img")[0];
-                                domElementClearClassList(image_clone_img);
-                                image_clone_img.classList.add("subbubble_image");
-                                image_clone.dataset.fullscreen_state = FullscreenTransitionState.INACTIVE;
-                                image_clone.addEventListener("click", function () {
-                                    enlargeImage(image_clone);
-                                });
+                                let new_image;
+                                if (false) {
+                                    new_image = image_element.cloneNode(true);
+                                    let inner_image = new_image.getElementsByTagName("img")[0];
+                                    inner_image.loading = "eager";
+                                    yield inner_image.decode(); //wait for decode to get scrollHeight?
+                                    (_c = first_picture.parentNode) === null || _c === void 0 ? void 0 : _c.insertBefore(new_image, first_picture);
+                                    (_d = first_picture.parentNode) === null || _d === void 0 ? void 0 : _d.removeChild(first_picture);
+                                    domElementClearClassList(new_image);
+                                    new_image.classList.add("subbubble_first_image");
+                                    let image_clone_img = new_image.getElementsByTagName("img")[0];
+                                    domElementClearClassList(image_clone_img);
+                                    image_clone_img.classList.add("subbubble_image");
+                                    new_image.dataset.fullscreen_state = FullscreenTransitionState.INACTIVE;
+                                    new_image.addEventListener("click", function () {
+                                        enlargeImage(new_image);
+                                    });
+                                }
+                                else if (true) {
+                                    new_image = yield addImage(entry["images"], i, "subbubble_image", undefined, false);
+                                    new_image.classList.add("subbubble_first_image");
+                                    new_image.dataset.fullscreen_state = FullscreenTransitionState.INACTIVE;
+                                    new_image.addEventListener("click", function () {
+                                        enlargeImage(new_image);
+                                    });
+                                    //Force image load:
+                                    if (true) {
+                                        let inner_image = new_image.getElementsByTagName("img")[0];
+                                        inner_image.loading = "eager";
+                                        yield inner_image.decode();
+                                        (_e = first_picture.parentNode) === null || _e === void 0 ? void 0 : _e.insertBefore(new_image, first_picture);
+                                        (_f = first_picture.parentNode) === null || _f === void 0 ? void 0 : _f.removeChild(first_picture);
+                                    }
+                                    //Event based approach that doesn't currently work, and I'm concerned about race conditions. (what if it's already cached? does it still fire a load event?)
+                                    /*first_picture.parentNode?.insertBefore(new_image, first_picture);
+                                    new_image.addEventListener("load", async function (event)
+                                    {
+                                        first_picture.parentNode?.removeChild(first_picture);
+                                    });*/
+                                }
                                 /*image_clone_img.style.opacity = "0.0";
                                 image_clone_img.style.position = "absolute";
                                 image_clone_img.addEventListener("transitionend", function()
@@ -539,7 +624,7 @@ function ContentSetup(content_json_path) {
                                 let current_page_y_offset = window.pageYOffset;
                                 //Scroll page so the element we clicked on doesn't move.
                                 //Both chromium and firefox do this automatically, safari doesn't. we can determine browser behavior by checking if pageYOffset changed
-                                let new_sh = getSubbubbleInnerImage(image_clone).scrollHeight;
+                                let new_sh = getSubbubbleInnerImage(new_image).scrollHeight;
                                 let delta = new_sh - previous_sh;
                                 let page_delta = current_page_y_offset - previous_page_y_offset;
                                 delta -= page_delta;

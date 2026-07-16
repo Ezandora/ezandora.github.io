@@ -41,6 +41,7 @@ function ContentSetup()
 	"cyrus.png",
 	"compact.png",
 	"azula-boss.gif",
+	"azula-boss-full.png",
 	"asdonmartingui.png",
 	"ascension_history.png",
 	"ampersand.png",
@@ -56,6 +57,7 @@ function ContentSetup()
 	"witchess_ai/rook.png",
 	"witchess_ai/ai_hearts.png",
 	];
+	image_urls.sort((a, b) => a.localeCompare(b)); //case-insensitive sort
 	
 	let images_container_element = document.getElementById("images_container");
 	
@@ -65,13 +67,16 @@ function ContentSetup()
 		container.classList.add("subbubble");
 		container.classList.add("image_container");
 		container.href = image_url;
-		let image_element = document.createElement("img");
-		image_element.src = image_url;
-		container.appendChild(image_element);
-		
+
+
 		let text = document.createElement("div");
 		text.innerHTML = image_url;
 		container.appendChild(text);
 		images_container_element.appendChild(container);
+
+		let image_element = document.createElement("img");
+		image_element.src = image_url;
+		container.appendChild(image_element);
+		
 	}
 }

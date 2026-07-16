@@ -5,6 +5,9 @@
       "subheader" : "Image to circles",
       "image url base" : "images/circles/",
       "image formats available": ["jxl", "avif", "jpg"],
+      "thumbnail image url base" : "images/circles/thumbnails/",
+      "thumbnail image formats available": ["jxl", "avif", "jpg"],
+      "thumbnail replicate url from base":true,
       "images" : [
         {
           "urls" : ["ISS2311f.jpg-PSNR 37.003532", "ISS2311f.jpg-PSNR 40.070053"],
@@ -100,6 +103,7 @@
           "",
           ""
           ],
+          "background url" : "images/Digital Rain.30.avif",
           "keep constant size" : true,
           "description" : "Digital Rain"
         }
@@ -109,9 +113,10 @@
     {
       "title" : "Guide",
       "subheader" : "Dynamic game advisor",
+      "image formats available": ["jxl", "png"],
       "images" : [
         {
-          "urls" : ["images/guide.png"],
+          "urls" : ["images/guide"],
           "description" : "Guide"
         }
       ],
@@ -120,9 +125,10 @@
     {
       "title" : "Destiny Ascension",
       "subheader" : "AI game player",
+      "image formats available": ["jxl", "png"],
       "images" : [
         {
-          "urls" : ["images/DestinyAscension.png"],
+          "urls" : ["images/DestinyAscension"],
           "description" : "Destiny Ascension"
         }
       ],
@@ -131,26 +137,51 @@
     {
       "title" : "Landscapes",
       "subheader" : "OpenGL playground",
+      "image url base" : "images/landscapes/",
+      "image formats available": ["jxl", "jpg"],
+      "thumbnail image url base" : "images/landscapes/thumbnails/",
+      "thumbnail image formats available": ["jxl", "avif", "jpg"],
+      "thumbnail replicate url from base":true,
       "images" : [
         {
-          "urls" : ["images/landscapes/snow.jpg"],
+          "urls" : ["snow"],
           "description" : "Snowy mountain"
         },
         {
-          "urls" : ["images/landscapes/reflective_sphere.jpg"],
+          "urls" : ["reflective_sphere"],
           "description" : "Reflected sphere"
         },
         {
-          "urls" : ["images/landscapes/Screen shot 2010-05-12 at 7.38.32 AM.jpg"],
+          "urls" : ["Screen shot 2010-05-12 at 7.38.32 AM"],
           "description" : "Wireframe rainbow landscape"
         },
         {
-          "urls" : ["images/landscapes/distance box blur.jpg"],
+          "urls" : ["distance box blur"],
           "description" : "Distance box blur"
         },
         {
-          "urls" : ["images/landscapes/Screen shot 2010-05-11 at 4.45.34 PM.jpg"],
+          "urls" : ["Screen shot 2010-05-11 at 4.45.34 PM"],
           "description" : "Dot hills"
+        },
+        {
+          "urls" : ["Screen shot 2010-05-11 at 9.00.06 PM"],
+          "description" : "Fog buildings"
+        },
+        {
+          "urls": ["Screen shot 2010-05-23 at 2.48.22 PM"],
+          "description" : "Quadtree wireframe"
+        },
+        {
+          "urls": ["wireframe-2"],
+          "description": "wireframe mountain with normal lines"
+        },
+        {
+          "urls": ["headintheclouds"],
+          "description": "tangent rainbow lines"
+        },
+        {
+          "urls": ["oh, the quadtrees you'll map"],
+          "description": "oh, the quadtrees you'll map"
         }
       ],
       "description" : "Two separate projects for trying various OpenGL concepts. Generated terrain, motion blur, summed area tables, real-time spherical reflections, quad trees, and shadow mapping."
@@ -161,45 +192,58 @@
       "images" : [
         {
           "urls" : ["video/Dust-High.webm", "video/Dust-Low.mp4"],
-          "description" : "Dust"
+          "description" : "Dust",
+          "background url" : "images/Dust.30.avif"
         }
       ],
+      "aspect ratio":"1/1",
       "description" : "Interactive, simulates gravity applied to particles."
     },
     {
       "title" : "Other Scripts",
       "subheader" : "Various in-game add-ons",
+      "image url base" : "images/scripts/",
+      "thumbnail image url base" : "images/scripts/thumbnails/",
+      "thumbnail image formats available": ["jxl", "avif", "jpg"],
       "images" : [
         {
-          "urls" : ["images/scripts/educate.png"],
+          "urls" : ["educate.jxl", "educate.png"],
+          "thumbnail urls" : ["educate"],
           "description" : "Source Terminal GUI"
         },
         {
-          "urls" : ["images/scripts/martin1.png"],
+          "urls" : ["martin1.png"],
+          "thumbnail urls" : ["martin1"],
           "description" : "Asdon Martin GUI"
         },
         {
-          "urls" : ["images/scripts/briefcase.png"],
+          "urls" : ["briefcase.jxl", "briefcase.png"],
+          "thumbnail urls" : ["briefcase"],
           "description" : "Kremlin's Greatest Briefcase"
         },
         {
-          "urls" : ["images/scripts/genie2.99999repeating.png"],
+          "urls" : ["genie2.99999repeating.jxl", "genie2.99999repeating.png"],
+          "thumbnail urls" : ["genie2.99999repeating"],
           "description" : "Genie"
         },
         {
-          "urls" : ["images/scripts/latte.png"],
+          "urls" : ["latte.png"],
+          "thumbnail urls" : ["latte"],
           "description" : "Latte"
         },
         {
-          "urls" : ["images/scripts/bastille.png"],
+          "urls" : ["bastille.png"],
+          "thumbnail urls" : ["bastille"],
           "description" : "Bastille"
         },
         {
-          "urls" : ["images/scripts/Explorer.png"],
+          "urls" : ["Explorer.jxl", "Explorer.png"],
+          "thumbnail urls" : ["Explorer"],
           "description" : "Far Future"
         },
         {
-          "urls" : ["images/scripts/24.png"],
+          "urls" : ["24.jxl", "24.png"],
+          "thumbnail urls" : ["24"],
           "description" : "Detective Solver"
         }
       ],
