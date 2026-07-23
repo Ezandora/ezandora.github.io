@@ -138,7 +138,7 @@
       "title" : "Landscapes",
       "subheader" : "OpenGL playground",
       "image url base" : "images/landscapes/",
-      "image formats available": ["jxl", "jpg"],
+      "image formats available": ["jxl", "avif", "jpg"],
       "thumbnail image url base" : "images/landscapes/thumbnails/",
       "thumbnail image formats available": ["jxl", "avif", "jpg"],
       "thumbnail replicate url from base":true,
@@ -152,7 +152,7 @@
           "description" : "Reflected sphere"
         },
         {
-          "urls" : ["Screen shot 2010-05-12 at 7.38.32 AM"],
+          "urls" : ["wireframe-rainbow"],
           "description" : "Wireframe rainbow landscape"
         },
         {
@@ -160,15 +160,15 @@
           "description" : "Distance box blur"
         },
         {
-          "urls" : ["Screen shot 2010-05-11 at 4.45.34 PM"],
+          "urls" : ["dot-hills"],
           "description" : "Dot hills"
         },
         {
-          "urls" : ["Screen shot 2010-05-11 at 9.00.06 PM"],
+          "urls" : ["buildings"],
           "description" : "Fog buildings"
         },
         {
-          "urls": ["Screen shot 2010-05-23 at 2.48.22 PM"],
+          "urls": ["quadtree-wireframe"],
           "description" : "Quadtree wireframe"
         },
         {
