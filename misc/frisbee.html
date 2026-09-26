@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Frisbee Problem
+</title>
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="frisbee.css">
+<script async defer src="frisbee.js" type="text/javascript" onload="ContentSetup()"></script>
+</head>
+<body>
+<div class="header_container">
+<H1>Frisbee Problem</H1>
+<div>Problem my friends and I were discussing at a pool party. How many ways to throw a frisbee between people. Apparently it's called a Hamiltonian cycle?</div>
+<div style="padding-top:1.0em;padding-bottom:1.0em;">This is the formula I came up with in the pool:
+<!-- I used a generator for this math block. -->
+<div>
+<math>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>n</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+
+  <mrow>
+    <mo fence="true" form="prefix" stretchy="true">{</mo>
+    <mtable columnalign="left" rowspacing="0.6em" columnspacing="1.5em">
+      <!-- Case 1 -->
+      <mtr>
+        <mtd><mn>0</mn></mtd>
+        <mtd><mi>n</mi><mo>&le;</mo><mn>1</mn></mtd>
+      </mtr>
+      
+      <!-- Case 2 -->
+      <mtr>
+        <mtd><mn>1</mn></mtd>
+        <mtd>
+          <mi>n</mi>
+          <mo>&isin;</mo>
+          <mo>{</mo>
+          <mn>2</mn>
+          <mo>,</mo>
+          <mn>3</mn>
+          <mo>}</mo>
+        </mtd>
+      </mtr>
+
+      <!-- Case 3 -->
+      <mtr>
+        <mtd>
+          <mo stretchy="false">(</mo>
+          <mi>n</mi>
+          <mo>&minus;</mo>
+          <mn>1</mn>
+          <mo stretchy="false">)</mo>
+          <mo>&middot;</mo>
+          <mi>f</mi>
+          <mo stretchy="false">(</mo>
+          <mi>n</mi>
+          <mo>&minus;</mo>
+          <mn>1</mn>
+          <mo stretchy="false">)</mo>
+        </mtd>
+        <mtd><mi>n</mi><mo>&ge;</mo><mn>4</mn></mtd>
+      </mtr>
+    </mtable>
+  </mrow>
+</math>
+</div>
+
+</div>
+
+<div style="padding-bottom:1em">
+<label class="label-medium">Node count:</label>
+<span class="node_count_input" id="node_count_input">7</span>
+<button class="node_count_input_button" onclick="nodeCountInputPlusButtonClicked()">&#10133;</button>
+<button class="node_count_input_button" onclick="nodeCountInputMinusButtonClicked()">&#10134;</button>
+</div>
+</div>
+
+</body>
+</html>
