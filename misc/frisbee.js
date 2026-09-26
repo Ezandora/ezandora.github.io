@@ -228,7 +228,7 @@ function redoLayout()
 		}
 		main_container.appendChild(containing_element);
 
-		let title = document.createElement("h2");
+		let title = document.createElement("div");
 		title.classList.add("traversal_containiner_title");
 		title.innerHTML = String(points) + " " + pluralize(points, "node", "nodes") + " " + pluralize(points, "has", "have") + " " + String(all_traversal.length) + " " + pluralize(all_traversal.length, "traversal", "traversals") + (should_display ? ":" : " (not displayed)");
 		containing_element.appendChild(title);
