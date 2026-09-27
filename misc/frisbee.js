@@ -1,52 +1,89 @@
 let __svg_namespace = "http://www.w3.org/2000/svg";
 
 
-function drawTraversal(x, y, radius, svg_element, point_coordinates, traversal)
+function formatOldPixelAsNewEm(pixels)
+{
+	return String(pixels / 22.5) + "em";
+}
+
+function drawTraversal(x, y, radius, should_output_labels, svg_element, point_coordinates, traversal)
 {
 	for (let i = 0; i < point_coordinates.length; i += 1)
 	{
 		let point_element = document.createElementNS(__svg_namespace, "circle");
 		//console.log("point_element = " + point_element + ", svg_element = " + svg_element);
 		let i_coordinate = point_coordinates[i];
-		point_element.setAttribute("cx", i_coordinate[0] * radius + x);
-		point_element.setAttribute("cy", i_coordinate[1] * radius + y);
-		point_element.setAttribute("r", 5);
-		point_element.setAttribute("fill", "black");
+		point_element.setAttribute("cx", formatOldPixelAsNewEm(i_coordinate[0] * radius + x));
+		point_element.setAttribute("cy", formatOldPixelAsNewEm(i_coordinate[1] * radius + y));
+		point_element.setAttribute("r", formatOldPixelAsNewEm(5));
+		point_element.setAttribute("fill", "currentColor");
 //		point.stroke = "black";
 //		point.strokeWidth = 2;
 		svg_element.appendChild(point_element);
-	}
-	let previous_index = -1;
-	if (traversal.length > 0)
-		previous_index = traversal[0];
-	for (let i = 1; i < traversal.length; i += 1)
-	{
-		//draw line from previous index to current index:
-		if (previous_index >= point_coordinates.length) break;
-		let current_index = traversal[i];
-		if (current_index >= point_coordinates.length) continue;
-		let line_element = document.createElementNS(__svg_namespace, "line");
-		line_element.setAttribute("x1", point_coordinates[previous_index][0] * radius + x);
-		line_element.setAttribute("y1", point_coordinates[previous_index][1] * radius + y);
-		line_element.setAttribute("x2", point_coordinates[current_index][0] * radius + x);
-		line_element.setAttribute("y2", point_coordinates[current_index][1] * radius + y);
-		line_element.setAttribute("stroke", "black");
-		line_element.setAttribute("stroke-width", 2);
-		svg_element.appendChild(line_element);
 
-		previous_index = current_index;
+		if (should_output_labels)
+		{
+			let text_label = document.createElementNS(__svg_namespace, "text");
+			text_label.setAttribute("x", formatOldPixelAsNewEm(i_coordinate[0] * (20.0 + radius) + x - 7.5));
+			text_label.setAttribute("y", formatOldPixelAsNewEm(i_coordinate[1] * (20.0 + radius) + y));
+			text_label.setAttribute("font-size", formatOldPixelAsNewEm(22.5)); //1em
+			text_label.setAttribute("fill", "currentColor");
+			text_label.textContent = i;
+			text_label.setAttribute("dominant-baseline", "middle");
+			text_label.setAttribute("text-anchor", "start");
+
+			svg_element.appendChild(text_label);
+		}
+	}
+	if (traversal.length > 0)
+	{
+		let previous_index = traversal[0];
+		for (let i = 1; i < traversal.length; i += 1)
+		{
+			//draw line from previous index to current index:
+			if (previous_index >= point_coordinates.length) break;
+			let current_index = traversal[i];
+			if (current_index >= point_coordinates.length) continue;
+			let line_element = document.createElementNS(__svg_namespace, "line");
+			line_element.setAttribute("x1", formatOldPixelAsNewEm(point_coordinates[previous_index][0] * radius + x));
+			line_element.setAttribute("y1", formatOldPixelAsNewEm(point_coordinates[previous_index][1] * radius + y));
+			line_element.setAttribute("x2", formatOldPixelAsNewEm(point_coordinates[current_index][0] * radius + x));
+			line_element.setAttribute("y2", formatOldPixelAsNewEm(point_coordinates[current_index][1] * radius + y));
+			line_element.setAttribute("stroke", "currentColor");
+			line_element.setAttribute("stroke-width", formatOldPixelAsNewEm(2));
+			svg_element.appendChild(line_element);
+
+			previous_index = current_index;
+		}
 	}
 }
 
-function drawTraversalEncapsulated(parent_element, radius, point_coordinates, traversal)
+function drawTraversalEncapsulated(parent_element, radius, should_output_labels, point_coordinates, traversal, unique_rotation)
 {
 	let svg_element = document.createElementNS(__svg_namespace, "svg");
-	svg_element.setAttribute("width", radius * 2.0 + 10.0);
-	svg_element.setAttribute("height", radius * 2.0 + 10.0);
-	svg_element.setAttribute("class", "traversal")
+	let svg_size = radius * 2.0 + (5.0 + 1.0) * 2.0; //the point radius plus a pixel's padding, on both sides
+	if (should_output_labels)
+		svg_size += (22.5 + 1.0 + 3.0) * 2.0;
+
+	svg_element.setAttribute("width", formatOldPixelAsNewEm(svg_size));
+	svg_element.setAttribute("height", formatOldPixelAsNewEm(svg_size));
+	svg_element.classList.add("traversal");
 	parent_element.appendChild(svg_element);
 
-	drawTraversal(radius + 5, radius + 5, radius, svg_element, point_coordinates, traversal);
+	if (false)
+	{
+		//raster a background element for coordinate debugging
+		let background_debug_element = document.createElementNS(__svg_namespace, "rect");
+		background_debug_element.setAttribute("width", "100%");
+		background_debug_element.setAttribute("height", "100%");
+		background_debug_element.setAttribute("fill", "hsl(214, 99%, 31%)");
+		svg_element.appendChild(background_debug_element);
+	}
+
+	let coordinate_correction = (svg_size - radius * 2.0) * 0.5; //move element to exact center
+
+
+	drawTraversal(radius + coordinate_correction, radius + coordinate_correction, radius, should_output_labels, svg_element, point_coordinates, traversal);
 
 }
 
@@ -68,15 +105,45 @@ function encodeTraversalIntoNumber(traversal, node_count)
 	return result;
 }
 
-function encodeSpecialReverseTraversalIntoNumber(traversal, node_count)
+function encodeRotatedTraversalIntoNumber(traversal, node_count, rotation, shift, reversal_type)
+{
+	//old reversal type: 0 - no reversal 1 - reverse before shift 2 - reverse after shift
+	//new is just 0 - no reversal, 1 - reverse after shift
+	let result = 0;
+	let multiplication = 1;
+	for (let i = 0; i < traversal.length; i += 1)
+	{
+		//let ii = (i + rotation) % traversal.length;
+
+		//if (node_count < 6)
+			//console.log("i = " + i + ", ii = " + ii + ", traversal.length = " + traversal.length + ", node_count = " + node_count + ", rotation = " + rotation)
+		//result += traversal[ii] * multiplication;
+
+		let ii = i;
+		/*if (reversal_type == 1 && false)
+			ii = (traversal.length - 1) - ii;*/
+		ii = (ii + shift) % traversal.length;
+		if (reversal_type === 1)
+			ii = (traversal.length - 1) - ii;
+		result += ((traversal[ii] + rotation) % node_count) * multiplication;
+		multiplication *= node_count;
+	}
+	return result;
+}
+
+function encodeReverseTraversalIntoNumber(traversal, node_count)
 {
 	let result = 0;
 	let multiplication = 1;
 	for (let i = 0; i < traversal.length; i += 1)
 	{
 		let ii = i;
-		if (i > 0 && i < traversal.length - 1)
+		//old special method:
+		/*if (i > 0 && i < traversal.length - 1)
+		{
 			ii = (traversal.length - 3) - (i - 1) + 1;
+		}*/
+		ii = (traversal.length - 1) - i;
 		//if (node_count < 6)
 			//console.log("i = " + i + ", ii = " + ii + ", traversal.length = " + traversal.length + ", node_count = " + node_count)
 		result += traversal[ii] * multiplication;
@@ -85,7 +152,7 @@ function encodeSpecialReverseTraversalIntoNumber(traversal, node_count)
 	return result;
 }
 
-function calculateAllTraversalRecurse(node_count, all_traversal, building_traversal, previously_present_map, all_traversal_number_map)
+function calculateAllTraversalRecurse(node_count, all_traversal, unique_rotation_traversals, building_traversal, previously_present_map, all_traversal_number_map, all_traversal_number_map_without_last_element)
 {
 	if (building_traversal.length === node_count)
 	{
@@ -94,7 +161,7 @@ function calculateAllTraversalRecurse(node_count, all_traversal, building_traver
 		{
 			//Check if the reverse is already present:
 			building_traversal.push(building_traversal[0]);
-			let reverse_traversal_number_alternate_method = encodeSpecialReverseTraversalIntoNumber(building_traversal, node_count);
+			let reverse_traversal_number_alternate_method = encodeReverseTraversalIntoNumber(building_traversal, node_count);
 			building_traversal.pop();
 
 			let reject_according_to_number_method = all_traversal_number_map.has(reverse_traversal_number_alternate_method)
@@ -139,8 +206,42 @@ function calculateAllTraversalRecurse(node_count, all_traversal, building_traver
 				//console.log("adding " + building_traversal);
 			building_traversal.push(building_traversal[0]);
 			all_traversal.push([...building_traversal]);
-			building_traversal.pop();
+			//building_traversal.pop();
 			all_traversal_number_map.set(encodeTraversalIntoNumber(building_traversal, node_count));
+			building_traversal.pop();
+
+
+			let rotation_is_unique = true;
+			//This is incorrect, but what is correct?
+			//Check shifted rotations with the number map:
+			//building_traversal.push(building_traversal[0]);
+			for (let rotation = 1; rotation < node_count; rotation += 1)
+			{
+				for (let shift = 0; shift < node_count; shift += 1)
+				{
+					for (let reversal_type = 0; reversal_type <= 1; reversal_type += 1)
+					{
+						let rotated_traversal_encoded = encodeRotatedTraversalIntoNumber(building_traversal, node_count, rotation, shift, reversal_type);
+						if (all_traversal_number_map_without_last_element.has(rotated_traversal_encoded))
+						{
+							//console.log("non-unique at " + rotation);
+							rotation_is_unique = false;
+							break;
+						}
+					}
+					if (!rotation_is_unique) break;
+				}
+				if (!rotation_is_unique) break;
+			}
+			all_traversal_number_map_without_last_element.set(encodeTraversalIntoNumber(building_traversal, node_count));
+			//building_traversal.pop();
+
+			//building_traversal.pop();
+
+			if (rotation_is_unique)
+			{
+				unique_rotation_traversals.set(all_traversal.length - 1, true);
+			}
 		}
 		return;
 	}
@@ -155,7 +256,7 @@ function calculateAllTraversalRecurse(node_count, all_traversal, building_traver
 		//let new_present_map = new Map(previously_present_map)
 		//new_present_map.set(i, true);
 		previously_present_map.set(i, true);
-		calculateAllTraversalRecurse(node_count, all_traversal, building_traversal, previously_present_map, all_traversal_number_map);
+		calculateAllTraversalRecurse(node_count, all_traversal, unique_rotation_traversals, building_traversal, previously_present_map, all_traversal_number_map, all_traversal_number_map_without_last_element);
 		previously_present_map.delete(i);
 		building_traversal.pop();
 	}
@@ -163,13 +264,16 @@ function calculateAllTraversalRecurse(node_count, all_traversal, building_traver
 
 function calculateAllTraversal(node_count)
 {
-	if (node_count < 2) return [];
+	if (node_count < 2) return [[], []];
 	let all_traversal = [];
+	let unique_rotation_traversals = new Map();
 	let previously_present_map = new Map();
 	let all_traversal_number_map = new Map();
-	calculateAllTraversalRecurse(node_count, all_traversal, [], previously_present_map, all_traversal_number_map);
+	let all_traversal_number_map_without_last_element = new Map();
+	calculateAllTraversalRecurse(node_count, all_traversal, unique_rotation_traversals, [], previously_present_map, all_traversal_number_map, all_traversal_number_map_without_last_element);
 
-	return all_traversal;
+	//console.log("unique_rotation_traversals = " + JSON.stringify([...unique_rotation_traversals]))
+	return [all_traversal, unique_rotation_traversals];
 }
 
 function pluralize(number, singular, plural)
@@ -181,16 +285,7 @@ function pluralize(number, singular, plural)
 
 function redoLayout()
 {
-
-	//let svg_element = document.getElementById("drawingSVG");
-	//let svg_element = document.createElementNS(__svg_namespace, "svg");
-	//svg_element.style.width = "100%";
-	//svg_element.style.height = "100%";
-	//svg_element.setAttribute("width", "100vw");
-	//svg_element.setAttribute("height", "100vh");
-	//document.body.appendChild(svg_element);
-
-	document.getElementById("main_container")?.remove();
+	document.getElementById("main_container")?.remove(); //destroy last results
 	let main_container = document.createElement("div");
 	main_container.classList.add("main_container");
 	main_container.id = "main_container";
@@ -200,6 +295,7 @@ function redoLayout()
 	for (let points = 1; points <= maximum_points; points += 1)
 	{
 		let point_coordinates = [];
+		//Generate points around an imaginary circle. Always start on the left, at the vertical center.
 		for (let i = 0; i < points; i += 1)
 		{
 			let angle_degrees = (360.0 / points) * i + 180.0;
@@ -208,10 +304,14 @@ function redoLayout()
 			let iy = 1.0 * Math.sin(angle_radians);
 			point_coordinates.push([ix, iy]);
 		}
-		let all_traversal = calculateAllTraversal(point_coordinates.length);
+		const [all_traversal, unique_rotation_traversals] = calculateAllTraversal(point_coordinates.length);
+		/*const result = calculateAllTraversal(point_coordinates.length);
+		const all_traversal = result[0];
+		const unique_rotation_traversals = result[1];*/
 
 		let containing_element = document.createElement("div");
 		containing_element.classList.add("traversal_container");
+		//Spread out hue across the spectrum:
 		let hue = (points - 1) * 360.0 / maximum_points;
 		containing_element.style.backgroundColor = "hsl(" + String(hue) + ", 75%, 80%)";
 		containing_element.style.flex = "1 1 25%";
@@ -220,30 +320,68 @@ function redoLayout()
 		if (should_display)
 		{
 			//this is not correct but close enough:
-			let minimum_width = ((radius * 2.0 + 20.0) * all_traversal.length);
+			let minimum_width_px = ((radius * 2.0 + 20.0) * all_traversal.length);
 			if (all_traversal.length > 3)
-				minimum_width /= 2.0;
-			minimum_width += 20.0; //padding
-			containing_element.style.flex = "1 1 " + minimum_width + "px";
+				minimum_width_px /= 2.0;
+			minimum_width_px += 20.0; //padding
+			let minimum_width_em = minimum_width_px / 22.5;
+			containing_element.style.flex = "1 1 " + minimum_width_em + "em";
 		}
 		main_container.appendChild(containing_element);
 
 		let title = document.createElement("div");
 		title.classList.add("traversal_containiner_title");
-		title.innerHTML = String(points) + " " + pluralize(points, "node", "nodes") + " " + pluralize(points, "has", "have") + " " + String(all_traversal.length) + " " + pluralize(all_traversal.length, "traversal", "traversals") + (should_display ? ":" : " (not displayed)");
+		title.innerHTML = String(points) + " " + pluralize(points, "node", "nodes");
 		containing_element.appendChild(title);
+		let subtitle = document.createElement("div");
+		subtitle.classList.add("traversal_containiner_subtitle");
+
+		let subtitle_text = String(all_traversal.length) + " " + pluralize(all_traversal.length, "traversal", "traversals");
+		if (all_traversal.length > 0)
+			subtitle_text += " and " + String(unique_rotation_traversals.size) + " unique " + pluralize(unique_rotation_traversals.size, "rotation", "rotations");
+		subtitle_text += (should_display ? "" : " (not displayed)");
+		subtitle.innerHTML = subtitle_text;
+		containing_element.appendChild(subtitle);
+
+		let should_output_labels = document.getElementById("toggle_labels_checkbox").checked;
 
 		let subcontaining_element = document.createElement("div");
 		containing_element.appendChild(subcontaining_element);
 		subcontaining_element.classList.add("traversal_subcontainer");
 		if (all_traversal.length === 0)
-			drawTraversalEncapsulated(subcontaining_element, radius, point_coordinates, []);
+		{
+			drawTraversalEncapsulated(subcontaining_element, radius, should_output_labels, point_coordinates, []);
+		}
 		else if (should_display)
 		{
-			for (let traversal of all_traversal)
+			//for (let traversal of all_traversal)
+			//console.log("unique_rotation_traversals = " + JSON.stringify([...unique_rotation_traversals]))
+			for (let i = 0; i < all_traversal.length; i += 1)
 			{
-			//drawTraversal(x + 50.0, y + 50.0, 50.0, svg_element, point_coordinates, [0, 1]);
-				drawTraversalEncapsulated(subcontaining_element, radius, point_coordinates, traversal);
+				let subsubcontaining_element = document.createElement("div");
+				subsubcontaining_element.classList.add("subsubcontaining_element");
+
+
+				/*if (i < all_traversal.length - 1)
+					subsubcontaining_element.style.borderRight = "1px solid black";
+				subsubcontaining_element.style.borderBottom = "1px solid black";*/
+				subcontaining_element.appendChild(subsubcontaining_element);
+				let traversal = all_traversal[i];
+				let unique_rotation = unique_rotation_traversals.has(i);
+				drawTraversalEncapsulated(subsubcontaining_element, radius, should_output_labels, point_coordinates, traversal, unique_rotation);
+
+				if (unique_rotation)
+					subsubcontaining_element.classList.add("traversal_rotation_first");
+				else
+					subsubcontaining_element.classList.add("traversal_rotation_repeated");
+
+				if (should_output_labels)
+				{
+					let traversal_text = document.createElement("div");
+					traversal_text.innerHTML = traversal;
+					traversal_text.classList.add("traversal_text");
+					subsubcontaining_element.appendChild(traversal_text);
+				}
 			}
 		}
 	}
@@ -276,4 +414,9 @@ function nodeCountInputPlusButtonClicked()
 function nodeCountInputMinusButtonClicked()
 {
 	modifyNodeCountByAmount(-1);
+}
+
+function toggleLabelsCheckboxClicked()
+{
+	redoLayout();
 }
