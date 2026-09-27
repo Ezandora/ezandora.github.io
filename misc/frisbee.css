@@ -25,11 +25,17 @@
     /*flex:1 1 25%;*/
 }
 
+.header_container
+{
+    padding-left:1em;
+}
+
 .main_container
 {
     display:flex;
     flex-wrap:wrap;
     width:100%;
+
 }
 
 .node_count_input
@@ -43,12 +49,15 @@
 .label-medium
 {
     font-size:1.5em;
+    font-weight:bold;
 }
 
 .node_count_input_button
 {
     font-size:1.5em;
     cursor:pointer;
+    border:0;
+    background:#CCCCCC;
 }
 
 /*.node_count_input_button:hover
@@ -58,12 +67,8 @@
 
 body
 {
+    background-color:var(--color-light-background);
     font-family:Helvetica Neue,Arial,sans-serif;
     color:black;
     margin:0px;
-}
-
-.header_container
-{
-    margin-left:10px;
 }

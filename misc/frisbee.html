@@ -5,11 +5,12 @@
 Frisbee Problem
 </title>
 <meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="/universal_stylesheet.css">
 <link rel="stylesheet" href="frisbee.css">
 <script async defer src="frisbee.js" type="text/javascript" onload="ContentSetup()"></script>
 </head>
 <body>
-<a href="/" style="display:block;width:100%;text-align:center;font-size:3.0em;background-color:hsl(272, 100%, 23%);color:white;text-decoration:none;">Home</a>
+<a href="/" style="display:block;width:100%;text-align:center;font-size:3.0em;background-color:hsl(272, 100%, 23%);color:white;text-decoration:none;font-weight:bold;">Home</a>
 <div class="header_container">
 <H1>Frisbee Problem</H1>
 <div>Problem my friends and I were discussing at a pool party. How many ways to throw a frisbee between people. Apparently it's called a Hamiltonian cycle?</div>
@@ -68,16 +69,31 @@ Frisbee Problem
   </mrow>
 </math>
 </div>
-
+<br>
+Actual formula:
+<math xmlns="http://w3.org" style="font-size:1.5em">
+  <mfrac>
+    <mrow>
+      <mo>(</mo>
+      <mi>n</mi>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+      <mo>)</mo>
+      <mo>!</mo>
+    </mrow>
+    <mn>2</mn>
+  </mfrac>
+</math>
 </div>
 
-<div style="padding-bottom:1em">
+<div style="padding-bottom:0.5em;display:flex;align-items:center;gap:10px;">
 <label class="label-medium">Node count:</label>
 <span class="node_count_input" id="node_count_input">7</span>
-<button class="node_count_input_button" onclick="nodeCountInputPlusButtonClicked()">&#10133;</button>
-<button class="node_count_input_button" onclick="nodeCountInputMinusButtonClicked()">&#10134;</button>
+<button class="node_count_input_button roundrect" onclick="nodeCountInputPlusButtonClicked()">&#10133;</button>
+<button class="node_count_input_button roundrect" onclick="nodeCountInputMinusButtonClicked()">&#10134;</button>
 </div>
 </div>
+<br>
 
 </body>
 </html>
