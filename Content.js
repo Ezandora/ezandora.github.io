@@ -220,50 +220,55 @@ function enlargeImage(image) {
         }
         image.dataset.fullscreen_state = FullscreenTransitionState.SHRINKING;
         document.body.classList.remove("hiddenScrollbar");
-        //Bug in safari: it ignores changes to the background color of sticky header elements, and prevents changes to the window highlight color. Which leaves a purple bar at the top in Safari.
-        //We can fix this by not having a background color in the sticky elements, but then they floating text when scrolling down.
-        root_element.style.setProperty("--color-very-dark-background", __original_color_very_dark_background);
-        image.addEventListener("transitionend", function () {
-            if (image.dataset.fullscreen_state !== FullscreenTransitionState.SHRINKING)
-                return;
-            image.dataset.fullscreen_state = FullscreenTransitionState.INACTIVE;
-            new_container.removeChild(image);
-            domElementClearClassList(image);
-            image.classList.add("subbubble_first_image");
-            //Change class to what it was before:
-            domElementClearClassList(inner_image);
-            for (let class_element of image_clone.classList) {
-                if (class_element === "subbubble_image_clone")
-                    continue;
-                inner_image.classList.add(class_element);
-            }
-            /*for (let class_element of image_clone.classList)
-            {
-                if (class_element === "subbubble_image_clone") continue;
-                image.classList.add(class_element);
-            }
-            if (image !== inner_image && image.tagName === "PICTURE")
-            {
+        //Do a short timeout after removing the hidden scrollbar; otherwise new safari won't perform the shrinking animation. Something about how things reflow, I assume?
+        setTimeout(() => {
+            //Bug in safari: it ignores changes to the background color of sticky header elements, and prevents changes to the window highlight color. Which leaves a purple bar at the top in Safari.
+            //We can fix this by not having a background color in the sticky elements, but then they floating text when scrolling down.
+            root_element.style.setProperty("--color-very-dark-background", __original_color_very_dark_background);
+            image.addEventListener("transitionend", function () {
+                if (image.dataset.fullscreen_state !== FullscreenTransitionState.SHRINKING)
+                    return;
+                image.dataset.fullscreen_state = FullscreenTransitionState.INACTIVE;
+                //Alternate fix to the scrollbar issue was to make the scrollbar reappear after the animation. But that's slightly more noticeable.
+                //document.body.classList.remove("hiddenScrollbar");
+                new_container.removeChild(image);
+                domElementClearClassList(image);
+                image.classList.add("subbubble_first_image");
+                //Change class to what it was before:
                 domElementClearClassList(inner_image);
-                let inner_image_clone = image_clone.getElementsByTagName("img")[0];
-                for (let class_element of inner_image_clone.classList)
-                {
-                    if (class_element === "subbubble_image_clone") continue;
+                for (let class_element of image_clone.classList) {
+                    if (class_element === "subbubble_image_clone")
+                        continue;
                     inner_image.classList.add(class_element);
                 }
-                inner_image.style.cssText = document.defaultView.getComputedStyle(inner_image_clone, "").cssText;
-            }*/
-            //Kind of hacky, change the style back:
-            image.style.cssText = document.defaultView.getComputedStyle(image_clone, "").cssText;
-            let parent_element = image_clone.parentElement;
-            parent_element.insertBefore(image, image_clone);
-            parent_element.removeChild(image_clone);
-            document.body.removeChild(new_background);
-            document.body.removeChild(new_container);
-        }, { once: true });
-        inner_image.classList.remove("fullscreen_image_full");
-        inner_image.classList.remove("fullscreen_image_full_retina");
-        new_background.classList.remove("fullscreen_background_black");
+                /*for (let class_element of image_clone.classList)
+                {
+                    if (class_element === "subbubble_image_clone") continue;
+                    image.classList.add(class_element);
+                }
+                if (image !== inner_image && image.tagName === "PICTURE")
+                {
+                    domElementClearClassList(inner_image);
+                    let inner_image_clone = image_clone.getElementsByTagName("img")[0];
+                    for (let class_element of inner_image_clone.classList)
+                    {
+                        if (class_element === "subbubble_image_clone") continue;
+                        inner_image.classList.add(class_element);
+                    }
+                    inner_image.style.cssText = document.defaultView.getComputedStyle(inner_image_clone, "").cssText;
+                }*/
+                //Kind of hacky, change the style back:
+                image.style.cssText = document.defaultView.getComputedStyle(image_clone, "").cssText;
+                let parent_element = image_clone.parentElement;
+                parent_element.insertBefore(image, image_clone);
+                parent_element.removeChild(image_clone);
+                document.body.removeChild(new_background);
+                document.body.removeChild(new_container);
+            }, { once: true });
+            inner_image.classList.remove("fullscreen_image_full");
+            inner_image.classList.remove("fullscreen_image_full_retina");
+            new_background.classList.remove("fullscreen_background_black");
+        }, 1);
     });
     image.dataset.fullscreen_state = FullscreenTransitionState.PREPARING;
     //If we call this immediately, it won't execute the animation.
