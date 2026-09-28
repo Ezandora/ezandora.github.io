@@ -25,8 +25,14 @@ function drawTraversal(x, y, radius, should_output_labels, svg_element, point_co
 		{
 			let text_label = document.createElementNS(__svg_namespace, "text");
 			text_label.setAttribute("font-size", formatOldPixelAsNewEm(22.5)); //1em
-			text_label.setAttribute("x", formatOldPixelAsNewEm(i_coordinate[0] * (20.0 + radius) + x - 7.5));
-			text_label.setAttribute("y", formatOldPixelAsNewEm(i_coordinate[1] * (20.0 + radius) + y));
+			let ix = x;
+			let iy = y;
+			if (point_coordinates.length === 1)
+			{
+				ix += radius / 40.0 * 15.0;
+			}
+			text_label.setAttribute("x", formatOldPixelAsNewEm(i_coordinate[0] * (20.0 + radius) + ix - 7.5));
+			text_label.setAttribute("y", formatOldPixelAsNewEm(i_coordinate[1] * (20.0 + radius) + iy));
 			text_label.setAttribute("fill", "currentColor");
 			text_label.textContent = i;
 			text_label.setAttribute("dominant-baseline", "middle");
@@ -270,9 +276,14 @@ function calculateAllTraversalRecurse(node_count, all_traversal, unique_rotation
 
 function calculateAllTraversal(node_count)
 {
-	if (node_count < 2) return [[], []];
 	let all_traversal = [];
 	let unique_rotation_traversals = new Map();
+	if (node_count < 2)
+	{
+		if (node_count > 0)
+			unique_rotation_traversals.set(0, true);
+		return [all_traversal, unique_rotation_traversals];
+	}
 	let previously_present_map = new Map();
 	let all_traversal_number_map = new Map();
 	let all_traversal_number_map_without_last_element = new Map();
@@ -364,6 +375,12 @@ function redoLayout()
 			let angle_radians = angle_degrees * (Math.PI / 180.0);
 			let ix = 1.0 * Math.cos(angle_radians);
 			let iy = 1.0 * Math.sin(angle_radians);
+			if (points === 1)
+			{
+				//Center it:
+				ix = 0.0;
+				iy = 0.0;
+			}
 			point_coordinates.push([ix, iy]);
 		}
 		const [all_traversal, unique_rotation_traversals] = calculateAllTraversal(point_coordinates.length);
@@ -421,15 +438,18 @@ function redoLayout()
 		let subcontaining_element = document.createElement("div");
 		containing_element.appendChild(subcontaining_element);
 		subcontaining_element.classList.add("traversal_subcontainer");
-		if (all_traversal.length === 0)
+		let iterating_traversals = all_traversal;
+		if (iterating_traversals.length === 0)
 		{
-			drawTraversalEncapsulated(subcontaining_element, radius, should_output_labels, point_coordinates, []);
+			//output empty traversal for layout
+			iterating_traversals = [[]];
 		}
-		else if (should_display)
+
+		if (should_display)
 		{
 			//for (let traversal of all_traversal)
 			//console.log("unique_rotation_traversals = " + JSON.stringify([...unique_rotation_traversals]))
-			for (let i = 0; i < all_traversal.length; i += 1)
+			for (let i = 0; i < iterating_traversals.length; i += 1)
 			{
 				let subsubcontaining_element = document.createElement("div");
 				subsubcontaining_element.classList.add("subsubcontaining_element");
@@ -439,7 +459,7 @@ function redoLayout()
 					subsubcontaining_element.style.borderRight = "1px solid black";
 				subsubcontaining_element.style.borderBottom = "1px solid black";*/
 				subcontaining_element.appendChild(subsubcontaining_element);
-				let traversal = all_traversal[i];
+				let traversal = iterating_traversals[i];
 				let unique_rotation = unique_rotation_traversals.has(i);
 				drawTraversalEncapsulated(subsubcontaining_element, radius, should_output_labels, point_coordinates, traversal, unique_rotation);
 
