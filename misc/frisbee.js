@@ -333,6 +333,8 @@ function redoLayout()
 	document.body.appendChild(main_container);
 	let maximum_points = Number(document.getElementById("node_count_input").innerHTML);
 	let radius = 50.0;
+	let should_output_labels = document.getElementById("toggle_labels_checkbox").checked;
+
 	for (let points = 1; points <= maximum_points; points += 1)
 	{
 		let point_coordinates = [];
@@ -446,13 +448,12 @@ function redoLayout()
 		subtitle.innerHTML = subtitle_text;
 		containing_element.appendChild(subtitle);
 
-		let should_output_labels = document.getElementById("toggle_labels_checkbox").checked;
 
 		/*let target_node_spacing = "5.0em"; //about 113 px, vs 4.0888em native svg
 		if (should_output_labels)
 			target_node_spacing = "7.5em"; //about 169 px, vs 6.444em native svg*/
 		//base off of radius:
-		let target_node_spacing_pixels = drawTraversalCalculateSVGSizeInPixels(radius, should_output_labels) + 22.0;
+		let target_node_spacing_pixels = drawTraversalCalculateSVGSizeInPixels(radius, should_output_labels) + 22.0 + 10.0;
 		if (should_output_labels)
 			target_node_spacing_pixels += 12.0;
 		let target_node_spacing = formatOldPixelAsNewEm(target_node_spacing_pixels);
