@@ -8,6 +8,25 @@ function formatOldPixelAsNewEm(pixels)
 
 function drawTraversal(x, y, radius, should_output_labels, svg_element, point_coordinates, traversal)
 {
+	if (true)
+	{
+		//Vertically center the points given to us:
+		let aabb_min = [0.0,0.0];
+		let aabb_max = [0.0,0.0];
+		for (let i = 0; i < point_coordinates.length; i += 1)
+		{
+			//console.log(JSON.stringify(point_coordinates[i]));
+			for (let j = 0; j < 2; j += 1)
+			{
+				aabb_min[j] = Math.min(aabb_min[j], point_coordinates[i][j]);
+				aabb_max[j] = Math.max(aabb_max[j], point_coordinates[i][j]);
+			}
+		}
+		let center = [0.5 * (aabb_max[0] + aabb_min[0]), 0.5 * (aabb_max[1] + aabb_min[1])];
+		//console.log(point_coordinates.length + " aabb = [" + JSON.stringify(aabb_min) + ", " + JSON.stringify(aabb_max) + " center = " + JSON.stringify(center));
+		x += (center[0]) * radius;
+		y -= (center[1]) * radius;
+	}
 	for (let i = 0; i < point_coordinates.length; i += 1)
 	{
 		let point_element = document.createElementNS(__svg_namespace, "circle");
