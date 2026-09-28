@@ -45,6 +45,7 @@
     display:grid;
     grid-template-columns:repeat(auto-fit, minmax(var(--node-spacing), 1fr));
     row-gap:0.5em;
+    margin-top:0.5em;
     /*min-width: min-content;*/
 
     /*grid-template-columns:repeat(auto-fit, minmax(100px, 150px));*/
