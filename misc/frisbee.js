@@ -296,9 +296,65 @@ function redoLayout()
 	{
 		let point_coordinates = [];
 		//Generate points around an imaginary circle. Always start on the left, at the vertical center.
+		let initial_angle = -90.0;
+
+		if (true)
+		{
+			//Does this angle create a horizontal line? If not, find the closest one, and correct the angle so it's horizontal.
+			//Just looks nicer, visually.
+			let best_dx = 0.0;
+			let best_dy = Number.MAX_VALUE;
+			for (let i = 1; i < points; i += 1)
+			{
+				let angle_1 = (360.0 / points) * (i - 1) + initial_angle;
+				let angle_2 = (360.0 / points) * i + initial_angle;
+				let dx = Math.cos(angle_2 * (Math.PI / 180.0)) - Math.cos(angle_1 * (Math.PI / 180.0));
+				let dy = Math.sin(angle_2 * (Math.PI / 180.0)) - Math.sin(angle_1 * (Math.PI / 180.0));
+				//console.log("dx = " + dx + ", dy = " + dy);
+
+				//if (Math.abs(dx) > Math.abs(best_dx) || Math.abs(best_dx) < 0.001)
+				if (Math.abs(dy) < Math.abs(best_dy))
+				{
+					best_dx = dx;
+					best_dy = dy;
+				}
+			}
+			if (Math.abs(best_dy) > 0.01 && points > 1)
+			{
+				//console.log(points + " best_dx = " + best_dx + ", best_dy = " + best_dy);
+				let angle_correction = Math.atan2(best_dy, best_dx) * 180.0 / Math.PI;
+				//console.log("angle_correction = " + angle_correction);
+				initial_angle += angle_correction;
+			}
+			//Correct initial rotation so the zero point is in the top-left:
+			let closest_point_to_target_angle = -1;
+			//let closest_point_angle = 0.0;
+			let closest_point_delta = 0.0;
+			let target_angle = 225.0;
+
+			for (let i = 0; i < points; i += 1)
+			{
+				let angle = (360.0 / points) * i + initial_angle;
+				//console.log(i + "/" + points + ": " + angle);
+				//let delta_1 = Math.abs(angle - target_angle);
+				let delta = Math.min(Math.abs(angle - target_angle), Math.abs((angle + 360.0) - target_angle), Math.abs((angle - 360.0) - target_angle));
+				if (closest_point_to_target_angle === -1 || delta < closest_point_delta)
+				{
+					closest_point_to_target_angle = i;
+					//closest_point_angle = angle;
+					closest_point_delta = delta;
+				}
+			}
+			//console.log(points + " closest_point_to_target_angle = " + closest_point_to_target_angle + ", closest_point_delta = " + closest_point_delta);
+			if (closest_point_to_target_angle !== 0)
+			{
+				initial_angle += (360.0 / points) * closest_point_to_target_angle;
+			}
+		}
+
 		for (let i = 0; i < points; i += 1)
 		{
-			let angle_degrees = (360.0 / points) * i + 180.0;
+			let angle_degrees = (360.0 / points) * i + initial_angle;
 			let angle_radians = angle_degrees * (Math.PI / 180.0);
 			let ix = 1.0 * Math.cos(angle_radians);
 			let iy = 1.0 * Math.sin(angle_radians);
