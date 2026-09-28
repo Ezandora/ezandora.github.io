@@ -443,7 +443,7 @@ function redoLayout()
 
 		let subtitle_text = String(all_traversal.length) + " " + pluralize(all_traversal.length, "traversal", "traversals");
 		if (all_traversal.length > 0)
-			subtitle_text += " and " + String(unique_rotation_traversals.size) + " unique " + pluralize(unique_rotation_traversals.size, "rotation", "rotations");
+			subtitle_text += ", " + String(unique_rotation_traversals.size) + " unique " + pluralize(unique_rotation_traversals.size, "rotation", "rotations");
 		subtitle_text += (should_display ? "" : " (not displayed)");
 		subtitle.innerHTML = subtitle_text;
 		containing_element.appendChild(subtitle);
