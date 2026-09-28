@@ -29,7 +29,7 @@ function drawTraversal(x, y, radius, should_output_labels, svg_element, point_co
 			let iy = y;
 			if (point_coordinates.length === 1)
 			{
-				ix += radius / 40.0 * 15.0;
+				ix -= radius / 40.0 * 15.0;
 			}
 			text_label.setAttribute("x", formatOldPixelAsNewEm(i_coordinate[0] * (20.0 + radius) + ix - 7.5));
 			text_label.setAttribute("y", formatOldPixelAsNewEm(i_coordinate[1] * (20.0 + radius) + iy));

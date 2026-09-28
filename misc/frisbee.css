@@ -74,6 +74,7 @@
 {
     padding-left:0.75em;
     padding-right:0.75em;
+    max-width:40em;
 }
 
 .main_container
@@ -86,8 +87,9 @@
 
 .node_count_input
 {
-    margin-left:0.44em;
-    margin-right:0.222em;
+    margin-left:0.222em;
+    /*margin-left:0.44em;
+    margin-right:0.222em;*/
     font-size:3.0em;
     font-weight:bold;
 }
