@@ -6,6 +6,11 @@ function formatOldPixelAsNewEm(pixels)
 	return String(pixels / 22.5) + "em";
 }
 
+function formatPixelsAsPx(pixels)
+{
+	return pixels + "px";
+}
+
 function drawTraversal(x, y, radius, should_output_labels, svg_element, point_coordinates, traversal)
 {
 	if (true)
@@ -32,9 +37,9 @@ function drawTraversal(x, y, radius, should_output_labels, svg_element, point_co
 		let point_element = document.createElementNS(__svg_namespace, "circle");
 		//console.log("point_element = " + point_element + ", svg_element = " + svg_element);
 		let i_coordinate = point_coordinates[i];
-		point_element.setAttribute("cx", formatOldPixelAsNewEm(i_coordinate[0] * radius + x));
-		point_element.setAttribute("cy", formatOldPixelAsNewEm(i_coordinate[1] * radius + y));
-		point_element.setAttribute("r", formatOldPixelAsNewEm(radius / 40.0 * 5.0));
+		point_element.setAttribute("cx", formatPixelsAsPx(i_coordinate[0] * radius + x));
+		point_element.setAttribute("cy", formatPixelsAsPx(i_coordinate[1] * radius + y));
+		point_element.setAttribute("r", formatPixelsAsPx(radius / 40.0 * 5.0));
 		point_element.setAttribute("fill", "currentColor");
 //		point.stroke = "black";
 //		point.strokeWidth = 2;
@@ -43,15 +48,15 @@ function drawTraversal(x, y, radius, should_output_labels, svg_element, point_co
 		if (should_output_labels)
 		{
 			let text_label = document.createElementNS(__svg_namespace, "text");
-			text_label.setAttribute("font-size", formatOldPixelAsNewEm(22.5)); //1em
+			text_label.setAttribute("font-size", formatPixelsAsPx(22.5)); //1em
 			let ix = x;
 			let iy = y;
 			if (point_coordinates.length === 1)
 			{
 				ix -= radius / 40.0 * 15.0;
 			}
-			text_label.setAttribute("x", formatOldPixelAsNewEm(i_coordinate[0] * (20.0 + radius) + ix - 7.5));
-			text_label.setAttribute("y", formatOldPixelAsNewEm(i_coordinate[1] * (20.0 + radius) + iy));
+			text_label.setAttribute("x", formatPixelsAsPx(i_coordinate[0] * (20.0 + radius) + ix - 7.5));
+			text_label.setAttribute("y", formatPixelsAsPx(i_coordinate[1] * (20.0 + radius) + iy));
 			text_label.setAttribute("fill", "currentColor");
 			text_label.textContent = i;
 			text_label.setAttribute("dominant-baseline", "middle");
@@ -70,12 +75,12 @@ function drawTraversal(x, y, radius, should_output_labels, svg_element, point_co
 			let current_index = traversal[i];
 			if (current_index >= point_coordinates.length) continue;
 			let line_element = document.createElementNS(__svg_namespace, "line");
-			line_element.setAttribute("x1", formatOldPixelAsNewEm(point_coordinates[previous_index][0] * radius + x));
-			line_element.setAttribute("y1", formatOldPixelAsNewEm(point_coordinates[previous_index][1] * radius + y));
-			line_element.setAttribute("x2", formatOldPixelAsNewEm(point_coordinates[current_index][0] * radius + x));
-			line_element.setAttribute("y2", formatOldPixelAsNewEm(point_coordinates[current_index][1] * radius + y));
+			line_element.setAttribute("x1", formatPixelsAsPx(point_coordinates[previous_index][0] * radius + x));
+			line_element.setAttribute("y1", formatPixelsAsPx(point_coordinates[previous_index][1] * radius + y));
+			line_element.setAttribute("x2", formatPixelsAsPx(point_coordinates[current_index][0] * radius + x));
+			line_element.setAttribute("y2", formatPixelsAsPx(point_coordinates[current_index][1] * radius + y));
 			line_element.setAttribute("stroke", "currentColor");
-			line_element.setAttribute("stroke-width", formatOldPixelAsNewEm(radius / 40.0 * 2.0));
+			line_element.setAttribute("stroke-width", formatPixelsAsPx(radius / 40.0 * 2.0));
 			svg_element.appendChild(line_element);
 
 			previous_index = current_index;
@@ -96,8 +101,8 @@ function drawTraversalEncapsulated(parent_element, radius, should_output_labels,
 	let svg_element = document.createElementNS(__svg_namespace, "svg");
 	let svg_size = drawTraversalCalculateSVGSizeInPixels(radius, should_output_labels);
 
-	svg_element.setAttribute("width", formatOldPixelAsNewEm(svg_size));
-	svg_element.setAttribute("height", formatOldPixelAsNewEm(svg_size));
+	svg_element.setAttribute("width", formatPixelsAsPx(svg_size));
+	svg_element.setAttribute("height", formatPixelsAsPx(svg_size));
 	svg_element.classList.add("traversal");
 	parent_element.appendChild(svg_element);
 
