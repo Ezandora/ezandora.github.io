@@ -1,6 +1,8 @@
+:root {
+	--node-spacing:5.0em;
+}
 .traversal
 {
-    padding:0.44em;
 }
 
 .traversal_rotation_first
@@ -16,22 +18,34 @@
 
 .traversal_text
 {
-    margin-left:0.44em;
-    margin-right:0.44em;
+    /*text-align:center;*/
 }
 
 .subsubcontaining_element
 {
-    display:inline-block;
-    padding-left:0.44em;
-    padding-right:0.44em;
+    /*display:inline-block;*/
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    /*flex:1;
+    padding:0.44em;*/
+    /*padding-left:0.44em;
+    padding-right:0.44em;*/
 }
+
+/*.traversal_subcontainer
+{
+    display:flex;
+    flex-wrap:wrap;
+}*/
 
 .traversal_subcontainer
 {
-    /*display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(4.1em, 1fr));
-    min-width: min-content;*/
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(var(--node-spacing), 1fr));
+    row-gap:0.5em;
+    /*min-width: min-content;*/
 
     /*grid-template-columns:repeat(auto-fit, minmax(100px, 150px));*/
 }
@@ -58,7 +72,8 @@
 
 .header_container
 {
-    padding-left:1em;
+    padding-left:0.75em;
+    padding-right:0.75em;
 }
 
 .main_container

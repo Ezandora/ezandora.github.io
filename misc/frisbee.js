@@ -15,7 +15,7 @@ function drawTraversal(x, y, radius, should_output_labels, svg_element, point_co
 		let i_coordinate = point_coordinates[i];
 		point_element.setAttribute("cx", formatOldPixelAsNewEm(i_coordinate[0] * radius + x));
 		point_element.setAttribute("cy", formatOldPixelAsNewEm(i_coordinate[1] * radius + y));
-		point_element.setAttribute("r", formatOldPixelAsNewEm(5));
+		point_element.setAttribute("r", formatOldPixelAsNewEm(radius / 40.0 * 5.0));
 		point_element.setAttribute("fill", "currentColor");
 //		point.stroke = "black";
 //		point.strokeWidth = 2;
@@ -24,9 +24,9 @@ function drawTraversal(x, y, radius, should_output_labels, svg_element, point_co
 		if (should_output_labels)
 		{
 			let text_label = document.createElementNS(__svg_namespace, "text");
+			text_label.setAttribute("font-size", formatOldPixelAsNewEm(22.5)); //1em
 			text_label.setAttribute("x", formatOldPixelAsNewEm(i_coordinate[0] * (20.0 + radius) + x - 7.5));
 			text_label.setAttribute("y", formatOldPixelAsNewEm(i_coordinate[1] * (20.0 + radius) + y));
-			text_label.setAttribute("font-size", formatOldPixelAsNewEm(22.5)); //1em
 			text_label.setAttribute("fill", "currentColor");
 			text_label.textContent = i;
 			text_label.setAttribute("dominant-baseline", "middle");
@@ -50,7 +50,7 @@ function drawTraversal(x, y, radius, should_output_labels, svg_element, point_co
 			line_element.setAttribute("x2", formatOldPixelAsNewEm(point_coordinates[current_index][0] * radius + x));
 			line_element.setAttribute("y2", formatOldPixelAsNewEm(point_coordinates[current_index][1] * radius + y));
 			line_element.setAttribute("stroke", "currentColor");
-			line_element.setAttribute("stroke-width", formatOldPixelAsNewEm(2));
+			line_element.setAttribute("stroke-width", formatOldPixelAsNewEm(radius / 40.0 * 2.0));
 			svg_element.appendChild(line_element);
 
 			previous_index = current_index;
@@ -58,12 +58,18 @@ function drawTraversal(x, y, radius, should_output_labels, svg_element, point_co
 	}
 }
 
+function drawTraversalCalculateSVGSizeInPixels(radius, should_output_labels)
+{
+	let svg_size = radius * 2.0 + (radius / 40.0 * 5.0 + 1.0) * 2.0; //the point radius plus a pixel's padding, on both sides
+	if (should_output_labels)
+		svg_size += (22.5 + 1.0 + 3.0) * 2.0;
+	return svg_size;
+}
+
 function drawTraversalEncapsulated(parent_element, radius, should_output_labels, point_coordinates, traversal, unique_rotation)
 {
 	let svg_element = document.createElementNS(__svg_namespace, "svg");
-	let svg_size = radius * 2.0 + (5.0 + 1.0) * 2.0; //the point radius plus a pixel's padding, on both sides
-	if (should_output_labels)
-		svg_size += (22.5 + 1.0 + 3.0) * 2.0;
+	let svg_size = drawTraversalCalculateSVGSizeInPixels(radius, should_output_labels);
 
 	svg_element.setAttribute("width", formatOldPixelAsNewEm(svg_size));
 	svg_element.setAttribute("height", formatOldPixelAsNewEm(svg_size));
@@ -291,7 +297,7 @@ function redoLayout()
 	main_container.id = "main_container";
 	document.body.appendChild(main_container);
 	let maximum_points = Number(document.getElementById("node_count_input").innerHTML);
-	let radius = 40.0;
+	let radius = 50.0;
 	for (let points = 1; points <= maximum_points; points += 1)
 	{
 		let point_coordinates = [];
@@ -400,6 +406,17 @@ function redoLayout()
 		containing_element.appendChild(subtitle);
 
 		let should_output_labels = document.getElementById("toggle_labels_checkbox").checked;
+
+		/*let target_node_spacing = "5.0em"; //about 113 px, vs 4.0888em native svg
+		if (should_output_labels)
+			target_node_spacing = "7.5em"; //about 169 px, vs 6.444em native svg*/
+		//base off of radius:
+		let target_node_spacing_pixels = drawTraversalCalculateSVGSizeInPixels(radius, should_output_labels) + 22.0;
+		if (should_output_labels)
+			target_node_spacing_pixels += 12.0;
+		let target_node_spacing = formatOldPixelAsNewEm(target_node_spacing_pixels);
+		//console.log("target_node_spacing = " + target_node_spacing)
+		document.documentElement.style.setProperty("--node-spacing", target_node_spacing);
 
 		let subcontaining_element = document.createElement("div");
 		containing_element.appendChild(subcontaining_element);
