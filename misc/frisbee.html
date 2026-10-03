@@ -15,86 +15,112 @@ Frisbee Problem
 <H1>Frisbee Problem</H1>
 <div>Problem my friends and I were discussing at a pool party. How many ways to throw a frisbee between people. Apparently it's called a Hamiltonian cycle?</div>
 <div style="padding-top:1.0em;padding-bottom:1.0em;">This is the formula I came up with in the pool:
-<!-- I used a generator for this math block. -->
 <div>
-<math>
-  <mi>f</mi>
-  <mo stretchy="false">(</mo>
-  <mi>n</mi>
-  <mo stretchy="false">)</mo>
-  <mo>=</mo>
-
+<math style="font-size:1.1em;">
   <mrow>
-    <mo fence="true" form="prefix" stretchy="true">{</mo>
-    <mtable columnalign="left" rowspacing="0.6em" columnspacing="1.5em">
-      <!-- Case 1 -->
-      <mtr>
-        <mtd><mn>0</mn></mtd>
-        <mtd><mi>n</mi><mo>&le;</mo><mn>1</mn></mtd>
-      </mtr>
-
-      <!-- Case 2 -->
-      <mtr>
-        <mtd><mn>1</mn></mtd>
-        <mtd>
-          <mi>n</mi>
-          <mo>&isin;</mo>
-          <mo>{</mo>
-          <mn>2</mn>
-          <mo>,</mo>
-          <mn>3</mn>
-          <mo>}</mo>
-        </mtd>
-      </mtr>
-
-      <!-- Case 3 -->
-      <mtr>
-        <mtd>
-          <mo stretchy="false">(</mo>
-          <mi>n</mi>
-          <mo>&minus;</mo>
-          <mn>1</mn>
-          <mo stretchy="false">)</mo>
-          <mo>&middot;</mo>
-          <mi>f</mi>
-          <mo stretchy="false">(</mo>
-          <mi>n</mi>
-          <mo>&minus;</mo>
-          <mn>1</mn>
-          <mo stretchy="false">)</mo>
-        </mtd>
-        <mtd><mi>n</mi><mo>&ge;</mo><mn>4</mn></mtd>
-      </mtr>
-    </mtable>
+    <mi>f</mi>
+    <mrow>
+      <mo fence="true" form="prefix" stretchy="false">(</mo>
+      <mi>n</mi>
+      <mo fence="true" form="postfix" stretchy="false">)</mo>
+    </mrow>
+    <mo>=</mo>
+    <mrow>
+      <mo fence="true" form="prefix" stretchy="true">{</mo>
+      <mtable>
+        <mtr>
+          <mtd class="align_left">
+            <mn>0</mn>
+          </mtd>
+          <mtd class="align_left">
+            <mrow>
+              <mi>n</mi>
+              <mo>&lt;</mo>
+              <mn>2</mn>
+            </mrow>
+          </mtd>
+        </mtr>
+        <mtr>
+          <mtd class="align_left">
+            <mn>1</mn>
+          </mtd>
+          <mtd class="align_left">
+            <mrow>
+              <mn>2</mn>
+              <mo>≤</mo>
+              <mi>n</mi>
+              <mo>≤</mo>
+              <mn>3</mn>
+            </mrow>
+          </mtd>
+        </mtr>
+        <mtr>
+          <mtd class="align_left">
+            <mrow>
+              <mrow>
+                <mo fence="true" form="prefix" stretchy="false">(</mo>
+                <mi>n</mi>
+                <mo>−</mo>
+                <mn>1</mn>
+                <mo fence="true" form="postfix" stretchy="false">)</mo>
+              </mrow>
+              <mo>⋅</mo>
+              <mi>f</mi>
+              <mrow>
+                <mo fence="true" form="prefix" stretchy="false">(</mo>
+                <mi>n</mi>
+                <mo>−</mo>
+                <mn>1</mn>
+                <mo fence="true" form="postfix" stretchy="false">)</mo>
+              </mrow>
+            </mrow>
+          </mtd>
+          <mtd class="align_left">
+            <mrow>
+              <mi>n</mi>
+              <mo>&gt;</mo>
+              <mn>3</mn>
+            </mrow>
+          </mtd>
+        </mtr>
+      </mtable>
+      <mo fence="true" form="postfix" stretchy="true"></mo>
+    </mrow>
   </mrow>
 </math>
 </div>
 <br>
 Explicit formula:
-<math xmlns="http://w3.org" style="font-size:1.5em">
-  <mi>f</mi>
-  <mo stretchy="false">(</mo>
-  <mi>n</mi>
-  <mo stretchy="false">)</mo>
-  <mo>=</mo>
-  <mfrac>
+<math style="font-size:1.2em">
+  <mrow>
+    <mi>f</mi>
     <mrow>
-      <mo>(</mo>
+      <mo fence="true" form="prefix" stretchy="false">(</mo>
       <mi>n</mi>
-      <mo>&#x2212;</mo>
-      <mn>1</mn>
-      <mo>)</mo>
-      <mo>!</mo>
+      <mo fence="true" form="postfix" stretchy="false">)</mo>
     </mrow>
-    <mn>2</mn>
-  </mfrac>
+    <mo>=</mo>
+    <mfrac>
+      <mrow>
+        <mrow>
+          <mo fence="true" form="prefix" stretchy="false">(</mo>
+          <mi>n</mi>
+          <mo>−</mo>
+          <mn>1</mn>
+          <mo fence="true" form="postfix" stretchy="false">)</mo>
+        </mrow>
+        <mo form="postfix" stretchy="false" lspace="0em" rspace="0em">!</mo>
+      </mrow>
+      <mn>2</mn>
+    </mfrac>
+  </mrow>
 </math>
 </div>
 <div>Grayed-out traversals are rotations of another traversal.</div>
 <br>
 <div style="padding-bottom:0.5em;display:flex;flex-wrap:wrap;column-gap:5em;align-items:center;justify-content:center">
 <div style="display:flex;align-items:center;justify-content:center;gap:0.5em;">
-<label class="label-medium">Node count:</label>
+<label class="label_medium">Node count:</label>
 <span class="node_count_input" id="node_count_input">7</span>
 <button class="input_button roundrect" onclick="nodeCountInputPlusButtonClicked()">&#10133;</button>
 <button class="input_button roundrect" onclick="nodeCountInputMinusButtonClicked()">&#10134;</button>
@@ -102,7 +128,7 @@ Explicit formula:
 
 <div style="display:flex;align-items:center;justify-content:center;gap:1.0em;">
 <input class="input_checkbox" type="checkbox" id="toggle_labels_checkbox" onclick="toggleLabelsCheckboxClicked()">
-<label class="label-medium" style="cursor:pointer;" for="toggle_labels_checkbox">Label vertices</label>
+<label class="label_medium" style="cursor:pointer;" for="toggle_labels_checkbox">Label vertices</label>
 </div>
 </div>
 </div>
